@@ -1,0 +1,71 @@
+header {
+ position: fixed;
+ display: flex;
+ top: 0;
+ right: 0;
+ left: 0;
+ height: 24px;
+ background-color: rgba(0, 0, 0, 0.288);
+ backdrop-filter: blur(50px);
+ justify-content: space-between;
+ align-items: center;
+}
+header div {
+ display: flex;
+ align-items: center;
+ height: 100%;
+ padding: 0 16px;
+ border: none;
+ border-radius: 4px;
+ margin: 0 -4px;
+}
+header .rightinfos,
+header .rightinfos .widgets {
+ margin: 0;
+ padding: 0;
+}
+header .rightinfos .widgets div {
+ margin: -3px;
+ padding: 0 12px;
+}
+header .rightinfos .date {
+ margin: 0 8px;
+ padding: 0;
+}
+header .menu p,
+header .date div {
+ color: white;
+ font-family: "Helvetica Neue", "SF Pro";
+ font-size: 13px;
+}
+header .widgets,
+header .date {
+ display: flex;
+}
+header .menu div:active {
+ justify-self: right;
+}
+header .menu div:hover,
+header .widgets div:hover {
+ cursor: default;
+}
+header .menu div:active,
+header .widgets div:active {
+ background-color: rgba(255, 255, 255, 0.527);
+}
+header img {
+ width: 16px;
+ height: 16px;
+}
+header .menu .Finder {
+ font-weight: 800;
+}
+header .rightinfos .widgets .battery img {
+ width: 26px;
+ height: 26px;
+}
+header .widgets,
+header .date div {
+ margin: 0 2px;
+ padding: 0;
+}
