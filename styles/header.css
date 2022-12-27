@@ -46,11 +46,13 @@ header .menu div:active {
  justify-self: right;
 }
 header .menu div:hover,
-header .widgets div:hover {
+header .widgets div:hover,
+header .date:hover {
  cursor: default;
 }
 header .menu div:active,
-header .widgets div:active {
+header .widgets div:active,
+header .date:active {
  background-color: rgba(255, 255, 255, 0.527);
 }
 header img {

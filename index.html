@@ -33,7 +33,8 @@
     display: flex;
     margin-top: 27px;
     width: 223.79px;
-    background-color: rgb(108, 114, 128);
+    background-color: rgba(151, 159, 177, 0.508);
+    border: solid 1px white;
     border-radius: 9999px;
     overflow: hidden;
    }
@@ -67,7 +68,11 @@
     />
     <div class="questionbox">
      <button class="question" onclick="move()">
-      <img class="question-mark" src="./images/icons/question-mark.png" alt="" />
+      <img
+       class="question-mark"
+       src="./images/icons/question-mark.png"
+       alt=""
+      />
      </button>
     </div>
    </div>
@@ -160,8 +165,8 @@
    }
 
    const hint = document.getElementById("hint");
-   let arrow = document.getElementById("arrow");
-   let input = document.getElementById("input");
+   const arrow = document.getElementById("arrow");
+   const input = document.getElementById("input");
 
    function showArrow() {
     if (input.value.length === 0 && arrow.style.display === "flex") {

@@ -71,12 +71,12 @@ nav {
  transform-origin: 50% 100%;
 }
 .dock .dock-container li:hover {
- margin: 0px 20px 0px 20px;
+ margin: 0px 12px 0px 12px;
 }
 
-.dock .dock-container li:active {
-  filter: brightness(0.5) !important; 
-  transition: none !important;
+.dock .dock-container li .ico:active{
+  filter: brightness(0.4) !important; 
+  transition: none;
 }
 
 .dock .dock-container li .name {
