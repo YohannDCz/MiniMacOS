@@ -1,0 +1,73 @@
+.modules {
+  text-align: center;
+}
+
+.modules a {
+  color: hsl(198, 65%, 25%);
+}
+
+.modules > .container {
+  display:inline-block;
+  text-align: left;
+  margin-top: 100px;
+}
+
+.modules table {
+  margin-top: 20px;
+  color: black;
+  width: 100%;
+  background-color: hsl(72, 4%, 24%);
+}
+
+.modules table tr.separator {
+}
+.modules table tr.separator td {
+  background-color: hsl(72, 4%, 24%);
+}
+
+.modules table th {
+  background-color: hsl(72, 4%, 42%);
+  border-bottom: 3px solid hsl(0, 0%, 85%);
+  height: 25px;
+  padding-left: 5px;
+  line-height: 25px;
+}
+
+.modules table td {
+  height: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: hsl(0, 0%, 97%);
+}
+
+.modules table td.green {
+  color: hsl(100, 80%, 40%);
+}
+.modules table td.orange {
+  color: orange;
+}
+.modules table td.orange a {
+  color: orange;
+}
+.modules table td.red {
+  color: hsl(0, 80%, 40%);
+}
+
+.modules table input.text {
+  width: 100%;
+}
+
+.modules .footer {
+  margin-top: 20px;
+}
+
+.modules .footer .path {
+  color: hsl(72, 4%, 60%);
+}
+
+.modules .footer .onboarding {
+  float: right;
+  color: hsl(198, 75%, 35%);
+  text-decoration: none;
+}
+

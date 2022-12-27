@@ -1,0 +1,13 @@
+html {
+  margin-top: 0px;
+  font: 12px 300 "Roboto", Arial;
+  color: hsl(72, 4%, 90%);
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: hsl(72, 4%, 24%);
+  height: 100%;
+}
+

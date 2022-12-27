@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../styles/header.css" />
+  <link rel="stylesheet" href="../styles/generalanddock.css" />
+  <title>Yohann's Portfolio</title>
+
+  <style>
+   #window {
+    position: absolute;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    left: 40px;
+    top: 40px;
+    width: 700px;
+    height: 475px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    transition: opacity 0.25s, transform 0.5s;
+   }
+
+   #header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 25px;
+    cursor: default;
+    color: #fff;
+   }
+
+   #header .traffic-lights {
+    display: flex;
+    position: absolute;
+    left: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   }
+
+   #header .traffic-lights:hover {
+    cursor: default;
+   }
+
+   #header .traffic-lights .red,
+   #header .traffic-lights .yellow,
+   #header .traffic-lights .green {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 9999px;
+    margin-left: 9px;
+   }
+
+   #header .traffic-lights .red {
+    background-color: rgb(235, 90, 80);
+   }
+
+   #header .traffic-lights .yellow {
+    background-color: rgb(240, 190, 68);
+   }
+
+   #header .traffic-lights .green {
+    background-color: rgb(100, 206, 111);
+   }
+
+   #header .appname {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "SF Pro", Helvetica;
+    color: black;
+   }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="menu">
+    <div class="apple">
+     <img src="../images/icons/icon_mac.svg" alt="" />
+    </div>
+    <div>
+     <p class="Finder">Finder</p>
+    </div>
+    <div>
+     <p>Fichier</p>
+    </div>
+    <div>
+     <p>Édition</p>
+    </div>
+    <div>
+     <p>Présentation</p>
+    </div>
+    <div>
+     <p>Aller</p>
+    </div>
+    <div>
+     <p>Fenêtre</p>
+    </div>
+    <div>
+     <p>Aide</p>
+    </div>
+   </div>
+   <div class="rightinfos">
+    <div class="widgets">
+     <div class="battery">
+      <img src="../images/icons/icons_batterie.svg" alt="" />
+     </div>
+     <div class="wifi">
+      <img src="../images/icons/icon_wifi.svg" alt="" />
+     </div>
+     <div class="search">
+      <img src="../images/icons/icon_search.svg" alt="" />
+     </div>
+     <div class="notifications">
+      <img src="../images/icons/icon_notifications.svg" alt="" />
+     </div>
+     <div class="siri">
+      <img src="../images/icons/icon_siri.png" alt="" />
+     </div>
+    </div>
+    <div class="date">
+     <div id="dayname"></div>
+     <div id="daynum"></div>
+     <div id="monthname"></div>
+     <div id="">à</div>
+     <div id="time"></div>
+    </div>
+   </div>
+  </header>
+  <nav class="dock">
+   <ul class="dock-container">
+    <li class="li-1">
+     <div class="name">Finder</div>
+     <img class="ico" src="../images/icons/app_finder.png" alt="The Finder." />
+    </li>
+    <li class="li-2">
+     <div class="name">LaunchPad</div>
+     <img
+      class="ico"
+      src="../images/icons/launchpad.png"
+      alt="The Launchpad."
+     />
+    </li>
+    <li class="li-3">
+     <div class="name">Safari</div>
+     <img
+      class="ico"
+      src="../images/icons/app_safari.png"
+      alt="The Safari browser."
+     />
+    </li>
+    <li class="li-4">
+     <div class="name">Visual Studio Code</div>
+     <img
+      class="ico"
+      src="../images/icons/app_vstudio.png"
+      alt="The Visual Studio Code app."
+     />
+    </li>
+    <li class="li-5">
+     <div class="name">Word</div>
+     <img class="ico" src="../images/icons/app_word.png" alt="The Word app." />
+    </li>
+    <li class="li-6">
+     <div class="name">Notes</div>
+     <img
+      class="ico"
+      src="../images/icons/app_notes.png"
+      alt="The Notes app."
+     />
+    </li>
+    <li class="li-7">
+     <div class="name">Calendar</div>
+     <img
+      class="ico"
+      src="../images/icons/app_calendar.png"
+      alt="The calendar."
+     />
+    </li>
+    <li class="li-8">
+     <div class="name">Mail</div>
+     <img class="ico" src="../images/icons/app_mail.png" alt="The Mail app." />
+    </li>
+    <li class="li-9">
+     <div class="name">Réglages</div>
+     <img
+      class="ico"
+      src="../images/icons/app_settings.png"
+      alt="The settings."
+     />
+    </li>
+   </ul>
+  </nav>
+  <section id="window">
+   <div id="header">
+    <div class="traffic-lights" id="traffic-lights">
+     <div class="red" id="red"></div>
+     <div class="yellow" id="yellow"></div>
+     <div class="green" id="green"></div>
+    </div>
+    <div class="appname">App's name</div>
+   </div>
+   <p>This is my work</p>
+   <p>Done</p>
+   <p>Clearly</p>
+  </section>
+  <script src="../scripts/date-time.js"></script>
+  <script src="../scripts/dock.js"></script>
+  <script id="resizeable" src="../scripts/resizeable-windows.js"></script>
+  <script id="draggable" src="../scripts/draggable-windows.js"></script>
+  <script>
+   let trafficLights = document.getElementById("traffic-lights");
+   let redButton = document.getElementById("red");
+   let yellowButton = document.getElementById("yellow");
+   let greenButton = document.getElementById("green");
+   let windows = document.getElementById("window");
+   let resizeable = document.getElementById("resizeable");
+   let draggable = document.getElementById("draggable");
+
+   trafficLights.onmouseover = function () {
+    redButton.innerHTML = `<img src="../images/icons/red-button.svg" style="width:9px; height:9px">`;
+    yellowButton.innerHTML = `<img src="../images/icons/yellow-button.svg" style="width:9px; height:9px">`;
+    greenButton.innerHTML = `<img src="../images/icons/green-button.svg" style="width:6px; height:6px">`;
+   };
+
+   trafficLights.onmouseout = function () {
+    redButton.innerHTML = "";
+    yellowButton.innerHTML = "";
+    greenButton.innerHTML = "";
+   };
+
+   redButton.onclick = function () {
+    windows.style.display = "none";
+   };
+
+   yellowButton.onclick = function () {
+    windows.style.transform = "scale(0.7) translateY(50%)";
+    windows.style.opacity = "0";
+   };
+
+   greenButton.onclick = function () {
+    windows.style.width = "100%";
+    windows.style.height = "100%";
+    windows.style.top = "0";
+    windows.style.left = "0";
+    windows.style.transition = "width 0.25s, height 0.25s";
+   };
+  </script>
+ </body>
+</html>
