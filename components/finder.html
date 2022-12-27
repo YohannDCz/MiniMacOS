@@ -11,6 +11,8 @@
 
   <style>
    #window {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     background-color: #f1f1f1;
     border: 1px solid #d3d3d3;
@@ -19,16 +21,14 @@
     width: 700px;
     height: 475px;
     border-radius: 5px;
-    text-align: center;
     overflow: hidden;
     transition: opacity 0.25s, transform 0.5s;
    }
 
    #header {
     display: flex;
+    position: relative;
     align-items: center;
-    justify-content: center;
-    width: 100%;
     height: 25px;
     cursor: default;
     color: #fff;
@@ -37,10 +37,9 @@
    #header .traffic-lights {
     display: flex;
     position: absolute;
-    left: 0;
-    flex-direction: row;
-    justify-content: center;
+    height: auto;
     align-items: center;
+    z-index: 999;
    }
 
    #header .traffic-lights:hover {
@@ -58,6 +57,7 @@
     border: none;
     border-radius: 9999px;
     margin-left: 9px;
+    padding: 0;
    }
 
    #header .traffic-lights .red {
@@ -72,10 +72,16 @@
     background-color: rgb(100, 206, 111);
    }
 
-   #header .appname {
+   #header #movable {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+   }
+   #header #movable .appname{
     font-size: 15px;
     font-weight: 600;
     font-family: "SF Pro", Helvetica;
+    text-align: center;
     color: black;
    }
   </style>
@@ -200,24 +206,27 @@
    </ul>
   </nav>
   <section id="window">
-   <div id="header">
-    <div class="traffic-lights" id="traffic-lights">
-     <div class="red" id="red"></div>
-     <div class="yellow" id="yellow"></div>
-     <div class="green" id="green"></div>
+    <div class="header" id="header">
+      <div class="traffic-lights" id="traffic-lights">
+        <button class="red" id="red"></button>
+        <button class="yellow" id="yellow"></button>
+        <button class="green" id="green"></button>
+      </div>
+      <div id="movable">
+        <div class="appname">App's name</div>
     </div>
-    <div class="appname">App's name</div>
-   </div>
+    </div>
+   
+   <div class="content">
    <p>This is my work</p>
    <p>Done</p>
    <p>Clearly</p>
+   </div>
   </section>
   <script src="../scripts/date-time.js"></script>
   <script src="../scripts/dock.js"></script>
-  <script id="resizeable" src="../scripts/resizeable-windows.js"></script>
-  <script id="draggable" src="../scripts/draggable-windows.js"></script>
   <script>
-   let trafficLights = document.getElementById("traffic-lights");
+    let trafficLights = document.getElementById("traffic-lights");
    let redButton = document.getElementById("red");
    let yellowButton = document.getElementById("yellow");
    let greenButton = document.getElementById("green");
@@ -225,13 +234,13 @@
    let resizeable = document.getElementById("resizeable");
    let draggable = document.getElementById("draggable");
 
-   trafficLights.onmouseover = function () {
+   trafficLights.onmouseenter = function () {
     redButton.innerHTML = `<img src="../images/icons/red-button.svg" style="width:9px; height:9px">`;
     yellowButton.innerHTML = `<img src="../images/icons/yellow-button.svg" style="width:9px; height:9px">`;
     greenButton.innerHTML = `<img src="../images/icons/green-button.svg" style="width:6px; height:6px">`;
    };
 
-   trafficLights.onmouseout = function () {
+   trafficLights.onmouseleave = function () {
     redButton.innerHTML = "";
     yellowButton.innerHTML = "";
     greenButton.innerHTML = "";
@@ -246,13 +255,30 @@
     windows.style.opacity = "0";
    };
 
+   
    greenButton.onclick = function () {
-    windows.style.width = "100%";
-    windows.style.height = "100%";
-    windows.style.top = "0";
-    windows.style.left = "0";
-    windows.style.transition = "width 0.25s, height 0.25s";
+    let heightPercentage = Math.round((windows.clientHeight / window.innerHeight) * 100);
+    let widthPercentage = Math.round((windows.clientWidth /window.innerWidth) * 100);
+    if (heightPercentage < 100 && widthPercentage < 100) {
+      windows.style.width = "100%";
+      windows.style.height = "100%";
+      windows.style.top = "0";
+      windows.style.left = "0";
+      windows.style.transition = "width 0.25s, height 0.25s, top 0.25s, left 0.25s";
+      // yellowButton.style.backgroundColor = "rgb(225, 220, 214)";
+      // yellowButton.disabled = true;
+    } else {
+      windows.style.width = "700px";
+      windows.style.height = "450px";
+      windows.style.top = "200px";
+      windows.style.left = "200px";
+      windows.style.transition = "width 0.25s, height 0.25s, top 0.25s, left 0.25s";
+      // yellowButton.style.backgroundColor = "rgb(240, 190, 68)";
+      // yellowButton.disabled = false;
+    }
    };
   </script>
+  <script id="resizeable" src="../scripts/resizeable-windows.js"></script>
+  <script id="draggable" src="../scripts/draggable-windows.js"></script>
  </body>
 </html>
