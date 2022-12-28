@@ -7,84 +7,9 @@
 
   <link rel="stylesheet" href="../styles/header.css" />
   <link rel="stylesheet" href="../styles/generalanddock.css" />
+  <link rel="stylesheet" href="../styles/window.css">
   <title>Yohann's Portfolio</title>
 
-  <style>
-   #window {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #f1f1f1;
-    border: 1px solid #d3d3d3;
-    left: 40px;
-    top: 40px;
-    width: 700px;
-    height: 475px;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: opacity 0.25s, transform 0.5s;
-   }
-
-   #header {
-    display: flex;
-    position: relative;
-    align-items: center;
-    height: 25px;
-    cursor: default;
-    color: #fff;
-   }
-
-   #header .traffic-lights {
-    display: flex;
-    position: absolute;
-    height: auto;
-    align-items: center;
-    z-index: 999;
-   }
-
-   #header .traffic-lights:hover {
-    cursor: default;
-   }
-
-   #header .traffic-lights .red,
-   #header .traffic-lights .yellow,
-   #header .traffic-lights .green {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 12px;
-    height: 12px;
-    border: none;
-    border-radius: 9999px;
-    margin-left: 9px;
-    padding: 0;
-   }
-
-   #header .traffic-lights .red {
-    background-color: rgb(235, 90, 80);
-   }
-
-   #header .traffic-lights .yellow {
-    background-color: rgb(240, 190, 68);
-   }
-
-   #header .traffic-lights .green {
-    background-color: rgb(100, 206, 111);
-   }
-
-   #header #movable {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-   }
-   #header #movable .appname{
-    font-size: 15px;
-    font-weight: 600;
-    font-family: "SF Pro", Helvetica;
-    text-align: center;
-    color: black;
-   }
-  </style>
  </head>
  <body>
   <header>
