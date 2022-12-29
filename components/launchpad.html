@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../styles/launchpad.css">
+  <title>Yohann's Portfolio</title>
+
+</head>
+<body>
+  <div class="input">
+    <img id="input-image" src="../images/icons/icon_search.svg" alt="">
+    <input id="input" type="text" placeholder="Rechercher" autocomplete="off">
+  </div>
+  <main class="panel">
+    <div class="app">
+      <img src="../images/icons/app_safari.png" alt="">
+      <p>Safari</p>
+    </div>
+    <div class="app">
+      <img src="../images/icons/app_vstudio.png" alt="">
+      <p>VS Code</p>
+    </div>
+    <div class="app">
+      <img src="../images/icons/app_notes.png" alt="">
+      <p>Notes</p>
+    </div>
+    <div class="app">
+      <img src="../images/icons/app_calendar.png" alt="">
+      <p>Calendrier</p>
+    </div>
+    <div class="app">
+      <img src="../images/icons/app_photoshop.png" alt="">
+      <p>Photoshop</p>
+    </div>
+    <div class="app">
+      <img src="../images/icons/app_facetime.png" alt="">
+      <p>Facetime</p>
+    </div>
+    <div class="app">
+      <img src="../images/icons/app_calculator.png" alt="">
+      <p>Calculatrice</p>
+    </div>
+    <div class="app">
+      <img src="../images/icons/app_terminal.png" alt="">
+      <p>Terminal</p>
+    </div>
+    <div class="app">
+      <img src="../images/icons/app_word.png" alt="">
+      <p>Word</p>
+    </div>
+    <div class="app">
+      <img src="../images/icons/app_mail.png" alt="">
+      <p>Mail</p>
+    </div>
+    <div class="app">
+      <img src="../images/icons/app_settings.png" alt="">
+      <p>Paramètres</p>
+    </div>
+  </main>
+  <script>
+    let input = document.getElementById('input')
+    let img = document.getElementById('input-image')
+    
+    input.onfocus = function() {
+      img.style.left = "8px";
+      input.style.left = "32px";
+    }
+  </script>
+</body>
+</html>
