@@ -1,15 +1,17 @@
 element = document.getElementById("window");
 
-let heightPercentage = Math.round(
- (element.clientHeight / window.innerHeight) * 100
-);
-let widthPercentage = Math.round(
- (element.clientWidth / window.innerWidth) * 100
-);
+makeResizable(element, 400, 225, 10);
 
-if (heightPercentage < 100 && widthPercentage < 100) {
-  makeResizable(element, 400, 225, 10);
-}
+// let heightPercentage = Math.round(
+//  (element.clientHeight / window.innerHeight) * 100
+// );
+// let widthPercentage = Math.round(
+//  (element.clientWidth / window.innerWidth) * 100
+// );
+
+// if (heightPercentage < 100 && widthPercentage < 100) {
+//   makeResizable(element, 400, 225, 10);
+// }
  
 
 

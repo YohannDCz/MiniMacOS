@@ -9,9 +9,9 @@ html, body {
   display: flex;
   height: 100%;
   width: 100%;
-  background-image: url("../images/wallpaper.png");
   background-repeat: no-repeat;
   justify-content: center;
+
 }
 
 .input {
@@ -73,8 +73,9 @@ main {
   right: 0;
   padding: 64px 110px;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
   z-index: 0;
+  transform: scale(1.2);
+  animation: overlayfx 0.2s linear 0s 1 forwards;
 }
 
 main .app {
@@ -94,4 +95,9 @@ main .app p {
   font-size: 13px;
   color: white;
   text-shadow: 0 0 5px black;
+}
+
+@keyframes overlayfx {
+   0% { transform: scale(1.2); opacity: 0; backdrop-filter: blur(0px); }
+   100%   { transform: scale(1); opacity: 1;  z-index: 1; backdrop-filter: blur(20px); }
 }

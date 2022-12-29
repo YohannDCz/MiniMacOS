@@ -3,8 +3,6 @@ let redButton = document.getElementById("red");
 let yellowButton = document.getElementById("yellow");
 let greenButton = document.getElementById("green");
 let windows = document.getElementById("window");
-let resizeable = document.getElementById("resizeable");
-let draggable = document.getElementById("draggable");
 
 trafficLights.onmouseenter = function () {
  redButton.innerHTML = `<img src="../images/icons/red-button.svg" style="width:9px; height:9px">`;
@@ -39,16 +37,12 @@ greenButton.onclick = function () {
   windows.style.height = "100%";
   windows.style.top = "0";
   windows.style.left = "0";
-  windows.style.transition = "width 0.25s, height 0.25s, top 0.25s, left 0.25s";
-  // yellowButton.style.backgroundColor = "rgb(225, 220, 214)";
-  // yellowButton.disabled = true;
- } else {
+  windows.style.transition = "top 0.25s, left 0.25s"
+ } else if (heightPercentage === 100 && widthPercentage === 100) {
   windows.style.width = "700px";
   windows.style.height = "450px";
   windows.style.top = "200px";
   windows.style.left = "200px";
-  windows.style.transition = "width 0.25s, height 0.25s, top 0.25s, left 0.25s";
-  // yellowButton.style.backgroundColor = "rgb(240, 190, 68)";
-  // yellowButton.disabled = false;
+  windows.style.transition = "";
  }
 };

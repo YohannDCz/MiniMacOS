@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="../styles/generalanddock.css" />
   <link rel="stylesheet" href="../styles/window.css">
   <title>Yohann's Portfolio</title>
-
+  <script src="../scripts/resizeable-windows.js" defer async></script>
+  <script src="../scripts/draggable-windows.js" defer async></script>
  </head>
  <body>
   <header>
@@ -76,16 +77,16 @@
     </li>
     <li class="li-2">
      <div class="name">LaunchPad</div>
-     <img
-      class="ico"
-      src="../images/icons/launchpad.png"
-      alt="The Launchpad."
-     />
+      <img
+        class="ico" id="launchpad"
+        src="../images/icons/launchpad.png"
+        alt="The Launchpad."
+      />
     </li>
     <li class="li-3">
      <div class="name">Safari</div>
      <img
-      class="ico"
+      class="ico" id="safariApp"
       src="../images/icons/app_safari.png"
       alt="The Safari browser."
      />
@@ -93,19 +94,19 @@
     <li class="li-4">
      <div class="name">Visual Studio Code</div>
      <img
-      class="ico"
+      class="ico" id="vscodeApp"
       src="../images/icons/app_vstudio.png"
       alt="The Visual Studio Code app."
      />
     </li>
     <li class="li-5">
      <div class="name">Word</div>
-     <img class="ico" src="../images/icons/app_word.png" alt="The Word app." />
+     <img class="ico" id="wordApp" src="../images/icons/app_word.png" alt="The Word app." />
     </li>
     <li class="li-6">
      <div class="name">Notes</div>
      <img
-      class="ico"
+      class="ico" id="notesApp"
       src="../images/icons/app_notes.png"
       alt="The Notes app."
      />
@@ -113,19 +114,19 @@
     <li class="li-7">
      <div class="name">Calendar</div>
      <img
-      class="ico"
+      class="ico" id="calendarApp"
       src="../images/icons/app_calendar.png"
       alt="The calendar."
      />
     </li>
     <li class="li-8">
      <div class="name">Mail</div>
-     <img class="ico" src="../images/icons/app_mail.png" alt="The Mail app." />
+     <img class="ico" id="mailApp" src="../images/icons/app_mail.png" alt="The Mail app." />
     </li>
     <li class="li-9">
      <div class="name">Réglages</div>
      <img
-      class="ico"
+      class="ico" id="settings"
       src="../images/icons/app_settings.png"
       alt="The settings."
      />
@@ -140,19 +141,39 @@
         <button class="green" id="green"></button>
       </div>
       <div id="movable">
-        <div class="appname">App's name</div>
+        <div class="appname">Finder</div>
       </div>
     </div>
-
-   <p>This is my work</p>
-   <p>Done</p>
-   <p>Clearly</p>
-   </div>
+    <iframe src="./finder-window.html" width= "100%" height="100%" style="border:none;"></iframe>
   </section>
   <script src="../scripts/date-time.js"></script>
   <script src="../scripts/dock.js"></script>
   <script src="../scripts/traffic-lights.js"></script>
-  <script id="resizeable" src="../scripts/resizeable-windows.js"></script>
-  <script id="draggable" src="../scripts/draggable-windows.js"></script>
+  <script>
+    const launchpad = document.getElementById('launchpad');
+
+    launchpad.onclick = function () {
+      const iframe = document.createElement('iframe');
+      const link = "./launchpad.html";
+
+      iframe.frameBorder = 0;
+      iframe.width = "100%";
+      iframe.height = "100%";
+      iframe.id = "iframe-launchpad";
+      iframe.setAttribute("src", link);
+      iframe.style.zIndex = 0;
+
+      document.body.appendChild(iframe);
+    }
+
+    const safari = document.getElementById('safariApp');
+    const vscode = document.getElementById('vscodeApp');
+    const word = document.getElementById('wordApp');
+    const notes = document.getElementById('notesApp');
+    const calendar = document.getElementById('calendarApp');
+    const mail = document.getElementById('mailApp');
+    const settings = document.getElementById('settings')
+    
+  </script>
  </body>
 </html>
