@@ -187,11 +187,21 @@
     padding: 0 16px;
    }
 
+   main .section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    background-color: white;
+   }
    main section .folder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 0;
    }
 
    main section .folder.active img {
@@ -382,7 +392,8 @@
      <img src="" alt="" class="search" />
     </div>
    </header>
-   <section id="section" onscroll="scrolling()">
+   <section onscroll="scrolling()">
+    <div class="section" id="section"></div>
     <div class="folder">
      <img src="../images/icons/finder/folder.png" alt="" />
      <p>Applications</p>
@@ -443,15 +454,12 @@
       folders[j++].className = "folder";
      }
      folders[i].className = "folder active";
+     section.onclick = function() {
+      folders[i].className = "folder"
+     }
     };
    }
-
-   // section.onclick = function() {
-   // 		let j = 0;
-   // 		while(j < folders.length) {
-   // 			folders[j++].className = 'folder';
-   // 		}
-   // 	}
+   
 
    function scrolling() {
     let section = document.getElementById("section");
