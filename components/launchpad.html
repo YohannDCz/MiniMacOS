@@ -10,64 +10,78 @@
 
 </head>
 <body>
-  <div class="input">
-    <img id="input-image" src="../images/icons/icon_search.svg" alt="">
-    <input id="input" type="text" placeholder="Rechercher" autocomplete="off">
+  <div class="container" id="container">
+    <div class="exit" id="exit"></div>
+    <div class="input">
+      <img id="input-image" src="../images/icons/icon_search.svg" alt="">
+      <input id="input" type="text" placeholder="Rechercher" autocomplete="off">
+    </div>
+    <main class="panel">
+      <div class="app">
+        <img src="../images/icons/app_safari.png" alt="">
+        <p>Safari</p>
+      </div>
+      <div class="app">
+        <img src="../images/icons/app_vstudio.png" alt="">
+        <p>VS Code</p>
+      </div>
+      <div class="app">
+        <img src="../images/icons/app_notes.png" alt="">
+        <p>Notes</p>
+      </div>
+      <div class="app">
+        <img src="../images/icons/app_calendar.png" alt="">
+        <p>Calendrier</p>
+      </div>
+      <div class="app">
+        <img src="../images/icons/app_photoshop.png" alt="">
+        <p>Photoshop</p>
+      </div>
+      <div class="app">
+        <img src="../images/icons/app_facetime.png" alt="">
+        <p>Facetime</p>
+      </div>
+      <div class="app">
+        <img src="../images/icons/app_calculator.png" alt="">
+        <p>Calculatrice</p>
+      </div>
+      <div class="app">
+        <img src="../images/icons/app_terminal.png" alt="">
+        <p>Terminal</p>
+      </div>
+      <div class="app">
+        <img src="../images/icons/app_word.png" alt="">
+        <p>Word</p>
+      </div>
+      <div class="app">
+        <img src="../images/icons/app_mail.png" alt="">
+        <p>Mail</p>
+      </div>
+      <div class="app">
+        <img src="../images/icons/app_settings.png" alt="">
+        <p>Paramètres</p>
+      </div>
+    </main>
   </div>
-  <main class="panel">
-    <div class="app">
-      <img src="../images/icons/app_safari.png" alt="">
-      <p>Safari</p>
-    </div>
-    <div class="app">
-      <img src="../images/icons/app_vstudio.png" alt="">
-      <p>VS Code</p>
-    </div>
-    <div class="app">
-      <img src="../images/icons/app_notes.png" alt="">
-      <p>Notes</p>
-    </div>
-    <div class="app">
-      <img src="../images/icons/app_calendar.png" alt="">
-      <p>Calendrier</p>
-    </div>
-    <div class="app">
-      <img src="../images/icons/app_photoshop.png" alt="">
-      <p>Photoshop</p>
-    </div>
-    <div class="app">
-      <img src="../images/icons/app_facetime.png" alt="">
-      <p>Facetime</p>
-    </div>
-    <div class="app">
-      <img src="../images/icons/app_calculator.png" alt="">
-      <p>Calculatrice</p>
-    </div>
-    <div class="app">
-      <img src="../images/icons/app_terminal.png" alt="">
-      <p>Terminal</p>
-    </div>
-    <div class="app">
-      <img src="../images/icons/app_word.png" alt="">
-      <p>Word</p>
-    </div>
-    <div class="app">
-      <img src="../images/icons/app_mail.png" alt="">
-      <p>Mail</p>
-    </div>
-    <div class="app">
-      <img src="../images/icons/app_settings.png" alt="">
-      <p>Paramètres</p>
-    </div>
-  </main>
   <script>
-    let input = document.getElementById('input')
-    let img = document.getElementById('input-image')
+    let input = document.getElementById('input');
+    let img = document.getElementById('input-image');
     
     input.onfocus = function() {
       img.style.left = "8px";
       input.style.left = "32px";
     }
+
+    // let background = document.getElementById('exit');
+    // let container = document.getElementById('container');
+    
+    // background.onclick = function() {
+    //   if (container.className === "container fadeout") {
+    //   container.className = "container fadein";
+    //   } else {
+    //     container.className = "container fadeout"
+    //   }
+    // }
   </script>
 </body>
 </html>

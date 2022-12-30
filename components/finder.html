@@ -11,6 +11,7 @@
   <title>Yohann's Portfolio</title>
   <script src="../scripts/resizeable-windows.js" defer async></script>
   <script src="../scripts/draggable-windows.js" defer async></script>
+
  </head>
  <body>
   <header>
@@ -71,9 +72,7 @@
    <ul class="dock-container">
     <li class="li-1">
      <div class="name">Finder</div>
-     <a href="../components/finder-window.html">
-     <img class="ico" src="../images/icons/app_finder.png" alt="The Finder." />
-    </a>
+     <img class="ico" id="finder" src="../images/icons/app_finder.png" alt="The Finder." />
     </li>
     <li class="li-2">
      <div class="name">LaunchPad</div>
@@ -146,25 +145,48 @@
     </div>
     <iframe src="./finder-window.html" width= "100%" height="100%" style="border:none;"></iframe>
   </section>
+  <iframe class="iframe" id="iframe" src="./launchpad.html" width= "100%" height="100%" style="border:none; visibility:hidden; transform:scale(1.2); backdrop-filter: blur(0px); opacity:0;"></iframe>
+
   <script src="../scripts/date-time.js"></script>
   <script src="../scripts/dock.js"></script>
   <script src="../scripts/traffic-lights.js"></script>
   <script>
+    const finder = document.getElementById('finder')
     const launchpad = document.getElementById('launchpad');
-
+    const iframe = document.getElementById('iframe');
+    // background.style.display = "none";
+    
     launchpad.onclick = function () {
-      const iframe = document.createElement('iframe');
-      const link = "./launchpad.html";
-
-      iframe.frameBorder = 0;
-      iframe.width = "100%";
-      iframe.height = "100%";
-      iframe.id = "iframe-launchpad";
-      iframe.setAttribute("src", link);
-      iframe.style.zIndex = 0;
-
-      document.body.appendChild(iframe);
+      if (iframe.style.visibility === "hidden") {
+        iframe.style.zIndex = 0;
+        iframe.style.transform = "scale(1)";
+        iframe.style.backdropFilter = "blur(20px)";
+        iframe.style.opacity = 1;
+        iframe.style.visibility = "visible";
+        iframe.style.transition = "all 0.2s";
+      } else if (iframe.style.visibility === "visible") {
+        iframe.style.zIndex = 999;
+        iframe.style.transform = "scale(1.2)";
+        iframe.style.backdropFilter = "blur(0px)";
+        iframe.style.opacity = 0;
+        iframe.style.visibility = "hidden";
+        iframe.style.transition = "all 0.2s";
+      }
     }
+
+    const iWindow = iframe.contentWindow;
+    const iDocument = iWindow.document;
+    const background = iDocument.getElementById('exit');
+    
+    background.onclick = function () {
+      iframe.style.zIndex = 999;
+      iframe.style.transform = "scale(1.2)";
+      iframe.style.backdropFilter = "blur(0px)";
+      iframe.style.opacity = 0;
+      iframe.style.visibility = "hidden";
+      iframe.style.transition = "all 0.2s";
+    }
+
 
     const safari = document.getElementById('safariApp');
     const vscode = document.getElementById('vscodeApp');
@@ -173,7 +195,7 @@
     const calendar = document.getElementById('calendarApp');
     const mail = document.getElementById('mailApp');
     const settings = document.getElementById('settings')
-    
+
   </script>
  </body>
 </html>
