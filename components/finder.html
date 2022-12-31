@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="../styles/generalanddock.css" />
   <link rel="stylesheet" href="../styles/window.css">
   <title>Yohann's Portfolio</title>
-  <script src="../scripts/resizeable-windows.js" defer async></script>
-  <script src="../scripts/draggable-windows.js" defer async></script>
 
  </head>
  <body>
@@ -20,7 +18,7 @@
      <img src="../images/icons/icon_mac.svg" alt="" />
     </div>
     <div>
-     <p class="Finder">Finder</p>
+     <p class="appName">Finder</p>
     </div>
     <div>
      <p>Fichier</p>
@@ -130,72 +128,113 @@
       alt="The settings."
      />
     </li>
-   </ul>
-  </nav>
-  <section id="window">
-    <div class="header" id="header">
-      <div class="traffic-lights" id="traffic-lights">
-        <button class="red" id="red"></button>
-        <button class="yellow" id="yellow"></button>
-        <button class="green" id="green"></button>
-      </div>
-      <div id="movable">
-        <div class="appname">Finder</div>
-      </div>
-    </div>
-    <iframe src="./finder-window.html" width= "100%" height="100%" style="border:none;"></iframe>
-  </section>
-  <iframe class="iframe" id="iframe" src="./launchpad.html" width= "100%" height="100%" style="border:none; visibility:hidden; transform:scale(1.2); backdrop-filter: blur(0px); opacity:0;"></iframe>
+  </ul>
+</nav>
 
-  <script src="../scripts/date-time.js"></script>
-  <script src="../scripts/dock.js"></script>
-  <script src="../scripts/traffic-lights.js"></script>
-  <script>
-    const finder = document.getElementById('finder')
-    const launchpad = document.getElementById('launchpad');
-    const iframe = document.getElementById('iframe');
-    // background.style.display = "none";
+<iframe class="iframe" id="iframeLaunchpad" src="./launchpad.html" width= "100%" height="100%" style="border:none; visibility:hidden; transform:scale(1.2); backdrop-filter: blur(0px); opacity:0;"></iframe>
+
+<script src="../scripts/date-time.js"></script>
+<script src="../scripts/dock.js"></script>
+<script src="../scripts/traffic-lights.js"></script>
+<script src="../scripts/resizeable-windows.js"></script>
+<script src="../scripts/draggable-windows.js"></script>
+<script>
+  const finder = document.getElementById('finder');
+  finder.addEventListener("click", function() {addWindow("./finder-window.html", "Finder")});
+
+  const safari = document.getElementById('safariApp');
+  safari.addEventListener("click", function() {addWindow("./apps/safari.html", "Safari")});
+
+  const vscode = document.getElementById('vscodeApp');
+  vscode.addEventListener("click", function() {addWindow("https://vscode.dev/", "Visual Studio Code")});
+
+  const word = document.getElementById('wordApp');
+  word.addEventListener("click", function() {addWindow("./word.html", "Word")});
+
+  const notes = document.getElementById('notesApp');
+  notes.addEventListener("click", function() {addWindow("./apps/notes.html", "Notes")});
+
+  const calendar = document.getElementById('calendarApp');
+  calendar.addEventListener("click", function() {addWindow("./apps/calendar.html", "Calendrier")});
+
+  const mail = document.getElementById('mailApp');
+  mail.addEventListener("click", function() {addWindow("./apps/mail.html", "Mail")});
+
+  const settings = document.getElementById('settings');
+  settings.addEventListener("click", function() {addWindow("./apps/settings.html", "Réglages Système")});
+  
+  function addWindow(location, name) {
+    if (document.querySelector(`.${name}`) == null) {
+      const windows = document.createElement('section');
+      windows.id = "window";
+      windows.className = name + "window";
+      let randomX = Math.ceil(Math.random() * 2);
+      let randomY = Math.ceil(Math.random() * 2);
+      windows.style.position = "absolute";
+      if (randomX == 1) {
+        windows.style.left = "200px";
+      } else if (randomX == 2) {
+        windows.style.left = "600px";
+      }
+      if (randomY == 1) {
+        windows.style.top = "50px";
+      } else if (randomY == 2) {
+        windows.style.top = "200px";
+      }
+      windows.innerHTML = `
+                        <div class="header" id="header">
+                          <div class="traffic-lights" id="traffic-lights">
+                            <button class="red" id="red"></button>
+                            <button class="yellow" id="yellow"></button>
+                            <button class="green" id="green"></button>
+                          </div>
+                          <div class="movable" id="movable">
+                            <div class="appname">${name}</div>
+                          </div>
+                        </div>
+                        <iframe src=${location} width= "100%" height="100%" style="border:none;"></iframe>`
+      document.body.appendChild(windows);
+      trafficLight();
+      resizeableWindows();
+      draggableWindows();
+    } else {
+      const windows = document.querySelector(`.${name}`);
+      windows.style.transform = "scale(1)";
+      windows.style.opacity = "1";
+      windows.style.transition = "0.2s";
+    }
+    }
     
+    
+    const iframeLaunchpad = document.getElementById('iframeLaunchpad');
+    const launchpad = document.getElementById('launchpad');
     launchpad.onclick = function () {
-      if (iframe.style.visibility === "hidden") {
-        iframe.style.zIndex = 0;
-        iframe.style.transform = "scale(1)";
-        iframe.style.backdropFilter = "blur(20px)";
-        iframe.style.opacity = 1;
-        iframe.style.visibility = "visible";
-        iframe.style.transition = "all 0.2s";
-      } else if (iframe.style.visibility === "visible") {
-        iframe.style.zIndex = 999;
-        iframe.style.transform = "scale(1.2)";
-        iframe.style.backdropFilter = "blur(0px)";
-        iframe.style.opacity = 0;
-        iframe.style.visibility = "hidden";
-        iframe.style.transition = "all 0.2s";
+      if (iframeLaunchpad.style.visibility === "hidden") {
+        iframeLaunchpad.style.zIndex = 0;
+        iframeLaunchpad.style.transform = "scale(1)";
+        iframeLaunchpad.style.backdropFilter = "blur(20px)";
+        iframeLaunchpad.style.opacity = 1;
+        iframeLaunchpad.style.visibility = "visible";
+        iframeLaunchpad.style.transition = "all 0.2s";
+      } else if (iframeLaunchpad.style.visibility === "visible") {
+        iframeLaunchpad.style.zIndex = 999;
+        iframeLaunchpad.style.transform = "scale(1.2)";
+        iframeLaunchpad.style.backdropFilter = "blur(0px)";
+        iframeLaunchpad.style.opacity = 0;
+        iframeLaunchpad.style.visibility = "hidden";
+        iframeLaunchpad.style.transition = "all 0.2s";
       }
     }
 
-    const iWindow = iframe.contentWindow;
-    const iDocument = iWindow.document;
-    const background = iDocument.getElementById('exit');
-    
+    const background = iframeLaunchpad.contentWindow.document.getElementById('exit');
     background.onclick = function () {
-      iframe.style.zIndex = 999;
-      iframe.style.transform = "scale(1.2)";
-      iframe.style.backdropFilter = "blur(0px)";
-      iframe.style.opacity = 0;
-      iframe.style.visibility = "hidden";
-      iframe.style.transition = "all 0.2s";
+      iframeLaunchpad.style.zIndex = 999;
+      iframeLaunchpad.style.transform = "scale(1.2)";
+      iframeLaunchpad.style.backdropFilter = "blur(0px)";
+      iframeLaunchpad.style.opacity = 0;
+      iframeLaunchpad.style.visibility = "hidden";
+      iframeLaunchpad.style.transition = "all 0.2s";
     }
-
-
-    const safari = document.getElementById('safariApp');
-    const vscode = document.getElementById('vscodeApp');
-    const word = document.getElementById('wordApp');
-    const notes = document.getElementById('notesApp');
-    const calendar = document.getElementById('calendarApp');
-    const mail = document.getElementById('mailApp');
-    const settings = document.getElementById('settings')
-
   </script>
  </body>
 </html>

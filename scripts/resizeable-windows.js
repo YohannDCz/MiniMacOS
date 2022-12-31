@@ -1,22 +1,20 @@
-element = document.getElementById("window");
+function resizeableWindows() {
+ element = document.getElementById("window");
 
-makeResizable(element, 400, 225, 10);
+ makeResizable(element, 400, 225, 10);
 
-// let heightPercentage = Math.round(
-//  (element.clientHeight / window.innerHeight) * 100
-// );
-// let widthPercentage = Math.round(
-//  (element.clientWidth / window.innerWidth) * 100
-// );
+ // let heightPercentage = Math.round(
+ //  (element.clientHeight / window.innerHeight) * 100
+ // );
+ // let widthPercentage = Math.round(
+ //  (element.clientWidth / window.innerWidth) * 100
+ // );
 
-// if (heightPercentage < 100 && widthPercentage < 100) {
-//   makeResizable(element, 400, 225, 10);
-// }
- 
+ // if (heightPercentage < 100 && widthPercentage < 100) {
+ //   makeResizable(element, 400, 225, 10);
+ // }
 
-
-
-function makeResizable(element, minW = 100, minH = 100, size = 20) {
+ function makeResizable(element, minW = 100, minH = 100, size = 20) {
   const top = document.createElement("div");
   top.style.width = "100%";
   top.style.height = size + "px";
@@ -126,131 +124,132 @@ function makeResizable(element, minW = 100, minH = 100, size = 20) {
   element.appendChild(corner4);
 
   function get_int_style(key) {
-    return parseInt(window.getComputedStyle(element).getPropertyValue(key));
+   return parseInt(window.getComputedStyle(element).getPropertyValue(key));
   }
 
   function resizeXPositive() {
-    let offsetX;
-    function dragMouseDown(e) {
-      if (e.button !== 0) return;
-      e = e || window.event;
-      e.preventDefault();
-      const { clientX } = e;
-      offsetX = clientX - element.offsetLeft - get_int_style("width");
-      document.addEventListener("mouseup", closeDragElement);
-      document.addEventListener("mousemove", elementDrag);
-    }
+   let offsetX;
+   function dragMouseDown(e) {
+    if (e.button !== 0) return;
+    e = e || window.event;
+    e.preventDefault();
+    const { clientX } = e;
+    offsetX = clientX - element.offsetLeft - get_int_style("width");
+    document.addEventListener("mouseup", closeDragElement);
+    document.addEventListener("mousemove", elementDrag);
+   }
 
-    function elementDrag(e) {
-      const { clientX } = e;
-      let x = clientX - element.offsetLeft - offsetX;
-      if (x < minW) x = minW;
-      element.style.width = x + "px";
-    }
+   function elementDrag(e) {
+    const { clientX } = e;
+    let x = clientX - element.offsetLeft - offsetX;
+    if (x < minW) x = minW;
+    element.style.width = x + "px";
+   }
 
-    function closeDragElement() {
-      document.removeEventListener("mouseup", closeDragElement);
-      document.removeEventListener("mousemove", elementDrag);
-    }
-    return dragMouseDown;
+   function closeDragElement() {
+    document.removeEventListener("mouseup", closeDragElement);
+    document.removeEventListener("mousemove", elementDrag);
+   }
+   return dragMouseDown;
   }
 
   function resizeYPositive() {
-    let offsetY;
-    function dragMouseDown(e) {
-      if (e.button !== 0) return;
-      e = e || window.event;
-      e.preventDefault();
-      const { clientY } = e;
-      offsetY = clientY - element.offsetTop - get_int_style("height");
+   let offsetY;
+   function dragMouseDown(e) {
+    if (e.button !== 0) return;
+    e = e || window.event;
+    e.preventDefault();
+    const { clientY } = e;
+    offsetY = clientY - element.offsetTop - get_int_style("height");
 
-      document.addEventListener("mouseup", closeDragElement);
-      document.addEventListener("mousemove", elementDrag);
-    }
+    document.addEventListener("mouseup", closeDragElement);
+    document.addEventListener("mousemove", elementDrag);
+   }
 
-    function elementDrag(e) {
-      const { clientY } = e;
-      let y = clientY - element.offsetTop - offsetY;
-      if (y < minH) y = minH;
-      element.style.height = y + "px";
-    }
+   function elementDrag(e) {
+    const { clientY } = e;
+    let y = clientY - element.offsetTop - offsetY;
+    if (y < minH) y = minH;
+    element.style.height = y + "px";
+   }
 
-    function closeDragElement() {
-      document.removeEventListener("mouseup", closeDragElement);
-      document.removeEventListener("mousemove", elementDrag);
-    }
-    return dragMouseDown;
+   function closeDragElement() {
+    document.removeEventListener("mouseup", closeDragElement);
+    document.removeEventListener("mousemove", elementDrag);
+   }
+   return dragMouseDown;
   }
 
   function resizeXNegative() {
-    let offsetX;
-    let startX;
-    let startW;
-    let maxX;
-    function dragMouseDown(e) {
-      if (e.button !== 0) return;
-      e = e || window.event;
-      e.preventDefault();
-      const { clientX } = e;
-      startX = get_int_style("left");
-      startW = get_int_style("width");
-      offsetX = clientX - startX;
-      maxX = startX + startW - minW;
+   let offsetX;
+   let startX;
+   let startW;
+   let maxX;
+   function dragMouseDown(e) {
+    if (e.button !== 0) return;
+    e = e || window.event;
+    e.preventDefault();
+    const { clientX } = e;
+    startX = get_int_style("left");
+    startW = get_int_style("width");
+    offsetX = clientX - startX;
+    maxX = startX + startW - minW;
 
-      document.addEventListener("mouseup", closeDragElement);
-      document.addEventListener("mousemove", elementDrag);
-    }
+    document.addEventListener("mouseup", closeDragElement);
+    document.addEventListener("mousemove", elementDrag);
+   }
 
-    function elementDrag(e) {
-      const { clientX } = e;
-      let x = clientX - offsetX;
-      let w = startW + startX - x;
-      if (w < minW) w = minW;
-      if (x > maxX) x = maxX;
-      element.style.left = x + "px";
-      element.style.width = w + "px";
-    }
+   function elementDrag(e) {
+    const { clientX } = e;
+    let x = clientX - offsetX;
+    let w = startW + startX - x;
+    if (w < minW) w = minW;
+    if (x > maxX) x = maxX;
+    element.style.left = x + "px";
+    element.style.width = w + "px";
+   }
 
-    function closeDragElement() {
-      document.removeEventListener("mouseup", closeDragElement);
-      document.removeEventListener("mousemove", elementDrag);
-    }
-    return dragMouseDown;
+   function closeDragElement() {
+    document.removeEventListener("mouseup", closeDragElement);
+    document.removeEventListener("mousemove", elementDrag);
+   }
+   return dragMouseDown;
   }
 
   function resizeYNegative() {
-    let offsetY;
-    let startY;
-    let startH;
-    let maxY;
-    function dragMouseDown(e) {
-      if (e.button !== 0) return;
-      e = e || window.event;
-      e.preventDefault();
-      const { clientY } = e;
-      startY = get_int_style("top");
-      startH = get_int_style("height");
-      offsetY = clientY - startY;
-      maxY = startY + startH - minH;
+   let offsetY;
+   let startY;
+   let startH;
+   let maxY;
+   function dragMouseDown(e) {
+    if (e.button !== 0) return;
+    e = e || window.event;
+    e.preventDefault();
+    const { clientY } = e;
+    startY = get_int_style("top");
+    startH = get_int_style("height");
+    offsetY = clientY - startY;
+    maxY = startY + startH - minH;
 
-      document.addEventListener("mouseup", closeDragElement, false);
-      document.addEventListener("mousemove", elementDrag, false);
-    }
+    document.addEventListener("mouseup", closeDragElement, false);
+    document.addEventListener("mousemove", elementDrag, false);
+   }
 
-    function elementDrag(e) {
-      const { clientY } = e;
-      let y = clientY - offsetY;
-      let h = startH + startY - y;
-      if (h < minH) h = minH;
-      if (y > maxY) y = maxY;
-      element.style.top = y + "px";
-      element.style.height = h + "px";
-    }
+   function elementDrag(e) {
+    const { clientY } = e;
+    let y = clientY - offsetY;
+    let h = startH + startY - y;
+    if (h < minH) h = minH;
+    if (y > maxY) y = maxY;
+    element.style.top = y + "px";
+    element.style.height = h + "px";
+   }
 
-    function closeDragElement() {
-      document.removeEventListener("mouseup", closeDragElement);
-      document.removeEventListener("mousemove", elementDrag);
-    }
-    return dragMouseDown;
+   function closeDragElement() {
+    document.removeEventListener("mouseup", closeDragElement);
+    document.removeEventListener("mousemove", elementDrag);
+   }
+   return dragMouseDown;
   }
+ }
 }
