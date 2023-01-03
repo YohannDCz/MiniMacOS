@@ -1,9 +1,9 @@
-function trafficLights() {
- let trafficLights = document.getElementById("traffic-lights");
- let redButton = document.getElementById("red");
- let yellowButton = document.getElementById("yellow");
- let greenButton = document.getElementById("green");
- let windows = document.getElementById("window");
+function trafficLights(trafficLightsId, redId, yellowId, greenId, windowId) {
+ let trafficLights = document.getElementById(trafficLightsId);
+ let redButton = document.getElementById(redId);
+ let yellowButton = document.getElementById(yellowId);
+ let greenButton = document.getElementById(greenId);
+ let windows = document.getElementById(windowId);
 
  trafficLights.onmouseenter = function () {
   redButton.innerHTML = `<img src="../images/icons/red-button.svg" style="width:9px; height:9px">`;
