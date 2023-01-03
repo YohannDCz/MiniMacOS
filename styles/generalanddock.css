@@ -5,7 +5,7 @@
 }
 html,
 body {
- background-image: url(../../images/wallpaper.png);
+ background-image: url(../images/wallpaper.png);
  background-size: cover;
  background-position: center;
  background-repeat: no-repeat;
@@ -77,9 +77,9 @@ nav {
  margin: 0px 12px 0px 12px;
 }
 
-.dock .dock-container li .ico:active{
-  filter: brightness(0.4) !important; 
-  transition: none;
+.dock .dock-container li .ico:active {
+ filter: brightness(0.4) !important;
+ transition: none;
 }
 
 .dock .dock-container li .name {
