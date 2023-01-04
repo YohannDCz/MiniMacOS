@@ -165,11 +165,11 @@
   const settings = document.getElementById('settings');
   settings.addEventListener("click", function() {addWindow("./apps/settings.html", "Réglages Système", "window8", "movable8", "trafficLights8", "red8", "yellow8", "green8")});
   
-  function addWindow(location, name, movableClassName, trafficLightsId, redId, yellowId, greenId) {
-    if (document.querySelector(`.${name}`) == null) {
+  function addWindow(location, name, windowId, movableId, trafficLightsId, redId, yellowId, greenId) {
+    if (document.getElementById(windowId) == null) {
       const windows = document.createElement('section');
-      windows.id = "window";
-      windows.className = name;
+      windows.id = windowId;
+      windows.className = "window";
       let randomX = Math.ceil(Math.random() * 2);
       let randomY = Math.ceil(Math.random() * 2);
       windows.style.position = "absolute";
@@ -185,22 +185,22 @@
       }
       windows.innerHTML = `
                         <div class="header" id="header">
-                          <div class="traffic-lights" id=${trafficLightsId}">
+                          <div class="traffic-lights" id="${trafficLightsId}">
                             <button class="red" id="${redId}"></button>
                             <button class="yellow" id="${yellowId}"></button>
                             <button class="green" id="${greenId}"></button>
                           </div>
-                          <div class="${movableClassName}" id="movable">
+                          <div class="movable" id="${movableId}">
                             <div class="appname">${name}</div>
                           </div>
                         </div>
                         <iframe src=${location} width= "100%" height="100%" style="border:none;"></iframe>`
       document.body.appendChild(windows);
-      trafficLights(trafficLightsId, redId, yellowId, greenId, name);
-      resizeableWindows(name);
-      draggableWindows(name, movableClassName);
+      trafficLights(trafficLightsId, redId, yellowId, greenId, windowId);
+      resizeableWindows(windowId);
+      draggableWindows(windowId, movableId);
     } else {
-      const windows = document.querySelector(`.${name}`);
+      const windows = document.getElementById(windowId);
       windows.style.transform = "scale(1)";
       windows.style.opacity = "1";
     }

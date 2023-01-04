@@ -1,16 +1,16 @@
-function draggableWindows(windowClassName, movableClassName) {
+function draggableWindows(windowId, movableId) {
  // Make the DIV element draggable:
- const element = document.querySelector(`.${windowClassName}`);
+ const element = document.getElementById(windowId);
+ console.log(element);
  dragElement(element);
-
  function dragElement(element) {
   var pos1 = 0,
    pos2 = 0,
    pos3 = 0,
    pos4 = 0;
-  if (document.querySelector(`.${movableClassName}`)) {
+  if (document.getElementById(movableId)) {
    // if present, the header is where you move the DIV from:
-   document.querySelector(`.${movableClassName}`).onmousedown = dragMouseDown;
+   document.getElementById(movableId).onmousedown = dragMouseDown;
   } else {
    // otherwise, move the DIV from anywhere inside the DIV:
    element.onmousedown = dragMouseDown;

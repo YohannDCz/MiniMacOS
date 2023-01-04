@@ -1,5 +1,5 @@
 function resizeableWindows(name) {
- element = document.querySelector(`.${name}`);
+ element = document.getElementById(name);
 
  makeResizable(element, 400, 225, 10);
 

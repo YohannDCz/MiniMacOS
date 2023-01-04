@@ -1,4 +1,4 @@
-#window {
+.window {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -61,7 +61,7 @@
     background-color: rgb(100, 206, 111);
    }
 
-   #header #movable {
+   #header .movable {
     display: flex;
     width: 100%;
     height: 100%;
@@ -69,7 +69,7 @@
     align-items: center;
    }
 
-   #header #movable .appname{
+   #header .movable .appname{
     font-size: 15px;
     font-weight: 600;
     font-family: "SF Pro", Helvetica;

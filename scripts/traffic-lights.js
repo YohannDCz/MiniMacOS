@@ -5,6 +5,7 @@ function trafficLights(trafficLightsId, redId, yellowId, greenId, windowId) {
  let greenButton = document.getElementById(greenId);
  let windows = document.getElementById(windowId);
 
+ console.log(trafficLightsId)
  trafficLights.onmouseenter = function () {
   redButton.innerHTML = `<img src="../images/icons/red-button.svg" style="width:9px; height:9px">`;
   yellowButton.innerHTML = `<img src="../images/icons/yellow-button.svg" style="width:9px; height:9px">`;
