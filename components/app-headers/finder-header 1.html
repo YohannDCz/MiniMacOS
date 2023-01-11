@@ -628,6 +628,23 @@
             </div>
         </div>
         <script>
+            const isVisible = elem => !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
+            
+            function hideOnClickOutside(element) {
+                const outsideClickListener = event => {
+                    if (!element.contains(event.target) && isVisible(element)) {
+                    element.className = 'box';
+                    element.nextElementSibling.className = 'container'
+                    removeClickListener();
+                    }
+                }
+                const removeClickListener = () => {
+                    document.removeEventListener('click', outsideClickListener);
+                }
+                document.addEventListener('click', outsideClickListener);
+            }
+
+
             let list = document.querySelectorAll(".box");
             for (let i = 0; i < list.length; i++) {
                 list[i].onclick = function () {
@@ -637,27 +654,25 @@
                         list[j++].nextElementSibling.className = "container"
                     }
 
-                    if (list[i].className == "box") {
-                        list[i].className = "box active";
-                        list[i].nextElementSibling.className = "container active";
+                    list[i].className = "box active";
+                    list[i].nextElementSibling.className = "container active";
 
-                        for (let k = 0; k < list.length; k++) {
-                            list[k].onmouseenter = function () {
-                                let h = 0;
-                                while (h < list.length) {
-                                    list[h].className = "box";
-                                    list[h++].nextElementSibling.className = "container";
-                                }
-                                list[k].className = "box active";
-                                list[k].nextElementSibling.className = "container active"
+                    for (let k = 0; k < list.length; k++) {
+                        list[k].onmouseenter = function () {
+                            let h = 0;
+                            while (h < list.length) {
+                                list[h].className = "box";
+                                list[h++].nextElementSibling.className = "container";
                             }
+                            list[k].className = "box active";
+                            list[k].nextElementSibling.className = "container active"
+                            hideOnClickOutside(list[k]);
                         }
-                    } else if (list[i].className == "box active") {
-                        list[i].className = "box";
-                        list[i].nextElementSibling.className = "container";
-                    }
-                } 
-            }
+                        hideOnClickOutside(list[i]);
+                    }    
+                }
+            } 
+
 
         </script>
     </body>
