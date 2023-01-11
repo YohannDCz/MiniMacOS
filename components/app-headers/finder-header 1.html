@@ -62,7 +62,7 @@
                 box-shadow: 0 0 3px rgba(0, 0, 0, 0.342);
                 margin-top: 2px;
                 margin-left: -4px;
-                padding: 4px 8px;
+                padding: 4px 4px;
             }
 
             .tab .container.active {
@@ -78,8 +78,8 @@
                 border: none;
                 border-radius: 4px;
                 /* background-color: aliceblue; */
-                padding: 2px 12px;
-                margin: 4px 0;
+                padding: 3px 12px;
+                margin: 0;
             }
 
             .tab .container .command {
@@ -102,7 +102,7 @@
 
             hr {
                 border: 0.25px solid rgba(114, 114, 114, 0.3);
-                margin: 0 8px;
+                margin: 4px 8px;
             }            
 
             .tab .container .command .left-block {
@@ -200,30 +200,30 @@
                 <p class="title app">Finder</p>
             </div>
             <div class="container">
-                <div>À propos du Finder</div>
+                <div class="enabled">À propos du Finder</div>
                 <hr>
-                <div class="command active">
+                <div class="command enabled">
                     <div>Réglages</div>
                     <div class="symbols">&#8984; ,</div>
                 </div>
                 <hr>
-                <div class="command active">
+                <div class="command enabled">
                     <div>Vider la corbeille</div>
                     <div class="symbols">&#8682; &#8984; &#9003;</div>
                 </div>
                 <hr>
-                <div class="command">
+                <div class="command enabled">
                     <div>Services</div>
                     <img class="rightarrow"
                         src="../../images/icons/icon_right-arrow.png" alt="">
                 </div>
 
                 <hr>
-                <div class="command">
+                <div class="command enabled">
                     <div>Masquer le Finder</div>
                     <div class="symbols">&#8984; H</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div>Masquer les autres</div>
                     <div class="symbols">&#8997; &#8984; H</div>
                 </div>
@@ -236,11 +236,11 @@
                 <p class="title">Fichier</p>
             </div>
             <div class="container">
-                <div class="command">
+                <div class="command enabled">
                     <div>Nouvelle fenêtre Finder</div>
                     <div class="symbols">&#8997; &#8984; N</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div>Nouveau dossier</div>
                     <div class="symbols">&#8679; &#8984; N</div>
                 </div>
@@ -248,8 +248,8 @@
                     <div class="grey">Nouveau dossier avec selection</div>
                     <div class="symbols">&#8963; &#8984; N</div>
                 </div>
-                <div>Nouveau dossier intelligent</div>
-                <div class="command">
+                <div class="enabled">Nouveau dossier intelligent</div>
+                <div class="command enabled">
                     <div>Nouvel onglet</div>
                     <div class="symbols">&#8984; T</div>
                 </div>
@@ -268,7 +268,7 @@
                     <div class="symbols">&#8984; W</div>
                 </div>
                 <hr>
-                <div class="command">
+                <div class="command enabled">
                     <div>Lire les informations</div>
                     <div class="symbols">&#8984; I</div>
                 </div>
@@ -322,7 +322,7 @@
                 </div>
                 <div class="grey">Tags...</div>
                 <hr>
-                <div class="command">
+                <div class="command enabled">
                     <div>Rechercher</div>
                     <di class="symbols">&#8984; F</di>
                 </div>
@@ -354,18 +354,18 @@
                     <div class="grey">Coller</div>
                     <div class="symbols">&#8984; V</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div>Tout sélectionner</div>
                     <div class="symbols">&#8984; A</div>
                 </div>
                 <hr>
-                <div>Afficher le presse-papiers</div>
+                <div class="enabled">Afficher le presse-papiers</div>
                 <hr>
-                <div class="command">
+                <div class="command enabled">
                     <div>Démarrer la Dictée</div>
                     <div class="symbols">fn D</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div>Emoji et symboles</div>
                     <div class="symbols">fn</div>
                 </div>
@@ -393,17 +393,17 @@
                     <div class="symbols">&#8984; 4</div>
                 </div>
                 <hr>
-                <div class="command">
+                <div class="command enabled">
                     <div>Organiser en piles</div>
                     <div class="symbols">&#8963; &#8984; 0</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div>Trier par</div>
                     <img src="../../images/icons/icon_right-arrow.png" alt=""
                         class="rightarrow">
                 </div>
-                <div>Aligner</div>
-                <div class="command">
+                <div class="enabled">Aligner</div>
+                <div class="command enabled">
                     <div>Aligner par</div>
                     <img src="../../images/icons/icon_right-arrow.png" alt=""
                         class="rightarrow">
@@ -442,7 +442,7 @@
                 <div class="grey">Personnaliser la barre d'outils...</div>
                 <div class="grey">Personnaliser la Touch Bar...</div>
                 <hr>
-                <div class="command">
+                <div class="command enabled">
                     <div>Afficher les options de présentation</div>
                     <div>&#8984; J</div>
                 </div>
@@ -467,82 +467,82 @@
                     <div class="grey">Suivant</div>
                     <div class="symbols">&#8984; ]</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div>Dossier parent</div>
                     <di class="symbols">&#8984; &#8593;</di>
                 </div>
                 <hr>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_recents.png" alt="">
                         <div>Récents</div>
                     </div>
                     <div class="symbols">&#8679; &#8984; F</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_documents.png" alt="">
                         <div>Documents</div>
                     </div>
                     <div class="symbols">&#8679; &#8984; O</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_desktop.png" alt="">
                         <div>Bureau</div>
                     </div>
                     <div class="symbols">&#8679; &#8984; D</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_downloads.png" alt="">
                         <div>Téléchargements</div>
                     </div>
                     <div class="symbols">&#8997; &#8984; L</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_home.svg" alt="">
                         <div>Départ</div>
                     </div>
                     <div class="symbols">&#8679; &#8984; H</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_laptop.png" alt="">
                         <div>Ordinateur</div>
                     </div>
                     <div class="symbols">&#8679; &#8984; C</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_airdrop.png" alt="">
                         <div>AirDrop</div>
                     </div>
                     <div class="symbols">&#8679; &#8984; R</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_network.png" alt="">
                         <div>Réseau</div>
                     </div>
                     <div class="symbols">&#8679; &#8984; K</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_icloud.png" alt="">
                         <div>iCloud Drive</div>
                     </div>
                     <div class="symbols">&#8679; &#8984; I</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_folder.png" alt="">
                         <div>Partagé</div>
                     </div>
                     <div class="symbols">&#8679; &#8984; S</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_applications.png"
                             alt="">
@@ -550,7 +550,7 @@
                     </div>
                     <div class="symbols">&#8679; &#8984; A</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_utilitaires.png"
                             alt="">
@@ -558,7 +558,7 @@
                     </div>
                     <div class="symbols">&#8679; &#8984; U</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div class="left-block">
                         <img src="../../images/icons/icon_folder.png" alt="">
                         <div>Google Drive</div>
@@ -566,17 +566,17 @@
                     <div class="symbols">&#8679; &#8984; F</div>
                 </div>
                 <hr>
-                <div class="command">
+                <div class="command enabled">
                     <div>Dossiers récents</div>
                     <img class="rightarrow"
                         src="../../images/icons/icon_right-arrow.png" alt="">
                 </div>
                 <hr>
-                <div class="command">
+                <div class="command enabled">
                     <div>Aller au dossier...</div>
                     <div class="symbols">&#8679; &#8984; G</div>
                 </div>
-                <div class="command">
+                <div class="command enabled">
                     <div>Se connecter au serveur...</div>
                     <div class="symbols">&#8984; K</div>
                 </div>
@@ -614,7 +614,7 @@
                 <div class="grey">Placer l'onglet dans une nouvelle fenêtre</div>
                 <div class="grey">Fusionner toutes les fenêtres</div>
                 <hr>
-                <div>Tout ramener au premier plan</div>
+                <div class="enabled">Tout ramener au premier plan</div>
             </div>
         </div>
         <div class="tab">
@@ -623,11 +623,26 @@
             </div>
             <div class="container">
                 <input type="text" placeholder="Recherche">
-                <div>Astuces pour votre Mac</div>
-                <div>Aide MacOS</div>
+                <div class="enabled">Astuces pour votre Mac</div>
+                <div class="enabled">Aide MacOS</div>
             </div>
         </div>
         <script>
+
+            let enabled = document.querySelectorAll(".enabled");
+            for (let i = 0; i < enabled.length; i++) {
+                enabled[i].onmouseenter = function () {
+                let j = 0;
+                while (j < enabled.length) {
+                    enabled[j++].style.backgroundColor = "transparent";
+                }
+                enabled[i].style.backgroundColor = "rgba(65, 150, 250, 0.5)";
+                enabled[i].onmouseleave = function () {
+                    enabled[i].style.backgroundColor = "transparent";
+                }
+                };
+            }
+
             const isVisible = elem => !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
             
             function hideOnClickOutside(element) {
