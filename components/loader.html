@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+          body, html {
+            width: 100%; 
+            height:100vh;
+          }
+
+          section #content {
+            z-index: 0;
+            height: 100%; 
+            width: 100%; 
+            background-color: blue;
+          }
+
+          section #loadingImg {
+            position: absolute;
+            z-index: 999;
+          }
+        </style>
+    </head>
+    <body>
+        <section style="width: 100%; height: 100%; display: flex;">
+            <div id="content" style=""></div>
+            <img id="loadingImg" src="../images/ios_load.gif" alt="">
+        </section>
+        <script>
+            function load(url) {
+                // display loading image here...
+                document.getElementById('loadingImg').visible = true;
+                // request your data...
+                var req = new XMLHttpRequest();
+                req.open("POST", url, true);
+
+                req.onreadystatechange = function () {
+                    if (req.readyState == 4 && req.status == 200) {
+                        // content is loaded...hide the gif and display the content...
+                        if (req.responseText) {
+                            document.getElementById('content').innerHTML = req.responseText;
+                            document.getElementById('loadingImg').visible = false;
+                        }
+                    }
+                };
+                request.send(vars);
+            }
+            load('loader.html')
+        </script>
+    </body>
+</html>

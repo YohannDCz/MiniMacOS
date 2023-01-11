@@ -1,241 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/generalanddock.css" />
+    <link rel="stylesheet" href="../styles/window.css">
 
-  <link rel="stylesheet" href="../styles/header.css" />
-  <link rel="stylesheet" href="../styles/generalanddock.css" />
-  <link rel="stylesheet" href="../styles/window.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.svg">
+    <title>Portfolio de Yohann D.</title>
 
-  <link rel="icon" type="image/x-icon" href="../images/favicon.svg">
-  <title>Portfolio de Yohann D.</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <div class="apple">
+          <img src="../images/icons/icon_mac.svg" alt="" />
+        </div>
+        <div>
+          <p class="appName">Finder</p>
+        </div>
+        <div>
+          <p>Fichier</p>
+        </div>
+        <div>
+          <p>Édition</p>
+        </div>
+        <div>
+          <p>Présentation</p>
+        </div>
+        <div>
+          <p>Aller</p>
+        </div>
+        <div>
+          <p>Fenêtre</p>
+        </div>
+        <div>
+          <p>Aide</p>
+        </div>
+      </div>
+      <div class="rightinfos">
+        <div class="widgets">
+          <div class="battery">
+            <img src="../images/icons/icons_batterie.svg" alt="" />
+          </div>
+          <div class="wifi">
+            <img src="../images/icons/icon_wifi.svg" alt="" />
+          </div>
+          <div class="search">
+            <img src="../images/icons/icon_search.svg" alt="" />
+          </div>
+          <div class="notifications">
+            <img src="../images/icons/icon_notifications.svg" alt="" />
+          </div>
+          <div class="siri">
+            <img src="../images/icons/icon_siri.png" alt="" />
+          </div>
+        </div>
+        <div class="date">
+          <div id="dayname"></div>
+          <div id="daynum"></div>
+          <div id="monthname"></div>
+          <div id="">à</div>
+          <div id="time"></div>
+        </div>
+      </div>
+    </header>
+    <nav class="dock">
+      <ul class="dock-container">
+        <li class="li-1">
+          <div class="name">Finder</div>
+          <img class="ico" id="finder" src="../images/icons/app_finder.png"
+            alt="The Finder." />
+        </li>
+        <li class="li-2">
+          <div class="name">LaunchPad</div>
+          <img
+            class="ico" id="launchpad"
+            src="../images/icons/launchpad.png"
+            alt="The Launchpad."
+            />
+        </li>
+        <li class="li-3">
+          <div class="name">Safari</div>
+          <img
+            class="ico" id="safariApp"
+            src="../images/icons/app_safari.png"
+            alt="The Safari browser."
+            />
+        </li>
+        <li class="li-4">
+          <div class="name">Visual Studio Code</div>
+          <img
+            class="ico" id="vscodeApp"
+            src="../images/icons/app_vstudio.png"
+            alt="The Visual Studio Code app."
+            />
+        </li>
+        <li class="li-5">
+          <div class="name">Word</div>
+          <img class="ico" id="wordApp" src="../images/icons/app_word.png"
+            alt="The Word app." />
+        </li>
+        <li class="li-6">
+          <div class="name">Notes</div>
+          <img
+            class="ico" id="notesApp"
+            src="../images/icons/app_notes.png"
+            alt="The Notes app."
+            />
+        </li>
+        <li class="li-7">
+          <div class="name">Calendar</div>
+          <img
+            class="ico" id="calendarApp"
+            src="../images/icons/app_calendar.png"
+            alt="The calendar."
+            />
+        </li>
+        <li class="li-8">
+          <div class="name">Mail</div>
+          <img class="ico" id="mailApp" src="../images/icons/app_mail.png"
+            alt="The Mail app." />
+        </li>
+        <li class="li-9">
+          <div class="name">Réglages</div>
+          <img
+            class="ico" id="settings"
+            src="../images/icons/app_settings.png"
+            alt="The settings."
+            />
+        </li>
+      </ul>
+    </nav>
 
- </head>
- <body>
-  <header>
-   <div class="menu">
-    <div class="apple">
-     <img src="../images/icons/icon_mac.svg" alt="" />
-    </div>
-    <div>
-     <p class="appName">Finder</p>
-    </div>
-    <div>
-     <p>Fichier</p>
-    </div>
-    <div>
-     <p>Édition</p>
-    </div>
-    <div>
-     <p>Présentation</p>
-    </div>
-    <div>
-     <p>Aller</p>
-    </div>
-    <div>
-     <p>Fenêtre</p>
-    </div>
-    <div>
-     <p>Aide</p>
-    </div>
-   </div>
-   <div class="rightinfos">
-    <div class="widgets">
-     <div class="battery">
-      <img src="../images/icons/icons_batterie.svg" alt="" />
-     </div>
-     <div class="wifi">
-      <img src="../images/icons/icon_wifi.svg" alt="" />
-     </div>
-     <div class="search">
-      <img src="../images/icons/icon_search.svg" alt="" />
-     </div>
-     <div class="notifications">
-      <img src="../images/icons/icon_notifications.svg" alt="" />
-     </div>
-     <div class="siri">
-      <img src="../images/icons/icon_siri.png" alt="" />
-     </div>
-    </div>
-    <div class="date">
-     <div id="dayname"></div>
-     <div id="daynum"></div>
-     <div id="monthname"></div>
-     <div id="">à</div>
-     <div id="time"></div>
-    </div>
-   </div>
-  </header>
-  <nav class="dock">
-   <ul class="dock-container">
-    <li class="li-1">
-     <div class="name">Finder</div>
-     <img class="ico" id="finder" src="../images/icons/app_finder.png" alt="The Finder." />
-    </li>
-    <li class="li-2">
-     <div class="name">LaunchPad</div>
-      <img
-        class="ico" id="launchpad"
-        src="../images/icons/launchpad.png"
-        alt="The Launchpad."
-      />
-    </li>
-    <li class="li-3">
-     <div class="name">Safari</div>
-     <img
-      class="ico" id="safariApp"
-      src="../images/icons/app_safari.png"
-      alt="The Safari browser."
-     />
-    </li>
-    <li class="li-4">
-     <div class="name">Visual Studio Code</div>
-     <img
-      class="ico" id="vscodeApp"
-      src="../images/icons/app_vstudio.png"
-      alt="The Visual Studio Code app."
-     />
-    </li>
-    <li class="li-5">
-     <div class="name">Word</div>
-     <img class="ico" id="wordApp" src="../images/icons/app_word.png" alt="The Word app." />
-    </li>
-    <li class="li-6">
-     <div class="name">Notes</div>
-     <img
-      class="ico" id="notesApp"
-      src="../images/icons/app_notes.png"
-      alt="The Notes app."
-     />
-    </li>
-    <li class="li-7">
-     <div class="name">Calendar</div>
-     <img
-      class="ico" id="calendarApp"
-      src="../images/icons/app_calendar.png"
-      alt="The calendar."
-     />
-    </li>
-    <li class="li-8">
-     <div class="name">Mail</div>
-     <img class="ico" id="mailApp" src="../images/icons/app_mail.png" alt="The Mail app." />
-    </li>
-    <li class="li-9">
-     <div class="name">Réglages</div>
-     <img
-      class="ico" id="settings"
-      src="../images/icons/app_settings.png"
-      alt="The settings."
-     />
-    </li>
-  </ul>
-</nav>
+    <iframe class="iframe" id="iframeLaunchpad" src="./launchpad.html"
+      width="100%"
+      height="100%" style="border:none; visibility:hidden; transform:scale(1.2);
+      backdrop-filter: blur(0px); opacity:0;"></iframe>
 
-<iframe class="iframe" id="iframeLaunchpad" src="./launchpad.html" width= "100%" height="100%" style="border:none; visibility:hidden; transform:scale(1.2); backdrop-filter: blur(0px); opacity:0;"></iframe>
-
-<script src="../scripts/date-time.js"></script>
-<script src="../scripts/dock.js"></script>
-<script src="../scripts/traffic-lights.js"></script>
-<script src="../scripts/resizeable-windows.js"></script>
-<script src="../scripts/draggable-windows.js"></script>
-<script>
-  const finder = document.getElementById('finder');
-  finder.addEventListener("click", function() {addWindow("./finder-window.html", "Finder", "window1", "movable1", "trafficLights1", "red1", "yellow1", "green1")});
-
-  const safari = document.getElementById('safariApp');
-  safari.addEventListener("click", function() {addWindow("./apps/safari.html", "Safari", "window2", "movable2", "trafficLights2", "red2", "yellow2", "green2")});
-
-  const vscode = document.getElementById('vscodeApp');
-  vscode.addEventListener("click", function() {addWindow("https://vscode.dev/", "VSCode", "window3", "movable3", "trafficLights3", "red3", "yellow3", "green3")});
-
-  const word = document.getElementById('wordApp');
-  word.addEventListener("click", function() {addWindow("./word.html", "Word", "window4", "movable4", "trafficLights4", "red4", "yellow4", "green4")});
-
-  const notes = document.getElementById('notesApp');
-  notes.addEventListener("click", function() {addWindow("./apps/notes.html", "Notes", "window5", "movable5", "trafficLights5", "red5", "yellow5", "green5")});
-
-  const calendar = document.getElementById('calendarApp');
-  calendar.addEventListener("click", function() {addWindow("./apps/calendar.html", "Calendrier", "window6", "movable6", "trafficLights6", "red6", "yellow6", "green6")});
-
-  const mail = document.getElementById('mailApp');
-  mail.addEventListener("click", function() {addWindow("./apps/mail.html", "Mail", "window7", "movable7", "trafficLights7", "red7", "yellow7", "green7")});
-
-  const settings = document.getElementById('settings');
-  settings.addEventListener("click", function() {addWindow("./apps/settings.html", "Réglages Système", "window8", "movable8", "trafficLights8", "red8", "yellow8", "green8")});
-  
-  function addWindow(location, name, windowId, movableId, trafficLightsId, redId, yellowId, greenId) {
-    if (document.getElementById(windowId) == null) {
-      const windows = document.createElement('section');
-      windows.id = windowId;
-      windows.className = "window";
-      let randomX = Math.ceil(Math.random() * 2);
-      let randomY = Math.ceil(Math.random() * 2);
-      windows.style.position = "absolute";
-      if (randomX == 1) {
-        windows.style.left = "200px";
-      } else if (randomX == 2) {
-        windows.style.left = "600px";
-      }
-      if (randomY == 1) {
-        windows.style.top = "50px";
-      } else if (randomY == 2) {
-        windows.style.top = "200px";
-      }
-      windows.innerHTML = `
-                        <div class="header" id="header">
-                          <div class="traffic-lights" id="${trafficLightsId}">
-                            <button class="red" id="${redId}"></button>
-                            <button class="yellow" id="${yellowId}"></button>
-                            <button class="green" id="${greenId}"></button>
-                          </div>
-                          <div class="movable" id="${movableId}">
-                            <div class="appname">${name}</div>
-                          </div>
-                        </div>
-                        <iframe src=${location} width= "100%" height="100%" style="border:none;"></iframe>`
-      document.body.appendChild(windows);
-      trafficLights(trafficLightsId, redId, yellowId, greenId, windowId);
-      resizeableWindows(windowId);
-      draggableWindows(windowId, movableId);
-    } else {
-      const windows = document.getElementById(windowId);
-      windows.style.transform = "scale(1)";
-      windows.style.opacity = "1";
-    }
-    }
-    
-    
-    const iframeLaunchpad = document.getElementById('iframeLaunchpad');
-    const launchpad = document.getElementById('launchpad');
-    launchpad.onclick = function () {
-      if (iframeLaunchpad.style.visibility === "hidden") {
-        iframeLaunchpad.style.zIndex = 0;
-        iframeLaunchpad.style.transform = "scale(1)";
-        iframeLaunchpad.style.backdropFilter = "blur(20px)";
-        iframeLaunchpad.style.opacity = 1;
-        iframeLaunchpad.style.visibility = "visible";
-        iframeLaunchpad.style.transition = "all 0.2s";
-      } else if (iframeLaunchpad.style.visibility === "visible") {
-        iframeLaunchpad.style.zIndex = 999;
-        iframeLaunchpad.style.transform = "scale(1.2)";
-        iframeLaunchpad.style.backdropFilter = "blur(0px)";
-        iframeLaunchpad.style.opacity = 0;
-        iframeLaunchpad.style.visibility = "hidden";
-        iframeLaunchpad.style.transition = "all 0.2s";
-      }
-    }
-
-    const background = iframeLaunchpad.contentWindow.document.getElementById('exit');
-    background.onclick = function () {
-      iframeLaunchpad.style.zIndex = 999;
-      iframeLaunchpad.style.transform = "scale(1.2)";
-      iframeLaunchpad.style.backdropFilter = "blur(0px)";
-      iframeLaunchpad.style.opacity = 0;
-      iframeLaunchpad.style.visibility = "hidden";
-      iframeLaunchpad.style.transition = "all 0.2s";
-    }
-  </script>
- </body>
+    <script src="../scripts/date-time.js"></script>
+    <script src="../scripts/dock.js"></script>
+    <script src="../scripts/traffic-lights.js"></script>
+    <script src="../scripts/resizeable-windows.js"></script>
+    <script src="../scripts/draggable-windows.js"></script>
+    <script src="../scripts/windows.js"></script>
+    <script src="../scripts/launchpad.js"></script>
+  </body>
 </html>

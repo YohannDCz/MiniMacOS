@@ -1,7 +1,7 @@
 function draggableWindows(windowId, movableId) {
  // Make the DIV element draggable:
  const element = document.getElementById(windowId);
- console.log(element);
+ 
  dragElement(element);
  function dragElement(element) {
   var pos1 = 0,

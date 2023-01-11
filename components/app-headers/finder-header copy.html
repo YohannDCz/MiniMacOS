@@ -631,49 +631,32 @@
             let list = document.querySelectorAll(".box");
             for (let i = 0; i < list.length; i++) {
                 list[i].onclick = function () {
-                    
-                    
-                    switch (list[i].className) {
-                        case "box":
-                            let h = 0;
-                            while (h < list.length) {
-                                list[h].className = "box";
-                                list[h++].nextElementSibling.className = "container"
-                            }
-                            list[i].className = "box active";
-                            list[i].nextElementSibling.className = "container active";
+                    let j = 0;
+                    while (j < list.length) {
+                        list[j].className = "box";
+                        list[j++].nextElementSibling.className = "container"
+                    }
 
-                            console.log(list[i].className)
-                            if (list[i].className == "box active") {
-                                for (let k = 0; k < list.length; k++) {
-                                    list[k].onmouseenter = function () {
-                                        let h = 0;
-                                        while (h < list.length) {
-                                            list[h].className = "box";
-                                            list[h++].nextElementSibling.className = "container";
-                                        }
-                                        list[k].className = "box active";
-                                        list[k].nextElementSibling.className = "container active"
-                                    }
+                    if (list[i].className == "box") {
+                        list[i].className = "box active";
+                        list[i].nextElementSibling.className = "container active";
+
+                        for (let k = 0; k < list.length; k++) {
+                            list[k].onmouseenter = function () {
+                                let h = 0;
+                                while (h < list.length) {
+                                    list[h].className = "box";
+                                    list[h++].nextElementSibling.className = "container";
                                 }
+                                list[k].className = "box active";
+                                list[k].nextElementSibling.className = "container active"
                             }
-                            break;
-                        case "box active":
-                            console.log("box");
-                            let j = 0;
-                            while (j < list.length) {
-                                list[j].className = "box";
-                                list[j++].nextElementSibling.className = "container";
-                            }
-                            list[i].className = "box";
-                            list[i].nextElementSibling.className = "container";
-                            break;
-                        default:
-                            list[i].className = "box";
-                            list[i].nextElementSibling.className = "container";
-                            break;
-                    } 
-                }
+                        }
+                    } else if (list[i].className == "box active") {
+                        list[i].className = "box";
+                        list[i].nextElementSibling.className = "container";
+                    }
+                } 
             }
 
         </script>
