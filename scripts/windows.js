@@ -22,12 +22,14 @@ mail.addEventListener("click", function() {addWindow("./apps/mail.html", "Mail")
 const settings = document.getElementById('settings');
 settings.addEventListener("click", function() {addWindow("./apps/settings.html", "Réglages Système")});
 
+counter = 0;
+
 function addWindow(location, name) {
   if (document.getElementById(name) == null) {
     const windows = document.createElement('section');
     windows.id = name;
     windows.className = "window";
-    // windows.style.zIndex = 
+    windows.style.zIndex = "revert";
     let randomX = Math.ceil(Math.random() * 2);
     let randomY = Math.ceil(Math.random() * 2);
     windows.style.position = "absolute";
@@ -52,12 +54,13 @@ function addWindow(location, name) {
                           <div class="appname">${name}</div>
                         </div>
                       </div>
-                      <iframe id="iframe" src=${location} width= "100%" height="100%" style="border:none;"></iframe>`
+                      <iframe class="iframe" id="iframe" src=${location} width= "100%" height="100%" style="border:none;"></iframe>`
     document.body.appendChild(windows);
     resizeableWindows();
     draggableWindows();
-    modifyZIndex()
+    modifyZIndex();
     trafficLights();
+    // let highestZindex = getHighestZindex(".window")
   } else {
     const windows = document.getElementById(name);
     windows.style.transform = "scale(1)";
