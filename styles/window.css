@@ -23,7 +23,7 @@
     color: #fff;
    }
 
-   #header .traffic-lights {
+   #header .trafficLights {
     display: flex;
     position: absolute;
     height: auto;
@@ -31,13 +31,13 @@
     z-index: 0;
    }
 
-   #header .traffic-lights:hover {
+   #header .trafficLights:hover {
     cursor: default;
    }
 
-   #header .traffic-lights .red,
-   #header .traffic-lights .yellow,
-   #header .traffic-lights .green {
+   #header .trafficLights .red,
+   #header .trafficLights .yellow,
+   #header .trafficLights .green {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,15 +49,15 @@
     padding: 0;
    }
 
-   #header .traffic-lights .red {
+   #header .trafficLights .red {
     background-color: rgb(235, 90, 80);
    }
 
-   #header .traffic-lights .yellow {
+   #header .trafficLights .yellow {
     background-color: rgb(240, 190, 68);
    }
 
-   #header .traffic-lights .green {
+   #header .trafficLights .green {
     background-color: rgb(100, 206, 111);
    }
 

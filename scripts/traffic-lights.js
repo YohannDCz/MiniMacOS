@@ -1,11 +1,15 @@
-function trafficLights(trafficLightsId, redId, yellowId, greenId, windowId) {
- let trafficLights = document.getElementById(trafficLightsId);
- let redButton = document.getElementById(redId);
- let yellowButton = document.getElementById(yellowId);
- let greenButton = document.getElementById(greenId);
- let windows = document.getElementById(windowId);
+function trafficLights() {
+ let windows = document.querySelectorAll(".window");
 
- trafficLights.onmouseenter = function () {
+windows.forEach((window1) => {
+
+  let trafficLights = window1.querySelector("#trafficLights");
+  let redButton = trafficLights.querySelector("#red");
+  let yellowButton = trafficLights.querySelector("#yellow");
+  let greenButton = trafficLights.querySelector("#green");
+
+  console.log(redButton)
+  trafficLights.onmouseenter = function () {
   redButton.innerHTML = `<img src="../images/icons/red-button.svg" style="width:9px; height:9px">`;
   yellowButton.innerHTML = `<img src="../images/icons/yellow-button.svg" style="width:9px; height:9px">`;
   greenButton.innerHTML = `<img src="../images/icons/green-button.svg" style="width:6px; height:6px">`;
@@ -18,33 +22,35 @@ function trafficLights(trafficLightsId, redId, yellowId, greenId, windowId) {
  };
 
  redButton.onclick = function () {
-  windows.remove();
+  window1.remove();
  };
 
  yellowButton.onclick = function () {
-  windows.style.transform = "scale(0.7) translateY(50%)";
-  windows.style.opacity = "0";
+  window1.style.transform = "scale(0.7) translateY(50%)";
+  window1.style.opacity = "0";
  };
 
  greenButton.onclick = function () {
   let heightPercentage = Math.round(
-   (windows.clientHeight / window.innerHeight) * 100
+   (window1.clientHeight / window.innerHeight) * 100
   );
   let widthPercentage = Math.round(
-   (windows.clientWidth / window.innerWidth) * 100
+   (window1.clientWidth / window.innerWidth) * 100
   );
   if (heightPercentage < 100 && widthPercentage < 100) {
-   windows.style.width = "100%";
-   windows.style.height = "100%";
-   windows.style.top = "0";
-   windows.style.left = "0";
-   windows.style.transition = "top 0.25s, left 0.25s";
+   window1.style.width = "100%";
+   window1.style.height = "100%";
+   window1.style.top = "0";
+   window1.style.left = "0";
+   window1.style.transition = "top 0.25s, left 0.25s";
   } else if (heightPercentage === 100 && widthPercentage === 100) {
-   windows.style.width = "700px";
-   windows.style.height = "450px";
-   windows.style.top = "200px";
-   windows.style.left = "200px";
-   windows.style.transition = "";
+   window1.style.width = "700px";
+   window1.style.height = "450px";
+   window1.style.top = "200px";
+   window1.style.left = "200px";
+   window1.style.transition = "";
   }
  };
+})
 }
+ 

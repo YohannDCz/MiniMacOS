@@ -1,7 +1,10 @@
-function resizeableWindows(name) {
- element = document.getElementById(name);
+function resizeableWindows() {
+ elements = document.querySelectorAll(".window");
 
- makeResizable(element, 400, 225, 10);
+elements.forEach((element) => {
+   makeResizable(element, 400, 225, 10);
+})
+
 
  // let heightPercentage = Math.round(
  //  (element.clientHeight / window.innerHeight) * 100
