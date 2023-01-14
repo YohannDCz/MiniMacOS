@@ -14,8 +14,8 @@ header {
 header .menu {
  display: inline-block;
  align-items: center;
- height: fit-content;
- width: fit-content;
+ height: auto;
+ width: auto;
  /* padding: 0 16px;
  border: none;
  border-radius: 4px;
