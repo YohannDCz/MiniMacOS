@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../styles/css">
+        <title>Portfolio de Yohann</title>
+        <link rel="icon" type="image/x-icon" href="../../images/favicon.svg">
+        <style>
+            * {
+                font-size: 14px;
+                font-family: "SF Pro", Helvetica, sans-serif;
+                color: white;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html, body {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: 100vh;
+                justify-content: left;
+                background-image: url('../../images/wallpaper.png');
+            }
+
+            header {
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: auto;
+            }
+            
+            .tab .box {
+                cursor: default;
+                display: flex;
+                align-items: center;
+                height: 24px;
+                padding: 0 16px;
+                border: none;
+                border-radius: 4px;
+                margin: 0 -4px;
+                z-index: 999;
+            }
+
+            .tab .box.active {
+                background-color: rgba(255, 255, 255, 0.527);
+            }
+
+            .tab .box.active, 
+            .tab .box .title {
+                color: white;
+                font-size: 13px;
+            }
+
+            .tab .box:has(img) {
+                margin-left: 4px;
+            }
+            .tab .box img {
+                width: 16px;
+                height: 16px;
+            }
+            .tab .box .title.app {
+                font-weight: 600;
+            }
+
+            .tab .container {
+                display: none;
+                position: relative;
+                width: 250px;
+                background-color: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(50px);
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 0 3px rgba(0, 0, 0, 0.342);
+                margin-top: 2px;
+                margin-left: -4px;
+                padding: 4px 4px;
+            }
+
+            .tab .container.active {
+                display: block;
+            }
+
+            .long .container {
+                width: 325px;
+            }
+
+            .tab .container div {
+                color: black;
+                border: none;
+                border-radius: 4px;
+                /* background-color: aliceblue; */
+                padding: 4px 12px;
+                margin: 0;
+                cursor: default;
+            }
+            
+            .apple .container {
+                margin-left: 4px;
+            }
+            
+            .tab .container .command {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .tab .container .command div {
+                margin: 0;
+                padding: 0;
+            }
+
+            .tab .container .command .symbols, .tab .container .grey {
+                color: rgba(114, 114, 114, 0.5);
+                display: flex;
+                align-items: center;
+            }
+
+            hr {
+                border: 0.25px solid rgba(114, 114, 114, 0.3);
+                margin: 4px 8px;
+            }            
+
+            .tab .container .command .left-block {
+                display: flex;
+                flex-direction: row;
+            }
+            
+            .tab .container .command img {
+                width: 16px;
+                height: 16px;
+                object-fit: contain;
+                object-position: center;
+                margin-right: 8px;
+            }
+
+            .tab .container .command .rightarrow {
+                width: 10px;
+                height: 10px;
+            }
+
+            .tab .container .colors {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .tab .container .colors .color {
+                width: 16px;
+                height: 16px;
+                border-radius: 9999px;
+                padding: 0;
+                margin-right: 12px;
+            }
+
+            .tab .container .colors .color.red {
+                background-color: rgb(201, 128, 121);
+                border: 0.5px solid rgb(255, 22, 1)
+            }
+
+            .tab .container .colors .color.orange {
+                background-color: rgb(203, 163, 112);
+                border: 0.px solid rgb(250, 142, 0)
+            }
+
+            .tab .container .colors .color.yellow {
+                background-color: rgb(206, 186, 116);
+                border: 0.5px solid rgb(255, 200, 0);
+            }
+
+            .tab .container .colors .color.green {
+                background-color: rgb(135, 184, 126);
+                border: 0.5px solid rgb(38, 255, 0);
+            }
+
+            .tab .container .colors .color.blue {
+                background-color: rgb(115, 147, 202);
+                border: 0.5px solid rgb(0, 94, 255);
+            }
+
+            .tab .container .colors .color.purple {
+                background-color: rgb(166, 134, 184);
+                border: 0.5px solid rgb(162, 0, 255);
+            }
+
+            .tab .container .colors .color.grey {
+                background-color: rgb(158, 158, 158);
+                border: 0.5px solid rgb(95, 95, 95);
+            }
+            
+            .tab .container input {
+                background-color: rgba(176, 176, 176, 0.179);
+                backdrop-filter: blur(20px);
+                border: 0.5px solid rgba(0, 0, 0, 0.174);
+                border-radius: 4px;
+                width: 100%;
+                margin: 4px 0;
+                color: black;
+                padding: 2px 0;
+                padding-left: 12px;
+            }
+
+            .tab .container input::placeholder {
+                color: rgba(114, 114, 114, 0.5);
+            }
+
+            .tab .container input:focus {
+                outline: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="tab long apple">
+                <div class="box">
+                    <img src="../../images/icons/icon_mac.svg" alt="The Apple logo." />
+                </div>
+                <div class="container">
+                    <div class="enabled">À propos de ce Mac</div>
+                    <hr>
+                    <div class="enabled">Réglages du système...</div>
+                    <div class="enabled">App Store...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Éléments récents</div>
+                        <img class="rightarrow" src="../../images/icons/icon_right-arrow.png" alt="">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Forcer à quitter...</div>
+                        <div class="symbols">&#8997; &#8984; &#9099;</div>
+                    </div>
+                    <hr>
+                    <div class="enabled">Suspendre l'activité</div>
+                    <div class="enabled">Redémarrer...</div>
+                    <div class="enabled">Éteindre...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Vérouiller l'écran</div>
+                        <div class="symbols">&#8963; &#8984; Q</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Fermer la session Yohann D...</div>
+                        <div class="symbols">&#8679; &#8984; Q</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="box" id="app">
+                    <p class="title app">Finder</p>
+                </div>
+                <div class="container">
+                    <div class="enabled">À propos du Finder</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Réglages</div>
+                        <div class="symbols">&#8984; ,</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Vider la corbeille</div>
+                        <div class="symbols">&#8679; &#8984; &#9003;</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Services</div>
+                        <img class="rightarrow"
+                            src="../../images/icons/icon_right-arrow.png" alt="">
+                    </div>
+
+                    <hr>
+                    <div class="command enabled">
+                        <div>Masquer le Finder</div>
+                        <div class="symbols">&#8984; H</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Masquer les autres</div>
+                        <div class="symbols">&#8997; &#8984; H</div>
+                    </div>
+
+                    <div class="grey">Tout afficher</div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box" id="fichier">
+                    <p class="title">Fichier</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Nouvelle fenêtre Finder</div>
+                        <div class="symbols">&#8997; &#8984; N</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Nouveau dossier</div>
+                        <div class="symbols">&#8679; &#8984; N</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Nouveau dossier avec selection</div>
+                        <div class="symbols">&#8963; &#8984; N</div>
+                    </div>
+                    <div class="enabled">Nouveau dossier intelligent</div>
+                    <div class="command enabled">
+                        <div>Nouvel onglet</div>
+                        <div class="symbols">&#8984; T</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Ouvrir</div>
+                        <div class="symbols">&#8984; O</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Ouvrir avec</div>
+                        <img class="rightarrow"
+                            src="../../images/icons/icon_right-arrow_grey.png"
+                            alt="">
+                    </div>
+                    <div class="command">
+                        <div class="grey">Fermer la fenêtre</div>
+                        <div class="symbols">&#8984; W</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Lire les informations</div>
+                        <div class="symbols">&#8984; I</div>
+                    </div>
+                    <div class="grey">Renommer</div>
+                    <div class="grey">Compresser</div>
+                    <div class="command">
+                        <div class="grey">Dupliquer</div>
+                        <div class="symbols">&#8984; D</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Créer un alias</div>
+                        <div class="symbols">&#8963; &#8984; A</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Coup d'oeil</div>
+                        <div class="symbols">&#8984; Y</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Imprimer</div>
+                        <div class="symbols">&#8984; P</div>
+                    </div>
+                    <hr>
+                    <div class="grey"> Partager...</div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Afficher l'original</div>
+                        <div class="symbols">&#8984; R</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Ajouter au Dock</div>
+                        <div class="symbols">&#8963; &#8679; &#8984; T</div>
+                    </div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Placer dans la corbeille</div>
+                        <div class="symbols">&#8984; &#9003;</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Éjecter</div>
+                        <div class="symbols">&#8984; E</div>
+                    </div>
+                    <hr>
+                    <div class="colors">
+                        <div class="color red"></div>
+                        <div class="color orange"></div>
+                        <div class="color yellow"></div>
+                        <div class="color green"></div>
+                        <div class="color blue"></div>
+                        <div class="color purple"></div>
+                        <div class="color grey"></div>
+                    </div>
+                    <div class="grey">Tags...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Rechercher</div>
+                        <di class="symbols">&#8984; F</di>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="box" id="edition">
+                    <p class="title">Édition</p>
+                </div>
+                <div class="container">
+                    <div class="command">
+                        <div class="grey">Annuler</div>
+                        <div class="symbols">&#8984; Z</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Rétablir</div>
+                        <div class="symbols">&#8679; &#8984; Z</div>
+                    </div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Couper</div>
+                        <div class="symbols">&#8984;</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Copier</div>
+                        <div class="symbols">&#8984; C</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Coller</div>
+                        <div class="symbols">&#8984; V</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Tout sélectionner</div>
+                        <div class="symbols">&#8984; A</div>
+                    </div>
+                    <hr>
+                    <div class="enabled">Afficher le presse-papiers</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Démarrer la Dictée</div>
+                        <div class="symbols">fn D</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Emoji et symboles</div>
+                        <div class="symbols">fn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box" id="presentation">
+                    <p class="title">Présentation</p>
+                </div>
+                <div class="container">
+                    <div class="command">
+                        <div class="grey">Par icônes</div>
+                        <div class="symbols">&#8984; 1</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Par liste</div>
+                        <div class="symbols">&#8984; 2</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Par colonnes</div>
+                        <div class="symbols">&#8984; 3</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Par galerie d'icônes</div>
+                        <div class="symbols">&#8984; 4</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Organiser en piles</div>
+                        <div class="symbols">&#8963; &#8984; 0</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Trier par</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt=""
+                            class="rightarrow">
+                    </div>
+                    <div class="enabled">Aligner</div>
+                    <div class="command enabled">
+                        <div>Aligner par</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt=""
+                            class="rightarrow">
+                    </div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Masquer la barre latérale</div>
+                        <div class="symbols">&#8963; &#8984; S</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Afficher l'aperçu</div>
+                        <div class="symbols">&#8679; &#8984; P</div>
+                    </div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Masquer la barre d'outils</div>
+                        <div class="symbols">&#8997; &#8984; T</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Afficher tous les onglets</div>
+                        <div class="symbols">&#8679; &#8984; \</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Afficher la barre d'onglets</div>
+                        <div class="symbols">&#8679; &#8984; T</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Masquer la barre du chemin d'accès</div>
+                        <div class="symbols">&#8997; &#8984; P</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Afficher la barre d'état</div>
+                        <div class="symbols">&#8984; /</div>
+                    </div>
+                    <hr>
+                    <div class="grey">Personnaliser la barre d'outils...</div>
+                    <div class="grey">Personnaliser la Touch Bar...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Afficher les options de présentation</div>
+                        <div>&#8984; J</div>
+                    </div>
+                    <div class="grey">Afficher les options d'aperçu</div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Activer le mode plein écran</div>
+                        <div class="symbols">fn F</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="box" id="aller">
+                    <p class="title">Aller</p>
+                </div>
+                <div class="container">
+                    <div class="command">
+                        <div class="grey">Précédent</div>
+                        <div class="symbols">&#8984; [</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Suivant</div>
+                        <div class="symbols">&#8984; ]</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Dossier parent</div>
+                        <di class="symbols">&#8984; &#8593;</di>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_recents.png" alt="">
+                            <div>Récents</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; F</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_documents.png" alt="">
+                            <div>Documents</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; O</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_desktop.png" alt="">
+                            <div>Bureau</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; D</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_downloads.png" alt="">
+                            <div>Téléchargements</div>
+                        </div>
+                        <div class="symbols">&#8997; &#8984; L</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_home.svg" alt="">
+                            <div>Départ</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; H</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_laptop.png" alt="">
+                            <div>Ordinateur</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; C</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_airdrop.png" alt="">
+                            <div>AirDrop</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; R</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_network.png" alt="">
+                            <div>Réseau</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; K</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_icloud.png" alt="">
+                            <div>iCloud Drive</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; I</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_folder.png" alt="">
+                            <div>Partagé</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; S</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_applications.png"
+                                alt="">
+                            <div>Applications</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; A</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_utilitaires.png"
+                                alt="">
+                            <div>Utilitaires</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; U</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_folder.png" alt="">
+                            <div>Google Drive</div>
+                        </div>
+                        <div class="symbols">&#8679; &#8984; F</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Dossiers récents</div>
+                        <img class="rightarrow"
+                            src="../../images/icons/icon_right-arrow.png" alt="">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Aller au dossier...</div>
+                        <div class="symbols">&#8679; &#8984; G</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Se connecter au serveur...</div>
+                        <div class="symbols">&#8984; K</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box" id="fenetre">
+                    <p class="title">Fenêtre</p>
+                </div>
+                <div class="container">
+                    <div class="command">
+                        <div class="grey">Minimiser</div>
+                        <div class="symbols">&#8984; M</div>
+                    </div>
+                    <div class="grey">Réduire/agrandir</div>
+                    <div class="grey">Déplacer la fenêtre vers la gauche de l'écran</div>
+                    <div class="grey">Déplacer la fenêtre vers la droite de l'écran</div>
+                    <div class="grey">Remplacer la fenêtre en mosaïque</div>
+                    <hr>
+                    <div class="grey">Supprimer la fenêtre du groupe</div>
+                    <div class="command">
+                        <div class="grey">Faire défiler les fenêtres</div>
+                        <div class="symbols">&#8984; `</div>
+                    </div>
+                    <div class="grey">Afficher la fenêtre de progression</div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Afficher l'onglet précédent</div>
+                        <div class="symbols">&#8963; &#8679; &#8677;</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Afficher l'onglet suivant</div>
+                        <div class="symbols">&#8963; &#8677;</div>
+                    </div>
+                    <div class="grey">Placer l'onglet dans une nouvelle fenêtre</div>
+                    <div class="grey">Fusionner toutes les fenêtres</div>
+                    <hr>
+                    <div class="enabled">Tout ramener au premier plan</div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="box" id="aide">
+                    <p class="title">Aide</p>
+                </div>
+                <div class="container">
+                    <input type="text" placeholder="Recherche">
+                    <div class="enabled">Astuces pour votre Mac</div>
+                    <div class="enabled">Aide MacOS</div>
+                </div>
+            </div>
+        </header>
+        <script>
+
+            
+            const isVisible = elem => !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
+            function hideOnClickOutside(element) {
+                const outsideClickListener = event => {
+                    if (!element.contains(event.target) && isVisible(element)) {
+                        element.className = 'box';
+                        element.nextElementSibling.className = 'container';
+                        for (let k = 0; k < list.length; k++) {
+                            list[k].onmouseenter =  null;
+                        }
+                        removeClickListener();
+                    }
+                }
+                const removeClickListener = () => {
+                    document.removeEventListener('click', outsideClickListener);
+                }
+                document.addEventListener('click', outsideClickListener);
+            }
+            
+            let list = document.querySelectorAll(".box");
+            for (let i = 0; i < list.length; i++) {
+                list[i].onclick = function () {
+                    switch (list[i].className) {
+                        case "box":
+                            let h = 0;
+                            while (h < list.length) {
+                                list[h].className = "box";
+                                list[h++].nextElementSibling.className = "container"
+                            }
+                            list[i].className = "box active";
+                            list[i].nextElementSibling.className = "container active";
+                            
+            
+                            for (let k = 0; k < list.length; k++) {
+                                list[k].onmouseover = function () {
+                                    let h = 0;
+                                    while (h < list.length) {
+                                        list[h].className = "box";
+                                        list[h++].nextElementSibling.className = "container";
+                                    }
+                                    list[k].className = "box active";
+                                    list[k].nextElementSibling.className = "container active";
+                                    hideOnClickOutside(list[k]);
+                                }
+                                hideOnClickOutside(list[i]);
+                            }
+                            break;
+                            case "box active":
+                                let j = 0;
+                                while (j < list.length) {
+                                    list[j].className = "box";
+                                    list[j++].nextElementSibling.className = "container";
+                                }
+                                list[i].className = "box";
+                                list[i].nextElementSibling.className = "container";
+                                
+                                for (let k = 0; k < list.length; k++) {
+                                    list[k].onmouseover =  null;
+                                }
+                                break;
+                            } 
+                        }
+                    }
+                    
+            let enabled = document.querySelectorAll(".enabled");
+            for (let y = 0; y < enabled.length; y++) {
+                enabled[y].onmouseenter = function () {
+                let z = 0;
+                while (z < enabled.length) {
+                    enabled[z++].style.backgroundColor = "transparent";
+                }
+                enabled[y].style.backgroundColor = "rgba(49, 104, 198, 0.5)";
+                };
+                enabled[y].onmouseleave = function () {
+                    enabled[y].style.backgroundColor = "transparent";
+                }
+            }
+        </script>
+    </body>
+    </html>
