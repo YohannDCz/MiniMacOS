@@ -15,32 +15,9 @@
   <body>
     <header>
       <div class="menu">
-        <div class="apple">
-          <img src="../images/icons/icon_mac.svg" alt="" />
-        </div>
-        <div>
-          <p class="appName">Finder</p>
-        </div>
-        <div>
-          <p>Fichier</p>
-        </div>
-        <div>
-          <p>Édition</p>
-        </div>
-        <div>
-          <p>Présentation</p>
-        </div>
-        <div>
-          <p>Aller</p>
-        </div>
-        <div>
-          <p>Fenêtre</p>
-        </div>
-        <div>
-          <p>Aide</p>
-        </div>
+        <iframe class="app-header" src="./app-headers/finder-header.html" width="fit-content" height="fit-content" style="border: none;"></iframe>
       </div>
-      <div class="rightinfos">
+      <!-- <div class="rightinfos">
         <div class="widgets">
           <div class="battery">
             <img src="../images/icons/icons_batterie.svg" alt="" />
@@ -65,7 +42,7 @@
           <div id="">à</div>
           <div id="time"></div>
         </div>
-      </div>
+      </div> -->
     </header>
     <nav class="dock">
       <ul class="dock-container">
@@ -148,15 +125,22 @@
     <script src="../scripts/windows.js"></script>
     <script src="../scripts/launchpad.js"></script>
     <script>
-      // const 
+      const  menu = document.querySelector(".menu");
 
-      // if (windowX.readyState == "loading") {
-      //   img.style.display = "flex";
-      //   iframe.style.display = "none";
-      // } else if (windowX.readyState == "complete") {
-      //   img.style.display = "none";
-      //   iframe.style.display = "flex"
-      // }
+      // menu.innerHTML = ``
+
+      const appHeader = document.querySelector(".app-header");
+      const active = appHeader.contentWindow
+      const isAnyActive = active.document.querySelectorAll(".box.active").length;
+
+      if (isAnyActive > 0) {
+        appHeader.style.width = "100vw";
+        appHeader.style.height = "100vh";
+      } else {
+        appHeader.style.width = "600px";
+        appHeader.style.height = "24px";
+      }
+      
     </script>
   </body>
 </html>
