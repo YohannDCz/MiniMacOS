@@ -136,6 +136,8 @@
 
       let targetNodes = active.querySelectorAll('.box');
 
+      console.log(targetNodes);
+      
       function workOnClassAdd() {
           appHeader.style.height = "100vh";
           header.style.height = "100vh";
@@ -155,7 +157,7 @@
       console.log(active.body.clientHeight)
 
 
-      targetNodes.forEach((targetNode1) => {
+      targetNodes.forEach((targetNode) => {
         class ClassWatcher {
 
           constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
@@ -206,7 +208,7 @@
           }
         }
         
-        let classWatcher = new ClassWatcher(targetNode1, 'active', workOnClassAdd, workOnClassRemoval)
+        let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
       })
     
     </script>
