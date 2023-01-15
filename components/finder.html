@@ -134,7 +134,7 @@
       const active = appHeader.contentWindow.document
       const isAnyActive = active.querySelectorAll(".box");
 
-      const targetNodes = active.querySelectorAll('.box')
+      let targetNodes = document.querySelector(".app-header").contentWindow.document.querySelectorAll('.box');
 
       function workOnClassAdd() {
           appHeader.style.height = "100vh";
@@ -154,7 +154,7 @@
       console.log(header.clientHeight)
       console.log(active.body.clientHeight)
 
-      // watch for a specific class change
+
       targetNodes.forEach((targetNode) => {
         class ClassWatcher {
 
