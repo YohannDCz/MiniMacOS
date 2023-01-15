@@ -20,7 +20,7 @@ header {
 header .menu {
   position: relative;
   display: flex;
-  z-index: 998;
+  /* z-index: 998; */
  /* align-items: center; */
  /* padding: 0 16px;
  border: none;
