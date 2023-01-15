@@ -133,7 +133,7 @@
       const header = document.querySelector("header");
       const appHeader = document.querySelector(".app-header");
       const active = appHeader.contentWindow
-      const isAnyActive = active.document.querySelectorAll(".box");
+      const isAnyActive = active.document.querySelectorAll(".box.active");
       
       isAnyActive.forEach((isActive) => {
         isActive.addEventListener("click", function() {
