@@ -141,14 +141,19 @@
           appHeader.style.height = "100vh";
           header.style.height = "100vh";
           menu.style.height = "100vh"
-
+          active.body.style.height = "100vh";
       }
 
       function workOnClassRemoval() {
           appHeader.style.width = "600px";
           appHeader.style.height = "24px";
           header.style.height = "24px";
+          active.body.style.height = "24px";
       }
+
+      console.log(appHeader.clientHeight)
+      console.log(header.clientHeight)
+      console.log(active.body.clientHeight)
 
       // watch for a specific class change
       targetNodes.forEach((targetNode) => {
@@ -188,9 +193,15 @@
                   this.lastClassState = currentClassState
                   if(currentClassState) {
                     this.classAddedCallback()
+                    console.log(appHeader.clientHeight)
+                    console.log(header.clientHeight)
+                    console.log(active.body.clientHeight)
                   }
                   else {
                     this.classRemovedCallback()
+                    console.log(appHeader.clientHeight)
+                    console.log(header.clientHeight)
+                    console.log(active.body.clientHeight)
                   }
                 }
               }
