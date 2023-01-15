@@ -129,19 +129,24 @@
       const  menu = document.querySelector(".menu");
 
       // menu.innerHTML = ``
-
+      
       const appHeader = document.querySelector(".app-header");
       const active = appHeader.contentWindow
-      const isAnyActive = active.document.querySelectorAll(".box.active").length;
+      const isAnyActive = active.document.querySelectorAll(".box");
+      
+      isAnyActive.forEach((isActive) => {
+        isActive.addEventListener("click", function() {
+          if (isAnyActive > 0) {
+            appHeader.style.width = "100vw";
+            appHeader.style.height = "100vh";
+          } else {
+            appHeader.style.width = "600px";
+            appHeader.style.height = "24px";
+          }
+        })
+      })
 
       console.log(isAnyActive)
-      if (isAnyActive > 0) {
-        appHeader.style.width = "100vw";
-        appHeader.style.height = "100vh";
-      } else {
-        appHeader.style.width = "600px";
-        appHeader.style.height = "24px";
-      }
       
     </script>
   </body>
