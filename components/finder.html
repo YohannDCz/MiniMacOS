@@ -126,7 +126,7 @@
     <script src="../scripts/windows.js"></script>
     <script src="../scripts/launchpad.js"></script>
     <script>
-      // const  menu = document.querySelector(".menu");
+      const menu = document.querySelector(".menu");
       // menu.innerHTML = ``
 
       const header = document.querySelector("header");
@@ -139,7 +139,9 @@
       function workOnClassAdd() {
           appHeader.style.width = "100vw";
           appHeader.style.height = "100vh";
-          header.style.height = "100w";
+          header.style.height = "100vh";
+          menu.style.height = "100vh"
+
       }
 
       function workOnClassRemoval() {
@@ -154,46 +156,46 @@
 
         class ClassWatcher {
 
-            constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
-                this.targetNode = targetNode
-                this.classToWatch = classToWatch
-                this.classAddedCallback = classAddedCallback
-                this.classRemovedCallback = classRemovedCallback
-                this.observer = null
-                this.lastClassState = targetNode.classList.contains(this.classToWatch)
+          constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
+            this.targetNode = targetNode
+            this.classToWatch = classToWatch
+            this.classAddedCallback = classAddedCallback
+            this.classRemovedCallback = classRemovedCallback
+            this.observer = null
+            this.lastClassState = targetNode.classList.contains(this.classToWatch)
 
-                this.init()
-            }
+            this.init()
+          }
 
-            init() {
-                this.observer = new MutationObserver(this.mutationCallback)
-                this.observe()
-            }
+          init() {
+            this.observer = new MutationObserver(this.mutationCallback)
+            this.observe()
+          }
 
-            observe() {
-                this.observer.observe(this.targetNode, { attributes: true })
-            }
+          observe() {
+            this.observer.observe(this.targetNode, { attributes: true })
+          }
 
-            disconnect() {
-                this.observer.disconnect()
-            }
+          disconnect() {
+            this.observer.disconnect()
+          }
 
-            mutationCallback = mutationsList => {
-                for(let mutation of mutationsList) {
-                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                        let currentClassState = mutation.target.classList.contains(this.classToWatch)
-                        if(this.lastClassState !== currentClassState) {
-                            this.lastClassState = currentClassState
-                            if(currentClassState) {
-                                this.classAddedCallback()
-                            }
-                            else {
-                                this.classRemovedCallback()
-                            }
-                        }
-                    }
+          mutationCallback = mutationsList => {
+            for(let mutation of mutationsList) {
+              if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                let currentClassState = mutation.target.classList.contains(this.classToWatch)
+                if(this.lastClassState !== currentClassState) {
+                  this.lastClassState = currentClassState
+                  if(currentClassState) {
+                    this.classAddedCallback()
+                  }
+                  else {
+                    this.classRemovedCallback()
+                  }
                 }
+              }
             }
+          }
         }
       })
       
