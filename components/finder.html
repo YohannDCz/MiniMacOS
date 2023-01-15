@@ -134,7 +134,7 @@
       const active = appHeader.contentWindow.document
       const isAnyActive = active.querySelectorAll(".box");
 
-      let targetNodes = active.querySelectorAll('.box');
+      let targetNodes = document.querySelector(".app-header").contentWindow.document.querySelectorAll('.box');
 
       function workOnClassAdd() {
           appHeader.style.height = "100vh";
@@ -155,7 +155,7 @@
       console.log(active.body.clientHeight)
 
 
-      targetNodes.forEach((targetNode) => {
+      targetNodes.forEach((targetNode1) => {
         class ClassWatcher {
 
           constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
@@ -206,7 +206,7 @@
           }
         }
         
-        let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
+        let classWatcher = new ClassWatcher(targetNode1, 'active', workOnClassAdd, workOnClassRemoval)
       })
     
     </script>
