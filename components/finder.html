@@ -16,9 +16,9 @@
     <div class="header"></div>
     <header>
       <div class="menu">
-        <iframe class="app-header" src="./app-headers/finder-header.html" style="border: none;" width="600px" height="24px"></iframe>
+        <iframe class="app-header" src="./app-headers/finder-header.html" style="border: none;" width="700px" height="24px"></iframe>
       </div>
-      <!-- <div class="rightinfos">
+      <div class="rightinfos">
         <div class="widgets">
           <div class="battery">
             <img src="../images/icons/icons_batterie.svg" alt="" />
@@ -43,7 +43,7 @@
           <div id="">à</div>
           <div id="time"></div>
         </div>
-      </div> -->
+      </div>
     </header>
     <nav class="dock">
       <ul class="dock-container">
@@ -156,7 +156,7 @@
       console.log(active.body.clientHeight)
 
 
-      targetNodes.forEach((targetNode) => {
+      for (let i = 0; i < targetNodes.length; i++) {
         class ClassWatcher {
 
           constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
@@ -207,8 +207,8 @@
           }
         }
         
-        let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
-      })
+        let classWatcher = new ClassWatcher(targetNodes[i], 'active', workOnClassAdd, workOnClassRemoval)
+      }
     
     </script>
   </body>
