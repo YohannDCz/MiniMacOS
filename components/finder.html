@@ -130,6 +130,7 @@
 
       // menu.innerHTML = ``
       
+      const header = document.querySelector("header");
       const appHeader = document.querySelector(".app-header");
       const active = appHeader.contentWindow
       const isAnyActive = active.document.querySelectorAll(".box");
@@ -139,9 +140,11 @@
           if (isAnyActive > 0) {
             appHeader.style.width = "100vw";
             appHeader.style.height = "100vh";
+            header.style.height = "100w";
           } else {
             appHeader.style.width = "600px";
             appHeader.style.height = "24px";
+            header.style.height = "24px";
           }
         })
       })
