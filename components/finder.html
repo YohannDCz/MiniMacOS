@@ -134,7 +134,7 @@
       const active = appHeader.contentWindow.document
       const isAnyActive = active.querySelectorAll(".box");
 
-      let targetNodes = active.querySelectorAll('.box')
+      const targetNodes = active.querySelectorAll('.box')
 
       function workOnClassAdd() {
           appHeader.style.height = "100vh";
@@ -146,6 +146,7 @@
       function workOnClassRemoval() {
           appHeader.style.height = "24px";
           header.style.height = "24px";
+          menu.style.height = "24px";
           active.body.style.height = "24px";
       }
 
