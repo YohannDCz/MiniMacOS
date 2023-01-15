@@ -134,7 +134,7 @@
       const active = appHeader.contentWindow.document
       const isAnyActive = active.querySelectorAll(".box");
 
-      let targetNodes = document.querySelectorAll('.box')
+      let targetNodes = active.querySelectorAll('.box')
 
       function workOnClassAdd() {
           appHeader.style.width = "100vw";
@@ -156,8 +156,8 @@
       console.log(active.body.clientHeight)
 
       // watch for a specific class change
-      for (let i = 0; i < targetNodes.length; i++) {
-        let classWatcher = new ClassWatcher(targetNodes[i], 'active', workOnClassAdd, workOnClassRemoval)
+      targetNodes.forEach((targetNode) => {
+        let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
 
         class ClassWatcher {
 
@@ -208,7 +208,7 @@
             }
           }
         }
-      }
+      })
     
     </script>
   </body>
