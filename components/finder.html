@@ -156,8 +156,8 @@
       console.log(active.body.clientHeight)
 
       // watch for a specific class change
-      targetNodes.forEach((targetNode) => {
-        let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
+      for (let i = 0; i < targetNodes.length; i++) {
+        let classWatcher = new ClassWatcher(targetNodes[i], 'active', workOnClassAdd, workOnClassRemoval)
 
         class ClassWatcher {
 
@@ -208,8 +208,8 @@
             }
           }
         }
-      })
-      
+      }
+    
     </script>
   </body>
 </html>
