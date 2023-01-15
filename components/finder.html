@@ -156,7 +156,7 @@
       console.log(active.body.clientHeight)
 
 
-      for (let i = 0; i < targetNodes.length; i++) {
+      targetNodes.forEach((targetNode) => {
         class ClassWatcher {
 
           constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
@@ -207,8 +207,8 @@
           }
         }
         
-        let classWatcher = new ClassWatcher(targetNodes[i], 'active', workOnClassAdd, workOnClassRemoval)
-      }
+        let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
+      })
     
     </script>
   </body>
