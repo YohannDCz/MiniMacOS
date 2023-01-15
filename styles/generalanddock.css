@@ -51,6 +51,7 @@ nav {
  backdrop-filter: blur(13px);
  -webkit-backdrop-filter: blur(13px);
  border: 1px solid rgba(255, 255, 255, 0.18);
+ z-index: 999;
 }
 
 .dock .dock-container .li-1::after {

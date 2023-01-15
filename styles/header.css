@@ -19,10 +19,9 @@ header {
 
 header .menu {
   position: relative;
- display: inline-block;
+  display: flex;
+  z-index: 998;
  /* align-items: center; */
- height: auto;
- width: auto;
  /* padding: 0 16px;
  border: none;
  border-radius: 4px;
