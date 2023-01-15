@@ -157,8 +157,6 @@
 
       // watch for a specific class change
       targetNodes.forEach((targetNode) => {
-        let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
-
         class ClassWatcher {
 
           constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
@@ -208,6 +206,8 @@
             }
           }
         }
+        
+        let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
       })
     
     </script>
