@@ -1,26 +1,29 @@
 const finder = document.getElementById('finder');
-finder.addEventListener("click", function() {addWindow("./finder-window.html", "Finder")});
+finder.addEventListener("click", function () {
+  addWindow("../components/finder-window.html", "Finder");
+  addHeader("../components/app-headers/finder-header.html", "finder-header");
+})
 
 const safari = document.getElementById('safariApp');
-safari.addEventListener("click", function() {addWindow("./apps/safari.html", "Safari")});
+safari.addEventListener("click", function () { addWindow("./apps/safari.html", "Safari") });
 
 const vscode = document.getElementById('vscodeApp');
-vscode.addEventListener("click", function() {addWindow("https://vscode.dev/", "VSCode",)});
+vscode.addEventListener("click", function () { addWindow("https://vscode.dev/", "VSCode",) });
 
 const word = document.getElementById('wordApp');
-word.addEventListener("click", function() {addWindow("./word.html", "Word")});
+word.addEventListener("click", function () { addWindow("./word.html", "Word") });
 
 const notes = document.getElementById('notesApp');
-notes.addEventListener("click", function() {addWindow("./apps/notes.html", "Notes")});
+notes.addEventListener("click", function () { addWindow("./apps/notes.html", "Notes") });
 
 const calendar = document.getElementById('calendarApp');
-calendar.addEventListener("click", function() {addWindow("./apps/calendar.html", "Calendrier")});
+calendar.addEventListener("click", function () { addWindow("./apps/calendar.html", "Calendrier") });
 
 const mail = document.getElementById('mailApp');
-mail.addEventListener("click", function() {addWindow("./apps/mail.html", "Mail")});
+mail.addEventListener("click", function () { addWindow("./apps/mail.html", "Mail") });
 
 const settings = document.getElementById('settings');
-settings.addEventListener("click", function() {addWindow("./apps/settings.html", "Réglages Système")});
+settings.addEventListener("click", function () { addWindow("./apps/settings.html", "Réglages Système") });
 
 counter = 0;
 
@@ -60,10 +63,15 @@ function addWindow(location, name) {
     draggableWindows();
     modifyZIndex();
     trafficLights();
-    // let highestZindex = getHighestZindex(".window")
   } else {
     const windows = document.getElementById(name);
     windows.style.transform = "scale(1)";
     windows.style.opacity = "1";
   }
+}
+
+function addHeader(location, name) {
+  const menu = document.querySelector(".menu");
+  menu.innerHTML = `<iframe class="${name}" src="${location}" style="border: none;" width="700px" height="24px"></iframe>`;
+  header(name);
 }

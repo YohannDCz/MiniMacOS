@@ -1,7 +1,8 @@
 header {
   display: flex;
   justify-content: space-between;
-  height: auto;
+  height: 24px;
+  width: 100%;
   /* align-items: center; */
 }
 

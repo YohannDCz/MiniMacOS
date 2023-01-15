@@ -1,10 +1,10 @@
-function header() {
-  const header = document.querySelector("header");
-  const appHeader = document.querySelector(".app-header");
-  const active = appHeader.contentWindow.document
+function header(name) {
   const menu = document.querySelector(".menu");
+  const header = document.querySelector("header");
+  const appHeader = document.querySelector(`.${name}`);
+  const active = appHeader.contentWindow.document;
 
-  let targetNodes = active.querySelectorAll('.box');
+  let targetNodes = active.querySelectorAll(".box");
 
   console.log(targetNodes);
 
