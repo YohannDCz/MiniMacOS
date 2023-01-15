@@ -1,19 +1,24 @@
 header {
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.header {
  position: fixed;
  display: flex;
  top: 0;
  right: 0;
  left: 0;
- height: auto;
+ height: 24px;
  background-color: rgba(0, 0, 0, 0.288);
  backdrop-filter: blur(50px);
- justify-content: space-between;
- align-items: center;
+
 }
 
 header .menu {
+  position: relative;
  display: inline-block;
- align-items: center;
+ /* align-items: center; */
  height: auto;
  width: auto;
  /* padding: 0 16px;

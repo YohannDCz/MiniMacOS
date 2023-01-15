@@ -13,9 +13,10 @@
 
   </head>
   <body>
+    <div class="header"></div>
     <header>
       <div class="menu">
-        <iframe class="app-header" src="./app-headers/finder-header.html" style="border: none;"></iframe>
+        <iframe class="app-header" src="./app-headers/finder-header.html" style="border: none;" width="600px" height="24px"></iframe>
       </div>
       <!-- <div class="rightinfos">
         <div class="widgets">
@@ -116,7 +117,7 @@
       height="100%" style="border:none; visibility:hidden; transform:scale(1.2);
       backdrop-filter: blur(0px); opacity:0;"></iframe>
 
-    <script src="../scripts/date-time.js"></script>
+    <!-- <script src="../scripts/date-time.js"></script> -->
     <script src="../scripts/dock.js"></script>
     <script src="../scripts/traffic-lights.js"></script>
     <script src="../scripts/resizeable-windows.js"></script>
@@ -125,21 +126,78 @@
     <script src="../scripts/windows.js"></script>
     <script src="../scripts/launchpad.js"></script>
     <script>
-      const  menu = document.querySelector(".menu");
-
+      const menu = document.querySelector(".menu");
       // menu.innerHTML = ``
 
+      const header = document.querySelector("header");
       const appHeader = document.querySelector(".app-header");
       const active = appHeader.contentWindow
-      const isAnyActive = active.document.querySelectorAll(".box.active").length;
+      const isAnyActive = active.document.querySelectorAll(".box");
 
-      if (isAnyActive > 0) {
-        appHeader.style.width = "100vw";
-        appHeader.style.height = "100vh";
-      } else {
-        appHeader.style.width = "600px";
-        appHeader.style.height = "24px";
+      let targetNodes = document.querySelectorAll('.box')
+
+      function workOnClassAdd() {
+          appHeader.style.width = "100vw";
+          appHeader.style.height = "100vh";
+          header.style.height = "100vh";
+          menu.style.height = "100vh"
+
       }
+
+      function workOnClassRemoval() {
+          appHeader.style.width = "600px";
+          appHeader.style.height = "24px";
+          header.style.height = "24px";
+      }
+
+      // watch for a specific class change
+      targetNodes.forEach((targetNode) => {
+        let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
+
+        class ClassWatcher {
+
+          constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
+            this.targetNode = targetNode
+            this.classToWatch = classToWatch
+            this.classAddedCallback = classAddedCallback
+            this.classRemovedCallback = classRemovedCallback
+            this.observer = null
+            this.lastClassState = targetNode.classList.contains(this.classToWatch)
+
+            this.init()
+          }
+
+          init() {
+            this.observer = new MutationObserver(this.mutationCallback)
+            this.observe()
+          }
+
+          observe() {
+            this.observer.observe(this.targetNode, { attributes: true })
+          }
+
+          disconnect() {
+            this.observer.disconnect()
+          }
+
+          mutationCallback = mutationsList => {
+            for(let mutation of mutationsList) {
+              if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                let currentClassState = mutation.target.classList.contains(this.classToWatch)
+                if(this.lastClassState !== currentClassState) {
+                  this.lastClassState = currentClassState
+                  if(currentClassState) {
+                    this.classAddedCallback()
+                  }
+                  else {
+                    this.classRemovedCallback()
+                  }
+                }
+              }
+            }
+          }
+        }
+      })
       
     </script>
   </body>
