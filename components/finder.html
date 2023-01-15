@@ -142,23 +142,32 @@
         },10);
       }
 
-      isAnyActive.forEach((isActive) => {
-        isActive.addEventListener("click", function() {
-          const header = document.querySelector("header");
-          const appHeader = document.querySelector(".app-header");
-          const active = appHeader.contentWindow
-          const isAnyActive = active.document.querySelectorAll(".box.active");
-          if (isAnyActive > 0) {
-            appHeader.style.width = "100vw";
-            appHeader.style.height = "100vh";
-            header.style.height = "100w";
-          } else if (isAnyActive == 0) {
-            appHeader.style.width = "600px";
-            appHeader.style.height = "24px";
-            header.style.height = "24px";
-          }
-        })
-      })
+      const header = document.querySelector("header");
+      const appHeader = document.querySelector(".app-header");
+      const active = appHeader.contentWindow
+      const isAnyActive = active.document.querySelectorAll(".box.active");
+
+      console.log(isOverflown(active));
+
+      function isOverflown(element) {
+        return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+      }
+
+
+      // isAnyActive.forEach((isActive) => {
+      //   isActive.addEventListener("click", function() {
+          
+      //     if (isAnyActive > 0) {
+      //       appHeader.style.width = "100vw";
+      //       appHeader.style.height = "100vh";
+      //       header.style.height = "100w";
+      //     } else if (isAnyActive == 0) {
+      //       appHeader.style.width = "600px";
+      //       appHeader.style.height = "24px";
+      //       header.style.height = "24px";
+      //     }
+      //   })
+      // })
 
       console.log(isAnyActive)
       
