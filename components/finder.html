@@ -16,7 +16,7 @@
     <div class="header"></div>
     <header>
       <div class="menu">
-        <iframe class="app-header" src="./app-headers/finder-header.html" style="border: none;" width="600px" height="24px"></iframe>
+        <iframe class="app-header" src="./app-headers/finder-header.html" style="border: none; position: absolute" width="600px" height="24px"></iframe>
       </div>
       <!-- <div class="rightinfos">
         <div class="widgets">
@@ -130,13 +130,27 @@
 
       // menu.innerHTML = ``
       
-      const header = document.querySelector("header");
-      const appHeader = document.querySelector(".app-header");
-      const active = appHeader.contentWindow
-      const isAnyActive = active.document.querySelectorAll(".box.active");
+      function addClassNameListener(elemId, callback) {
+        var elem = document.getElementById(elemId);
+        var lastClassName = elem.className;
+        window.setInterval( function() {   
+          var className = elem.className;
+          if (className !== lastClassName) {
+              callback();   
+              lastClassName = className;
+          }
+        },10);
+      }
+
+      addClassNameListener("")
+
       
       isAnyActive.forEach((isActive) => {
         isActive.addEventListener("click", function() {
+          const header = document.querySelector("header");
+          const appHeader = document.querySelector(".app-header");
+          const active = appHeader.contentWindow
+          const isAnyActive = active.document.querySelectorAll(".box.active");
           if (isAnyActive > 0) {
             appHeader.style.width = "100vw";
             appHeader.style.height = "100vh";
