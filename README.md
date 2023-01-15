@@ -1,4 +1,4 @@
-# Projet_Ventura
+# Projet Ventura
 Intégration de MacOS sur le web.
 
 Ce code design les parties principales de MacOSX notamment l'écran de verouillage, le finder ainsi que le launchpad et un minimum d'applications.
