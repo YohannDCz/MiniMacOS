@@ -134,6 +134,7 @@
       const active = appHeader.contentWindow
       const isAnyActive = active.document.querySelectorAll(".box.active").length;
 
+      console.log(isAnyActive)
       if (isAnyActive > 0) {
         appHeader.style.width = "100vw";
         appHeader.style.height = "100vh";
