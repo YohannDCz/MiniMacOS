@@ -122,7 +122,7 @@
     <script src="../scripts/resizeable-windows.js"></script>
     <script src="../scripts/draggable-windows.js"></script>
     <script src="../scripts/zindex.js"></script>
-    <script src="../scripts/header.js"></script>
+    <!-- <script src="../scripts/header.js"></script> -->
     <script src="../scripts/windows.js"></script>
     <script src="../scripts/launchpad.js"></script>
     <script>
@@ -130,91 +130,91 @@
       const body = document.querySelector('body');
 
       body.onclick = function () {
-        menu.innerHTML = `<iframe class=".finder-header" src="../components/app-headers/finder-header.html" style="border: none;" width="700px" height="24px"></iframe>`
+        menu.innerHTML = `<iframe class="finder-header" src="../components/app-headers/finder-header.html" style="border: none;" width="700px" height="24px"></iframe>`
       }
 
       // function header(name) {
-        const menu = document.querySelector(".menu");
-        const header = document.querySelector("header");
-        const appHeader = document.querySelector(`.finder-header`);
-        const active = appHeader.contentWindow.document;
+      const menu = document.querySelector(".menu");
+      const header = document.querySelector("header");
+      const appHeader = document.querySelector(".finder-header");
+      const active = appHeader.contentWindow.document;
 
-        let targetNodes = active.querySelectorAll(".box");
+      let targetNodes = active.querySelectorAll(".box");
 
-        console.log(targetNodes);
+      console.log(targetNodes);
 
-        function workOnClassAdd() {
-          appHeader.style.height = "100vh";
-          header.style.height = "100vh";
-          menu.style.height = "100vh";
-          active.body.style.height = "100vh";
-        }
+      function workOnClassAdd() {
+        appHeader.style.height = "100vh";
+        header.style.height = "100vh";
+        menu.style.height = "100vh";
+        active.body.style.height = "100vh";
+      }
 
-        function workOnClassRemoval() {
-          appHeader.style.height = "24px";
-          header.style.height = "24px";
-          menu.style.height = "24px";
-          active.body.style.height = "24px";
-        }
+      function workOnClassRemoval() {
+        appHeader.style.height = "24px";
+        header.style.height = "24px";
+        menu.style.height = "24px";
+        active.body.style.height = "24px";
+      }
 
-        console.log(appHeader.clientHeight)
-        console.log(header.clientHeight)
-        console.log(active.body.clientHeight)
+      console.log(appHeader.clientHeight)
+      console.log(header.clientHeight)
+      console.log(active.body.clientHeight)
 
 
-        targetNodes.forEach((targetNode) => {
-          class ClassWatcher {
+      targetNodes.forEach((targetNode) => {
+        class ClassWatcher {
 
-            constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
-              this.targetNode = targetNode
-              this.classToWatch = classToWatch
-              this.classAddedCallback = classAddedCallback
-              this.classRemovedCallback = classRemovedCallback
-              this.observer = null
-              this.lastClassState = targetNode.classList.contains(this.classToWatch)
+          constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
+            this.targetNode = targetNode
+            this.classToWatch = classToWatch
+            this.classAddedCallback = classAddedCallback
+            this.classRemovedCallback = classRemovedCallback
+            this.observer = null
+            this.lastClassState = targetNode.classList.contains(this.classToWatch)
 
-              this.init()
-            }
+            this.init()
+          }
 
-            init() {
-              this.observer = new MutationObserver(this.mutationCallback)
-              this.observe()
-            }
+          init() {
+            this.observer = new MutationObserver(this.mutationCallback)
+            this.observe()
+          }
 
-            observe() {
-              this.observer.observe(this.targetNode, { attributes: true })
-            }
+          observe() {
+            this.observer.observe(this.targetNode, { attributes: true })
+          }
 
-            disconnect() {
-              this.observer.disconnect()
-            }
+          disconnect() {
+            this.observer.disconnect()
+          }
 
-            mutationCallback = mutationsList => {
-              for (let mutation of mutationsList) {
-                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                  let currentClassState = mutation.target.classList.contains(this.classToWatch)
-                  if (this.lastClassState !== currentClassState) {
-                    this.lastClassState = currentClassState
-                    if (currentClassState) {
-                      this.classAddedCallback()
-                      console.log(appHeader.clientHeight)
-                      console.log(header.clientHeight)
-                      console.log(active.body.clientHeight)
-                    }
-                    else {
-                      this.classRemovedCallback()
-                      console.log(appHeader.clientHeight)
-                      console.log(header.clientHeight)
-                      console.log(active.body.clientHeight)
-                    }
+          mutationCallback = mutationsList => {
+            for (let mutation of mutationsList) {
+              if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                let currentClassState = mutation.target.classList.contains(this.classToWatch)
+                if (this.lastClassState !== currentClassState) {
+                  this.lastClassState = currentClassState
+                  if (currentClassState) {
+                    this.classAddedCallback()
+                    console.log(appHeader.clientHeight)
+                    console.log(header.clientHeight)
+                    console.log(active.body.clientHeight)
+                  }
+                  else {
+                    this.classRemovedCallback()
+                    console.log(appHeader.clientHeight)
+                    console.log(header.clientHeight)
+                    console.log(active.body.clientHeight)
                   }
                 }
               }
             }
           }
+        }
 
-          let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
-        })
+        let classWatcher = new ClassWatcher(targetNode, 'active', workOnClassAdd, workOnClassRemoval)
+      })
       // }
       // header("finder-header");
     </script>
