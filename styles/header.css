@@ -23,7 +23,7 @@ header .menu {
   display: flex;
   width: 700px;
   height: 24px;
-  z-index: 998;
+  /* z-index: 998; */
  /* align-items: center; */
  /* padding: 0 16px;
  border: none;
