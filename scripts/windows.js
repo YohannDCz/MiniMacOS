@@ -70,8 +70,8 @@ function addWindow(location, name) {
   }
 }
 
-function addHeader(location, name) {
+function addHeader(location) {
   const menu = document.querySelector(".menu");
-  menu.innerHTML = `<iframe class="${name}" src="${location}" style="border: none;" width="700px" height="24px"></iframe>`;
-  header(name);
+  menu.innerHTML = `<iframe class="app-header" src="${location}" style="border: none;" width="700px" height="24px"></iframe>`;
+  header();
 }
