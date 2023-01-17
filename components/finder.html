@@ -15,6 +15,7 @@
     <div class="header"></div>
     <header>
       <div class="menu">
+        <iframe class="finder-header" src="../components/app-headers/finder-header.html" style="border: none;" width="700px" height="24px"></iframe>
       </div>
       <div class="rightinfos">
         <div class="widgets">
@@ -125,6 +126,13 @@
     <script src="../scripts/windows.js"></script>
     <script src="../scripts/launchpad.js"></script>
     <script>
+
+      const body = document.querySelector('body');
+
+      body.onclick = function () {
+        menu.innerHTML = `<iframe class=".finder-header" src="../components/app-headers/finder-header.html" style="border: none;" width="700px" height="24px"></iframe>`
+      }
+
       // function header(name) {
         const menu = document.querySelector(".menu");
         const header = document.querySelector("header");
