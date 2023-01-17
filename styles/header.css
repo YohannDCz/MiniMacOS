@@ -15,7 +15,6 @@ header {
   height: 24px;
   background-color: rgba(0, 0, 0, 0.288);
   backdrop-filter: blur(50px);
-
 }
 
 header .menu {
@@ -23,7 +22,7 @@ header .menu {
   display: flex;
   width: 700px;
   height: 24px;
-  /* z-index: 998; */
+  z-index: 800;
   /* align-items: center; */
   /* padding: 0 16px;
   border: none;
@@ -32,7 +31,7 @@ header .menu {
 }
 
 header iframe {
-  z-index: 998;
+  z-index: 801;
 }
 
 header .rightinfos,
@@ -40,7 +39,9 @@ header .rightinfos .widgets {
   margin: 0;
   padding: 0;
   display: flex;
-  z-index: 999;
+}
+header .rightinfos {
+  z-index: 900;
 }
 
 header .rightinfos .widgets div,
@@ -68,7 +69,7 @@ header .date div {
 header .widgets,
 header .date {
   display: flex;
-  z-index: 999;
+  z-index: 901;
 }
 
 header .menu div:active {
@@ -105,4 +106,5 @@ header .widgets,
 header .date div {
   margin: 0 2px;
   padding: 0;
+  user-select: none;
 }
