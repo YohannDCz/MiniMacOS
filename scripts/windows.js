@@ -1,49 +1,41 @@
 const finder = document.getElementById('finder');
 finder.addEventListener("click", function () {
   addWindow("../components/finder-window.html", "Finder");
-  addHeader("../components/app-headers/finder-header.html");
 })
 
 const safari = document.getElementById('safariApp');
 safari.addEventListener("click", function () { 
   addWindow("./apps/safari.html", "Safari");
-  addHeader("../components/app-headers/safari-header.html");
 });
 
 const vscode = document.getElementById('vscodeApp');
 vscode.addEventListener("click", function () { 
   addWindow("https://vscode.dev/", "VSCode"); 
-  addHeader("../components/app-headers/vscode-header.html");
 });
 
 const word = document.getElementById('wordApp');
 word.addEventListener("click", function () { 
   addWindow("./word.html", "Word");
-  addHeader("../components/app-headers/word-header.html");
 });
 
 const notes = document.getElementById('notesApp');
 notes.addEventListener("click", function () { 
   addWindow("./apps/notes.html", "Notes");
-  addHeader("../components/app-headers/notes-header.html");
 });
 
 const calendar = document.getElementById('calendarApp');
 calendar.addEventListener("click", function () { 
   addWindow("./apps/calendar.html", "Calendrier");
-  addHeader("../components/app-headers/calendar-header.html");
 });
 
 const mail = document.getElementById('mailApp');
 mail.addEventListener("click", function () { 
   addWindow("./apps/mail.html", "Mail");
-  addHeader("../components/app-headers/mail-header.html");
 });
 
 const settings = document.getElementById('settings');
 settings.addEventListener("click", function () { 
   addWindow("./apps/settings.html", "Réglages Système");
-  addHeader("../components/app-headers/settings-header.html");
 });
 
 counter = 0;
@@ -89,10 +81,4 @@ function addWindow(location, name) {
     windows.style.transform = "scale(1)";
     windows.style.opacity = "1";
   }
-}
-
-function addHeader(location) {
-  const menu = document.querySelector(".menu");
-  menu.innerHTML = `<iframe class="app-header" src="${location}" style="border: none;" width="700px" height="24px"></iframe>`;
-  header();
 }

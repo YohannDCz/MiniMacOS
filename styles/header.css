@@ -30,16 +30,13 @@ header .menu {
   margin: 0 -4px; */
 }
 
-header iframe {
-  z-index: 801;
-}
-
 header .rightinfos,
 header .rightinfos .widgets {
   margin: 0;
   padding: 0;
   display: flex;
 }
+
 header .rightinfos {
   z-index: 900;
 }
@@ -72,17 +69,12 @@ header .date {
   z-index: 901;
 }
 
-header .menu div:active {
-  justify-self: right;
-}
-
 header .menu div:hover,
 header .widgets div:hover,
 header .date:hover {
   cursor: default;
 }
 
-header .menu div:active,
 header .widgets div:active,
 header .date:active {
   background-color: rgba(255, 255, 255, 0.527);
