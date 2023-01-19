@@ -46,6 +46,7 @@ function addWindow(location, name) {
     windows.id = name;
     windows.className = "window";
     windows.style.zIndex = "revert";
+    windows.onclick = "modifyZIndex()";
     let randomX = Math.ceil(Math.random() * 2);
     let randomY = Math.ceil(Math.random() * 2);
     windows.style.position = "absolute";
