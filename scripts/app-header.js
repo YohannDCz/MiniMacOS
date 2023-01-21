@@ -72,7 +72,7 @@ for (let y = 0; y < enabled.length; y++) {
     while (z < enabled.length) {
       enabled[z++].style.backgroundColor = "transparent";
     }
-    enabled[y].style.backgroundColor = "rgba(49, 104, 198, 0.5)";
+    enabled[y].style.backgroundColor = "rgba(0,136,255,0.5)";
   };
   enabled[y].onmouseleave = function () {
     enabled[y].style.backgroundColor = "transparent";

@@ -75,9 +75,14 @@ html, body {
     display: block;
 }
 
+.tab.ticked .container > div {
+    padding-left: 20px;
+}
+
 .long .container {
     width: 325px;
 }
+
 
 .extralong .container {
     width: 400px;
@@ -92,7 +97,7 @@ html, body {
     border: none;
     border-radius: 4px;
     /* background-color: aliceblue; */
-    padding: 4px 12px;
+    padding: 3px 12px;
     margin: 0;
     cursor: default;
     user-select: none;
@@ -123,7 +128,7 @@ html, body {
 
 hr {
     border: 0.25px solid rgba(114, 114, 114, 0.3);
-    margin: 4px 8px;
+    margin: 4px 12px;
 }            
 
 .tab .container .command .left-block {
@@ -136,12 +141,18 @@ hr {
     height: 16px;
     object-fit: contain;
     object-position: center;
-    margin-right: 8px;
+    margin-right: 4px;
 }
 
-.tab .container .command .rightarrow {
+.tab .container .command .right-arrow {
     width: 10px;
     height: 10px;
+}
+
+.tab .container .tick {
+    width: 12px !important;
+    position: absolute;
+    margin-left: -16px;
 }
 
 .tab .container .colors {
