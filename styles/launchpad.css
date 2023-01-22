@@ -28,7 +28,7 @@ html, body, .container {
   border-radius: 4px;
   padding: 4px;
   margin-top: 20px;
-  z-index: 999;
+  z-index: 0;
 }
 
 .input input {

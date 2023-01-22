@@ -2,7 +2,7 @@ const iframeLaunchpad = document.getElementById('iframeLaunchpad');
 const launchpad = document.getElementById('launchpad');
 launchpad.onclick = function () {
   if (iframeLaunchpad.style.visibility === "hidden") {
-    iframeLaunchpad.style.zIndex = 999;
+    iframeLaunchpad.style.zIndex = 100;
     iframeLaunchpad.style.transform = "scale(1)";
     iframeLaunchpad.style.backdropFilter = "blur(20px)";
     iframeLaunchpad.style.opacity = 1;
@@ -20,7 +20,7 @@ launchpad.onclick = function () {
 
 const background = iframeLaunchpad.contentWindow.document.getElementById('exit');
 background.onclick = function () {
-  iframeLaunchpad.style.zIndex = 999;
+  iframeLaunchpad.style.zIndex = 100;
   iframeLaunchpad.style.transform = "scale(1.2)";
   iframeLaunchpad.style.backdropFilter = "blur(0px)";
   iframeLaunchpad.style.opacity = 0;

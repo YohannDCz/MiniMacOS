@@ -1,0 +1,219 @@
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "SF Pro", Helvetica, sans-serif;
+    }
+
+    html,
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      background-color: rgba(228, 226, 226, 0.743);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 40px;
+      background-color: white;
+      z-index: 1;
+    }
+
+    header .info {
+      display: flex;
+      align-items: center;
+    }
+
+    header .info button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border: 1px solid rgba(195, 195, 195, 0.589);
+      border-radius: 4px;
+    }
+
+    header .left-info .chevron {
+      width: 28px;
+      height: 24px;
+    }
+
+    header .left-info .chevron:first-child {
+      margin-left: 12px;
+    }
+
+    header .left-info .chevron img {
+      width: 20px;
+      height: 20px;
+    }
+
+    header .left-info .sidebar {
+      width: 36px;
+      height: 24px;
+      margin-left: 12px;
+    }
+
+    header .left-info .sidebar img {
+      width: 14px;
+      height: 14px;
+    }
+
+    header .middle-info .security {
+      width: 36px;
+      height: 24px;
+      position: absolute;
+      margin-left: -40px;
+    }
+
+    header .middle-info .security img {
+      width: 14px;
+      height: 14px;
+    }
+
+    header .middle-info input {
+      border: none;
+      border-radius: 4px;
+      width: 320px;
+      height: 24px;
+      padding: 0;
+      padding-left: 12px;
+      background-color: #E5E7EB;
+    }
+
+    header .middle-info input::placeholder {
+      text-align: center;
+      color: rgb(159, 158, 166)
+    }
+
+    header .right-info .share,
+    header .right-info .tabs {
+      width: 36px;
+      height: 24px;
+    }
+
+    header .right-info .tabs {
+      margin: 8px;
+    }
+
+    header .right-info img {
+      width: 16px;
+      height: 16px;
+    }
+
+    main {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 40px;
+      z-index: 0;
+    }
+
+    main section.favourites,
+    main section.frequently-used,
+    main section.security {
+      display: flex;
+      width: 65.138%;
+      flex-wrap: wrap;
+      flex-direction: column;
+      position: relative;
+    }
+
+    main section h2 {
+      font-weight: 700;
+      color: rgb(62, 62, 62);
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+
+    main section.favourites h2 {
+      margin-top: 74px;
+    }
+
+    main section .websites {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 12px;
+      width: 100%;
+    }
+
+    main section.frequently-used .websites {
+      column-gap: 12px;
+      row-gap: 12px;
+    }
+
+    main section .websites p {
+      width: 72px;
+      text-align: center;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    main section.favourites .website img {
+      width: 72px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(100, 100, 100, 0.25);
+    }
+
+    main section.frequently-used .websites .website img {
+      height: 120px;
+      width: 216px;
+      object-fit: cover;
+      object-position: top;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(100, 100, 100, 0.25);
+    }
+
+    main section.favourites .websites .website img:active,
+    main section.frequently-used .websites .website img:active {
+      filter: brightness(0.4) !important;
+      transition: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    main section.security .websites {
+      display: flex;
+    }
+
+    main section.security .banner {
+      background-color: white;
+      border: none;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 12px 0;
+      margin-bottom: 64px;
+      box-shadow: 0 0 10px rgba(100, 100, 100, 0.25);
+    }
+
+    main section.security .websites .shield {
+      width: 32px;
+      margin: auto auto auto 24px;
+    }
+
+    main section.security .websites .number {
+      width: auto;
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+    }
+
+    main section.security .websites .title {
+      flex: 1;
+      text-align: left;
+    }

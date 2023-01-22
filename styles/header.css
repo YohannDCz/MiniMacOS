@@ -3,6 +3,7 @@ header {
   justify-content: space-between;
   height: 24px;
   width: 100%;
+  z-index: 50;
   /* align-items: center; */
 }
 
@@ -22,7 +23,7 @@ header .menu {
   display: flex;
   width: 700px;
   height: 24px;
-  z-index: 800;
+  z-index: 50;
   /* align-items: center; */
   /* padding: 0 16px;
   border: none;
@@ -38,7 +39,7 @@ header .rightinfos .widgets {
 }
 
 header .rightinfos {
-  z-index: 900;
+  z-index: 50;
 }
 
 header .rightinfos .widgets div,
@@ -66,7 +67,7 @@ header .date div {
 header .widgets,
 header .date {
   display: flex;
-  z-index: 901;
+  z-index: 50;
 }
 
 header .menu div:hover,
