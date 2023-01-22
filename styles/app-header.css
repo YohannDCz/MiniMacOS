@@ -92,6 +92,10 @@ html, body {
     width: 450px;
 }
 
+.short .container {
+    width: 150px;
+}
+
 .tab .container div {
     color: black;
     border: none;
@@ -141,7 +145,6 @@ hr {
     height: 16px;
     object-fit: contain;
     object-position: center;
-    margin-right: 4px;
 }
 
 .tab .container .command .right-arrow {

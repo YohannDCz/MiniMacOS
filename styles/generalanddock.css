@@ -96,6 +96,7 @@ background: rgba(205, 205, 205, 0.7);
  border-radius: 5px;
  visibility: hidden;
 }
+
 .dock .dock-container li .name::after {
  content: "";
  position: absolute;
@@ -107,8 +108,8 @@ background: rgba(205, 205, 205, 0.7);
  border-left: 10px solid transparent;
  border-right: 10px solid transparent;
  border-top: 10px solid rgba(205, 205, 205, 0.7);
-;
 }
+
 .dock .dock-container li .ico {
  width: 80px;
  height: 80px;
