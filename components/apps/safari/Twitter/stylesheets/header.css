@@ -1,0 +1,179 @@
+header {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 356.5px;
+    justify-content: flex-end;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 0 12px;
+    justify-content: space-between;
+    width: 251px;
+}
+
+.menu .twitter-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    transition: 0.15s;
+}
+
+.menu .twitter-logo:hover {
+    border-radius: 9999px;
+    background-color: rgb(203, 232, 251);
+}
+
+.menu .twitter-logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu .items {
+    display: flex;
+    flex-direction: column;
+    margin: 2px 0 4px 0;
+}
+
+.menu .twitter-logo, .menu .items:hover, .tweet:hover, .tweet .a-button button:hover {
+    cursor: pointer;
+}
+
+.menu .items .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+    max-height: 50.25px;
+    white-space: pre-wrap;
+}
+
+.menu .items .item:hover {
+    background-color: rgb(216, 216, 216);
+    border-radius: 9999px;
+}
+
+.menu .items .item-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.menu .items .item img {
+    width: 26.25px;
+    height: 26.25px;
+}
+
+.menu .items .item h1 {
+    font-size: 20px; 
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    margin: 0 16px 0 20px;
+}
+
+.menu .items .item .home {
+    font-weight: bold;
+}
+
+.tweet-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.tweet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 226px;
+    height: 50px;
+    background-color: rgb(29,155,240);
+    border: none;
+    border-radius: 52px;
+    margin: 4px 0;
+}
+
+.tweet:hover, .tweet:hover .a-button button {
+    background-color: rgb(26,140,216);
+}
+
+.tweet .a-button {
+    display: flex;
+    padding: 0 32px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tweet .a-button button {
+    font-size: 17px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: rgb(29,155,240);
+    color: white;
+    border: none;
+
+}
+
+.footer .profile {
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    margin: 12px 0;
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+.footer .profile:hover {
+    background-color: rgb(216, 216, 216);
+    border-radius:9999px;
+
+}
+
+.footer .profile .profile-picture {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    border-radius: 100%;
+}
+
+.footer .profile .menu-drop img {
+    width: 18.75px;
+    height: 18.75px;
+}
+
+
+.footer .profile .name-and-pseudo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 12px;
+    justify-content: space-between;
+}
+
+.footer .profile .name-and-pseudo p {
+    margin: 0;
+    font-size: 15px;
+    font-family: Helvetica, sans-serif;
+}
+
+.footer .profile .name-and-pseudo .name {
+    font-weight: bold;
+}
+
+.menu-drop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

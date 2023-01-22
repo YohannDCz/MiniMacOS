@@ -1,0 +1,39 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    background-color: white;
+    border: 1px solid white;
+    z-index: 100;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 16px 0 14px;
+}
+
+.item:hover {
+    background-color: rgb(250, 250, 250);
+}
+ .item img {
+     width: 24px;
+     height: 24px;
+     margin: 0 0 6px;
+     padding: 0;
+ }
+
+ p {
+     font-size: 10px;
+     font-family: roboto;
+     margin: 0;
+ }

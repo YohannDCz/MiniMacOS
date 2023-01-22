@@ -1,0 +1,146 @@
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    background-color: white;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    padding: 0px 24px 0px 16px;
+    z-index: 99;
+}
+
+.info-left {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    position: relative;
+    width: 179px;
+}
+
+.logotype {
+    position: relative;
+    width: 120px;
+    height: 20px;
+    object-fit: contain;
+    object-position: center;
+    padding: 18px 14px 18px 1px;
+    cursor: pointer;
+}
+
+.info-middle {
+    max-width: 728px;
+    height: 56px;
+    display: flex;
+    flex:1;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.info-middle .searchbar {
+    max-width: 534px;
+    height: 34px;
+    padding: 2px 6px;
+    margin-left: 34px; 
+    display: flex;
+    flex: 1;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 9999px 2px 2px 9999px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.126);
+}
+
+.info-middle input::placeholder {
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 300;
+    color: grey;
+    padding-left: 16px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 62px;
+    height: 38px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 2px 9999px 9999px 2px;
+    margin-left: -2px;
+    background-color: rgb(245, 245, 245);
+    cursor: pointer;
+}
+
+.search:hover {
+    background-color: rgb(233, 232, 232);
+}
+
+.info-middle .mic-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 100%;
+    background-color: rgb(244, 244, 244);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.research {
+    display: flex;
+    margin-left: 40px;
+    flex: 1;
+}
+
+.center {
+    display: flex;
+    flex: 1;
+    flex-shrink: 1;
+    max-width: 720px; 
+}
+
+.info-right {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 216px;
+}
+
+.info-right .profile-picture {
+    width: 60px;
+    height: 34px;
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    padding: 1px 6px 1px 0;
+    margin-right: 2px;
+
+}
+
+.profile-picture img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}

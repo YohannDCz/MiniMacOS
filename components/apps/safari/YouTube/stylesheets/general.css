@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: roboto, arial, sans-serif;
+    background-color: rgb(247, 247, 247);
+}
+
+img {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    padding: 8px;
+}
+
+button {
+    display: flex;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 100%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: -32px;
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    padding: 4px 8px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.search:hover .tooltip, .mic-button:hover .tooltip, .create:hover .tooltip, .apps:hover .tooltip, .notifications:hover .tooltip  {
+    opacity: 0.75
+}

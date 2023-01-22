@@ -1,0 +1,173 @@
+.video-grid {
+    display: grid;
+    column-gap: 16px;
+    row-gap: 16px;
+    padding-left: 96px;
+    padding-right: 56px;
+    padding-top: 80px;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 292px;
+}
+
+.thumbnail {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 0;
+}
+
+.thumbnail .timestamp {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    z-index: 3;
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    padding: 3px 4px;
+    margin: 4px;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    height: 94px;
+}
+
+.description .profile-picture {
+    position: relative;
+    display: flex;
+    z-index: 4;;
+}
+
+.description .profile-picture img {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    margin-top: 12px;
+    margin-right: 12px;
+}
+
+.description .profile-picture .minicards {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    background: #FFF;
+    width: 250px;
+    height: auto;
+    border-radius: 14px;
+    z-index: 99;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.description .profile-picture:hover .minicards {
+    opacity: 1;
+}
+
+.description .profile-picture .minicards .mini-image {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    object-position: center;
+    margin: 12px;
+}
+
+.description .profile-picture .minicards .mini-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}   
+.description .profile-picture .minicards .mini-description .channel-name,
+.description .profile-picture .minicards .mini-description .subscribers {
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+}
+
+.description .profile-picture .minicards .mini-description .channel-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.text {
+    flex: 1;
+    height: 94px;
+    padding-right: 24px;
+}   
+
+.text p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.text a {
+    text-decoration: none;
+    color: black;
+}
+
+.text .title {
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-top: 12px;
+}
+
+.text .user {
+    color: #606060;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.text .views-timestamp {
+    display: flex;
+    flex-direction: row;
+    color: #606060;
+}
+
+.text .views-timestamp .views, .text .views-timestamp .timestamp {
+    font-size: 12px;
+    color: #606060;
+}
+
+@media (max-width: 888px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+ }
+
+ @media (min-width: 889px) and (max-width: 1155px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+ }
+
+ @media (min-width: 1156px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+ }

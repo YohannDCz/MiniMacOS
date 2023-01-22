@@ -1,0 +1,95 @@
+.logotype-div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: right;
+    min-height: 150px;
+    max-height: 290px;
+    flex: 1;
+    box-sizing: border-box;
+}
+.logotype {
+    flex: 1;
+    position: absolute;
+    width: 272px;
+    height: 92px;
+    bottom: 0;
+}
+
+.section-searchbar {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.searchbar {
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 40px;
+    max-width: 584px;
+    height: 46px;
+    
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+
+    background-color: white;
+}
+
+.searchbar:hover {
+    border-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.284);
+}
+
+.searchbar .input {
+    display: flex;
+    flex: 1;
+    position: absolute;
+    left: 47px;
+    right: 54px;
+    height: 100%;
+}
+
+.searchbar input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: none;
+    outline: none;
+}
+
+.loupe-div {
+    display: flex;
+    position: absolute;
+    left:14px;
+    width: 20px;
+    height:100%;
+    align-items: center;
+    padding-right: 13px;
+    }
+
+.loupe {
+    object-fit: cover;
+    object-position: center;
+    width: 20px;
+    height: 20px;
+}
+
+.mic-div {
+    display: flex;
+    position: absolute;
+    right: 14px;
+    height: 44px;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.mic {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    object-position: center;
+}

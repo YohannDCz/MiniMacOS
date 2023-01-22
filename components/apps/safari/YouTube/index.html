@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>YouTube</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="./stylesheets/general.css">
+        <link rel="stylesheet" href="./stylesheets/grid.css">
+        <link rel="stylesheet" href="./stylesheets/header.css">
+        <link rel="stylesheet" href="./stylesheets/nav.css">
+        <link rel="stylesheet" href="./stylesheets/newcss.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="info-left">
+                <button type="button" class="hamburger-button">
+                    <img class="hamburger" src="./icons/hamburger-menu.svg" alt="Hamburger menu">
+                </button>
+                <img class="logotype" src="./icons/youtube-logo.svg" alt="YouTube logotype">
+            </div>
+            <div class="info-middle">
+                <div class="center">
+                    <div class="research">
+                        <input class="searchbar" type="text" placeholder="Search">
+                        <div class="search">
+                            <img src="./icons/search.svg" alt="search icon">
+                            <div class="tooltip">Search</div>
+                        </div>
+                    </div>
+                    <button class="mic-button">
+                        <img class="mic-icon" src="./icons/voice-search-icon.svg" alt=" mic icon">
+                        <div class="tooltip">Search with your voice</div>
+                    </button>
+                </div> 
+            </div>   
+            <div class="info-right">
+                <button class="create">
+                    <img src="./icons/upload.svg" alt="Live button">
+                    <div class="tooltip">Create</div>
+                </button>
+                <button class="apps">
+                    <img src="./icons/youtube-apps.svg" alt="YouTube Apps">
+                    <div class="tooltip">Apps</div>
+                </button>
+                <button class="notifications">
+                    <img src="./icons/notifications.svg" alt="Notifications">
+                    <p class="notification">3</p>
+                    <div class="tooltip">Notifications</div>
+                </button>
+                <button class="profile-picture">
+                    <a href="./newhtml.html"><img src="./images/woody2.jpeg" alt="Profile Picture"></a>
+                </button>
+            </div>
+        </header>
+        <nav>
+            <a class="item">
+                <img src="./icons/home.svg" alt="">
+                <p class="title">Home</p>
+            </a>
+            <a class="item">
+                <img src="./icons/explore.svg" alt="">
+                <p class="title">Explore</p>
+            </a>
+            <a class="item">
+                <img src="./icons/subscriptions.svg" alt="">
+                <p class="title">Subscription</p>
+            </a>
+            <a class="item">
+                <img src="./icons/originals.svg" alt="">
+                <p class="title">Originals</p>
+            </a>
+            <a class="item">
+                <img src="./icons/youtube-music.svg" alt="">
+                <p class="title">YouTube Music</p>
+            </a>
+            <a class="item">
+                <img src="./icons/library.svg" alt="">
+                <p class="title">Library</p>
+            </a>
+        </nav>
+        <main class="video-grid">
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=75d_29QWELk&t=7s&ab_channel=Kurzgesagt%E2%80%93InaNutshell">
+                        <img src="./images/thumbnails/thumbnail.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">5:50</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img class="image" src="./images/profile-pictures/profile-picture1.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture1.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">Kurzgesagt...</p>
+                                <p class="subscribers">19,8M subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=75d_29QWELk&t=7s&ab_channel=Kurzgesagt%E2%80%93InaNutshell">
+                            <p class="title">Change Your Life - One Tiny Step at a Time</p>
+                        </a>
+                        <p class="user">Kurzgesagt - In a Nutshell</p>
+                        <div class="views-timestamp">
+                            <p class="views">5.3M views &#183;</p> 
+                            <p class="timestamp">1 month ago </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=0hc3KGD1SFc&ab_channel=ZachKing">
+                        <img src="./images/thumbnails/thumbnail2.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">7:20</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture2.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture2.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">Zach King</p>
+                                <p class="subscribers">14,9M subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=0hc3KGD1SFc&ab_channel=ZachKing">
+                            <p class="title">Tricks with Monument - MAGIC OF THE MONTH -...</p>
+                        </a>
+                        <p class="user">Zach King</p>
+                        <div class="views-timestamp">
+                            <p class="views">179k views &#183;</p> 
+                            <p class="timestamp">2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc&list=WL&index=28&t=22052s&ab_channel=SuperSimpleDev">
+                        <img src="./images/thumbnails/thumbnail3.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">6:31:24</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture3.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture3.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">SuperSimpleDev</p>
+                                <p class="subscribers">114k subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc&list=WL&index=28&t=22052s&ab_channel=SuperSimpleDev">
+                            <p class="title">HTML & CSS Full Course - Beginner to Pro (2022)</p>
+                        </a>
+                        <p class="user">SuperSimpleDev</p>
+                        <div class="views-timestamp">
+                            <p class="views">1.3M views &#183;</p> 
+                            <p class="timestamp">5 months ago </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=MnrJzXM7a6o&ab_channel=JohnSchroter">
+                        <img src="./images/thumbnails/thumbnail4.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">10:16</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture4.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture4.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">John Shroter</p>
+                                <p class="subscribers">55.8k subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=MnrJzXM7a6o&ab_channel=JohnSchroter">
+                            <p class="title">Steve Jobs introduces iPhone in 2007</p>
+                        </a>
+                        <p class="user">John Shroter</p>
+                        <div class="views-timestamp">
+                            <p class="views">39M views &#183;</p> 
+                            <p class="timestamp">10 years ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=9a9idrbPM78&ab_channel=GuinnessWorldRecords">
+                        <img src="./images/thumbnails/thumbnail5.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">5:50</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture5.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture5.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">Guiness World Records</p>
+                                <p class="subscribers">9,46M subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=9a9idrbPM78&ab_channel=GuinnessWorldRecords">
+                            <p class="title">Most diamonds set in one ring - 24,679 by SWA Diamonds (India)</p>
+                        </a>
+                        <p class="user">Guiness World Records</p>
+                        <div class="views-timestamp">
+                            <p class="views">60k views &#183;</p> 
+                            <p class="timestamp">7 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=j3FaaXf_2iw&ab_channel=EnesYilmazer">
+                        <img src="./images/thumbnails/thumbnail6.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">29:36</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture6.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture6.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">Enes Yilmazer</p>
+                                <p class="subscribers">2,89M subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=j3FaaXf_2iw&ab_channel=EnesYilmazer">
+                            <p class="title">Touring a $32.5 Million Oceanfront California Modern Mansion</p>
+                        </a>
+                        <p class="user">Enes Yilmazer</p>
+                        <div class="views-timestamp">
+                            <p class="views">5.3M views &#183;</p> 
+                            <p class="timestamp">1 month ago </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=0Jtry6syRoI&ab_channel=TheiCollection">
+                        <img src="./images/thumbnails/thumbnail7.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">12:47</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture7.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture7.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">TheiCollection</p>
+                                <p class="subscribers">885k subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=0Jtry6syRoI&ab_channel=TheiCollection">
+                            <p class="title">J'ai testé le MacBook Air (M2) en avant première !</p>
+                        </a>
+                        <p class="user">TheiCollection</p>
+                        <div class="views-timestamp">
+                            <p class="views">127k views &#183;</p> 
+                            <p class="timestamp">2 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=0ngc7vI9RhY&ab_channel=KaizenLane">
+                        <img src="./images/thumbnails/thumbnail8.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">11:26</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture8.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture8.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">Kaizen Lane</p>
+                                <p class="subscribers">200k subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=0ngc7vI9RhY&ab_channel=KaizenLane">
+                            <p class="title">Cette méthode va te mettre au travail COMME JAMAIS</p>
+                        </a>
+                        <p class="user">Kaizen Lane</p>
+                        <div class="views-timestamp">
+                            <p class="views">30k views &#183;</p> 
+                            <p class="timestamp">2 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=Sx7xIpPwl9w&ab_channel=JoshHiTech">
+                        <img src="./images/thumbnails/thumbnail9.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">11:26</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture9.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture9.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">Josh HiTech</p>
+                                <p class="subscribers">2,95k subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=Sx7xIpPwl9w&ab_channel=JoshHiTech">
+                            <p class="title">Becoming A Front End Developer Takes Time</p>
+                        </a>
+                        <p class="user">Josh HiTech</p>
+                        <div class="views-timestamp">
+                            <p class="views">75k views &#183;</p> 
+                            <p class="timestamp">1 months ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=X1jMMFOqxEw&ab_channel=MrBeast">
+                        <img src="./images/thumbnails/thumbnail10.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">11:26</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture10.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture10.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">MrBeast</p>
+                                <p class="subscribers">118M subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=X1jMMFOqxEw&ab_channel=MrBeast">
+                            <p class="title">$50,000 Game Of Extreme Hide and Seek - Challenge</p>
+                        </a>
+                        <p class="user">MrBeast</p>
+                        <div class="views-timestamp">
+                            <p class="views">100M views &#183;</p> 
+                            <p class="timestamp">2 years ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=I8dQfQekmcs&ab_channel=ZachKing">
+                        <img src="./images/thumbnails/thumbnail11.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">11:26</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture2.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture2.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">Zach King</p>
+                                <p class="subscribers">14,9M subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=I8dQfQekmcs&ab_channel=ZachKing">
+                            <p class="title">MAGIC DUEL: Jack Black vs Zach King</p>
+                        </a>
+                        <p class="user">Kaizen Lane</p>
+                        <div class="views-timestamp">
+                            <p class="views">30k views &#183;</p> 
+                            <p class="timestamp">2 week ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=oPSHg0oJpX4&ab_channel=MetaBallStudios">
+                        <img src="./images/thumbnails/thumbnail12.jpeg" alt="The thumbnail of the video.">
+                    </a>
+                    <p class="timestamp">11:26</p>
+                </div>
+                <div class="description">
+                    <div class="profile-picture">
+                        <img src="./images/profile-pictures/profile-picture12.jpeg" alt="">
+                        <div class="minicards">
+                            <img class="mini-image" src="./images/profile-pictures/profile-picture12.jpeg" alt="Profile picture.">
+                            <div class="mini-description">
+                                <p class="channel-name">MetaBallStudio</p>
+                                <p class="subscribers">1,34M subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <a href="https://www.youtube.com/watch?v=oPSHg0oJpX4&ab_channel=MetaBallStudios">
+                            <p class="title">WATERFALLS HEIGHT in perspective</p>
+                        </a>
+                        <p class="user">MetaBallStudio</p>
+                        <div class="views-timestamp">
+                            <p class="views">87k views &#183;</p> 
+                            <p class="timestamp">5 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

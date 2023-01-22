@@ -1,0 +1,68 @@
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    height: 48px;
+}
+
+.right-section {
+    display: flex;
+}
+
+.gmail-images {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+
+.gmail:hover, .images:hover {
+    text-decoration: underline;
+}
+.images {
+    margin: 0 15px;
+}
+
+
+.menu-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.div-menu {
+    display: flex;
+    padding: 4px;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    padding: 12px;
+}
+
+
+.div-profile {
+    display: flex;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    padding: 4px;
+}

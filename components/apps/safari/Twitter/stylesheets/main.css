@@ -1,0 +1,195 @@
+main {
+    display: flex;
+    flex-direction: row;
+    width: 990px;
+    justify-content: space-between;
+}
+    
+main .center {
+    width: 598px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid rgb(239, 243, 244);
+    background-color: white;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 598px;
+    border: 1px solid rgb(239, 243, 244);
+    flex-basis: auto;
+    margin-top: -1px;
+}
+
+article .post {
+    display: flex;
+    flex-direction: row;
+    padding: 12px 16px 0 16px;
+    width: 566px;
+}
+
+article .profile-picture {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 12px 0 0;
+}
+
+article .profile-picture img {
+    background-color: black;
+    height: 48px;
+    width: 48px;
+    border-radius: 9999px;
+}
+
+article .profile-picture img:hover {
+    background-color: rgba(26, 26, 26, 0.15)
+}
+
+article .post .description {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 12px;
+}
+
+article .description .user-and-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article .description .user-and-menu .user {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+article .description .name {
+    font-weight: bold;
+}
+
+article .description .stamp img {
+    height: 18.75px;
+    width: 18.75px;
+    margin-left: 2px;
+}
+
+article .description .pseudo {
+    margin-left: 4px;
+}
+
+article .description .pseudo, article .description .timestamp {
+    color: #536471;
+}
+
+article .description .dot {
+    color: #536471;
+    padding: 0 4px;
+}
+
+.user-and-menu .menu {
+    height: 34.75px;
+    width: 34.75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-and-menu .menu img {
+    height: 18.75px;
+    width: 18.75px;
+}
+
+.description .content {
+    display: block;
+    margin-top: 12px;
+}
+
+.description .content img {
+    height: 510px;
+    border-radius: 16px;
+}
+
+.description .interactions {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 425px;
+}
+
+.description .interactions .interaction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 12px 0 0;
+}
+
+.description .interactions img {
+    width: 18.75px;
+    height: 18.75px;
+}
+
+.description .interactions .interaction div {
+    color: #536471;
+    font-size: 13px;
+    padding: 0 12px;
+}
+
+.description .raw-text {
+    margin-top: -4px;
+}
+
+.content .card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(26, 26, 26, 0.15);
+    border-radius: 16px;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+.content .card .head {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-start;
+    align-items: center;
+    margin: 12px 12px 0 12px;
+    align-items: flex-end;
+
+}
+.content .card .head .mini-profile-picture {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 4px;
+}
+
+.content .card .description {
+    padding: 0;
+    margin: 4px 12px 12px 12px;
+} 
+
+.content .card .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.content .card img {
+    border-radius: 0;
+    width: 504px;
+}

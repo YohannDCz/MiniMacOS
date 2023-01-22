@@ -1,0 +1,154 @@
+aside {
+    height: 100%;
+    overscroll-behavior-y:none;
+}
+
+aside .container .search-box {
+    width: 350px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    margin: 0 0 12px;
+}
+
+aside .container .searchbar {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    width: 350px;
+    background-color: rgb(239, 243, 244);
+    border-radius: 9999px;
+}
+
+aside .container .searchbar input {
+    display: block;
+    width: 275px;
+    height: 42px;
+    border: none;
+    background-color: rgb(239, 243, 244);
+    outline: none;
+}
+
+aside .container .searchbar .searchbar-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 18.75px;
+    padding-left: 12px;
+}
+
+aside .container .searchbar img {
+    display: inline-block;
+    width: 18.75px;
+    height: 18.75px;
+}
+
+aside .container .who-to-follow .card img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+aside .container .panel, aside .container .who-to-follow {
+    background-color: rgb(247, 249, 249);
+    border-radius: 16px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+aside .container .title {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+aside .container .panel .trends, aside .container .who-to-follow .card {
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+
+aside .container .panel .trends:hover, aside .container .who-to-follow .card:hover,
+aside .container .showmore:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+
+aside .container .panel .trends .trending, 
+aside .container .panel .trends .tweet-number {
+    color: #536471;
+    font-size: 13px;
+}
+
+aside .container .panel .trends .tweet-number {
+    margin-top: 4px;
+}
+
+aside .container .panel .trends .topic {
+    color: #0F1419;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+aside .container .who-to-follow .card {
+    display: flex;
+    flex-direction: row;
+}
+
+aside .container .who-to-follow .card .name-and-follow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    }
+aside .container .who-to-follow .card .name-and-pseudo {
+    display: flex;
+    flex-direction: column;
+}
+
+aside .container .who-to-follow .card .name-and-pseudo a:hover {
+    text-decoration: underline;
+}
+
+aside .container .who-to-follow .card .name-and-pseudo .name-and-stamp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+aside .container .who-to-follow .card .name-and-pseudo .name-and-stamp .stamp {
+    display: block;
+    width: 18.75px;
+    height: 18.75px;
+    margin-left: 2px;
+}
+
+
+aside .container .who-to-follow .card .name-and-pseudo .pseudo {
+    color: #536471;
+    margin-top: 4px;
+}
+
+aside .container .who-to-follow .card .name-and-follow button {
+    background-color: #0F1419;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 9999px;
+    padding: 8px 16px;
+}
+
+aside .container .showmore a {
+    display: block;
+    padding: 16px;
+    color: #1D9bF0;
+}

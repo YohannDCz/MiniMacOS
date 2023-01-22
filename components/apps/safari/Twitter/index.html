@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Twitter Clone</title>
+        <meta name="description" content="Here is a clone of the famous website Twitter">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/header.css">
+        <link rel="stylesheet" href="stylesheets/post-area.css">
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <link rel="stylesheet" href="stylesheets/aside.css">
+        <style>
+            html, body {
+                height: 100%;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Helvetica, sans-serif;
+                font-size: 15px;
+            }
+
+            body {
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                height: 3000px;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <div class="menu">
+                    <div class="twitter-logo">
+                        <img src="icons/twitter.svg" alt="The Twitter logo.">
+                    </div>
+                    <div class="items">
+                        <div class="item-box">
+                            <div class="item">
+                                <img src="./icons/home.svg" alt="">
+                                <h1 class="home">Home</h1>
+                            </div>
+                        </div>
+                        <div class="item-box">
+                            <div class="item">
+                                <img src="./icons/explore.svg" alt="">
+                                <h1>Explore</h1>
+                            </div>
+                        </div>
+                        <div class="item-box">
+                            <div class="item">
+                                <img src="./icons/notifications.svg" alt="">
+                                <h1>Notifications</h1>
+                            </div>
+                        </div>
+                        <div class="item-box">
+                            <div class="item">
+                                <img src="./icons/messages.svg" alt="">
+                                <h1>Messages</h1>
+                            </div>
+                        </div>
+                        <div class="item-box">
+                            <div class="item">
+                                <img src="./icons/bookmark.svg" alt="">
+                                <h1>Bookmarks</h1>
+                            </div>
+                        </div>
+                        <div class="item-box">
+                            <div class="item">
+                                <img src="./icons/list.svg" alt="">
+                                <h1>Lists</h1>
+                            </div>
+                        </div>
+                        <div class="item-box">
+                            <div class="item">
+                                <img src="./icons/profile.svg" alt="">
+                                <h1>Profile</h1>
+                            </div>
+                        </div>
+                        <div class="item-box">
+                            <div class="item">
+                                <img src="./icons/more.svg" alt="">
+                                <h1>More</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet-box">
+                        <div class="tweet">
+                            <a class="a-button">
+                                <button>Tweet</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="profile">
+                        <img class="profile-picture" src="images/profile-picture.jpg" alt="">
+                        <div class="name-and-pseudo">
+                            <p class="name">Yohann Di Cresce...</p>
+                            <p class="pseudo">@YohannDCz</p>
+                        </div>
+                        <div class="menu-drop">
+                            <img src="icons/menu-drop.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="center">
+                <div class="home-title">
+                    <div class="title">
+                        <h1>Home</h1>
+                        <div class="star">
+                            <img src="./icons/stars.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="tweet-area-box">
+                    <div class="tweet-area">
+                        <div class="profile-picture">
+                            <a><img src="images/profile-picture.jpg" alt="The profile picture of the account connected."></a>
+                        </div>
+                        <div class="post">
+                            <div class="input-box">
+                                <div class="input">
+                                    <input type="text" placeholder="What's happening?">
+                                </div>
+                            </div>
+                            <div class="icons-and-tweet">
+                                <div class="icons">
+                                    <div class="icon">
+                                        <img src="icons/images.svg" alt="">
+                                    </div>
+                                    <div class="icon">
+                                        <img src="icons/gif.svg" alt="">
+                                    </div>
+                                    <div class="icon">
+                                        <img src="icons/graphic.svg" alt="">
+                                    </div>
+                                    <div class="icon">
+                                        <img src="icons/smiley.svg" alt="">
+                                    </div>
+                                    <div class="icon">
+                                        <img src="icons/calendar.svg" alt="">
+                                    </div>
+                                    <div class="icon">
+                                        <img src="icons/location.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="tweet-button">
+                                    <button>Tweet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article >
+                    <div class="post">
+                        <a class="profile-picture">
+                            <img src="./images/profile-picture2.jpeg" alt="">
+                        </a>
+                        <div class="description">
+                            <div class="user-and-menu">
+                                <div class="user">
+                                    <div class="name">Elon Musk</div>
+                                    <div class="stamp">
+                                        <img src="./icons/stamp.svg" alt="">
+                                    </div>
+                                    <div class="pseudo">@elonmusk</div>
+                                    <div class="dot">&middot;</div>
+                                    <div class="timestamp">Aug 12</div>
+                                </div>
+                                <div class="menu">
+                                    <img src="./icons/menu.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="raw-text">This will be on Mars one day</div>
+                            <div class="content">
+                                <img src="./images/picture2.jpeg" alt="">
+                            </div>
+                            <div class="interactions">
+                                <div class="interaction">
+                                    <img src="./icons/comment.svg" alt="">
+                                    <div class="counter">21</div>
+                                </div>
+                                <div class="interaction">
+                                    <img src="./icons/retweet.svg" alt="">
+                                    <div class="counter">26.6k</div>
+                                </div>
+                                <div class="interaction">
+                                    <img src="./icons/like.svg" alt="">
+                                    <div class="counter">351.7k</div>
+                                </div>
+                                <div class="interaction">
+                                    <img src="./icons/share.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article >
+                    <div class="post">
+                        <a class="profile-picture">
+                            <img src="./images/profile-picture3.jpeg" alt="">
+                        </a>
+                        <div class="description">
+                            <div class="user-and-menu">
+                                <div class="user">
+                                    <div class="name">Xavier</div>
+                                    <div class="stamp">
+                                        <img src="./icons/stamp.svg" alt="">
+                                    </div>
+                                    <div class="pseudo">@xavierofficials</div>
+                                    <div class="dot">&middot;</div>
+                                    <div class="timestamp">1h</div>
+                                </div>
+                                <div class="menu">
+                                    <img src="./icons/menu.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="raw-text">if life is a party then im a piñata</div>
+                            <div class="interactions">
+                                <div class="interaction">
+                                    <img src="./icons/comment.svg" alt="">
+                                    <div class="counter">110</div>
+                                </div>
+                                <div class="interaction">
+                                    <img src="./icons/retweet.svg" alt="">
+                                    <div class="counter">4,533</div>
+                                </div>
+                                <div class="interaction">
+                                    <img src="./icons/like.svg" alt="">
+                                    <div class="counter">21,8k</div>
+                                </div>
+                                <div class="interaction">
+                                    <img src="./icons/share.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article >
+                    <div class="post">
+                        <a class="profile-picture">
+                            <img src="./images/profile-picture4.jpeg" alt="">
+                        </a>
+                        <div class="description">
+                            <div class="user-and-menu">
+                                <div class="user">
+                                    <div class="name">Zara Larsson</div>
+                                    <div class="stamp">
+                                        <img src="./icons/stamp.svg" alt="">
+                                    </div>
+                                    <div class="pseudo">@zaralarsson</div>
+                                    <div class="dot">&middot;</div>
+                                    <div class="timestamp">2h</div>
+                                </div>
+                                <div class="menu">
+                                    <img src="./icons/menu.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="raw-text">Sexy!!!!</div>
+                                <div class="content">
+                                    <div class="card">
+                                        <div class="head">
+                                            <img class="mini-profile-picture" src="./images/profile-picture41.jpeg" alt="">
+                                            <div class="name">Zara Larsson - Charts</div>
+                                            <div class="pseudo">@astrids_charts</div>
+                                            <div class="dot">&middot;</div>
+                                            <div class="timestamp">2h</div>
+                                        </div>
+                                        <div class="description">Words by @zaralarsson & @Alesso hit #1 on iTunes Norway today! 🇳🇴</div>
+                                        <div class="image">
+                                            <img src="./images/picture4.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="interactions">
+                                    <div class="interaction">
+                                        <img src="./icons/comment.svg" alt="">
+                                        <div class="counter">80</div>
+                                    </div>
+                                    <div class="interaction">
+                                        <img src="./icons/retweet.svg" alt="">
+                                        <div class="counter">1997</div>
+                                    </div>
+                                    <div class="interaction">
+                                        <img src="./icons/like.svg" alt="">
+                                        <div class="counter">11.7k</div>
+                                    </div>
+                                    <div class="interaction">
+                                        <img src="./icons/share.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article >
+                    <div class="post">
+                        <a class="profile-picture">
+                            <img src="./images/profile-picture2.jpeg" alt="">
+                        </a>
+                        <div class="description">
+                            <div class="user-and-menu">
+                                <div class="user">
+                                    <div class="name">Elon Musk</div>
+                                    <div class="stamp">
+                                        <img src="./icons/stamp.svg" alt="">
+                                    </div>
+                                    <div class="pseudo">@elonmusk</div>
+                                    <div class="dot">&middot;</div>
+                                    <div class="timestamp">3h</div>
+                                </div>
+                                <div class="menu">
+                                    <img src="./icons/menu.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="raw-text">but have you seen my sex tape</div>
+                            <div class="content">
+                                <img src="./images/picture3.jpeg" alt="">
+                            </div>
+                            <div class="interactions">
+                                <div class="interaction">
+                                    <img src="./icons/comment.svg" alt="">
+                                    <div class="counter">25.5k</div>
+                                </div>
+                                <div class="interaction">
+                                    <img src="./icons/retweet.svg" alt="">
+                                    <div class="counter">54.3k</div>
+                                </div>
+                                <div class="interaction">
+                                    <img src="./icons/like.svg" alt="">
+                                    <div class="counter">652.2k</div>
+                                </div>
+                                <div class="interaction">
+                                    <img src="./icons/share.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <aside>
+                <div class="container">
+                    <div class="search-box">
+                        <div class="searchbar">
+                            <div class="searchbar-icon">
+                                <img src="./icons/search.svg" alt="">
+                            </div>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="title">Trends for you</div>
+                        <div class="trends">
+                            <p class="trending">Trending</p>
+                            <h1 class="topic">Elon Musk</h1>
+                            <p class="tweet-number">99.9K Tweets</p>
+                        </div>
+                        <div class="trends">
+                            <p class="trending">Trending</p>
+                            <h1 class="topic">SELENA IS COMING</h1>
+                            <p class="tweet-number">13.1K Tweets</p>
+                        </div>
+                        <div class="trends">
+                            <p class="trending">Trending in France</p>
+                            <h1 class="topic">Sabrina</h1>
+                            <p class="tweet-number">16.4K Tweets</p>
+                        </div>
+                        <div class="trends">
+                            <p class="trending">Entertainment &middot; Trending</p>
+                            <h1 class="topic">Tim Burton</h1>
+                            <p class="tweet-number">31.6K Tweets</p>
+                        </div>
+                        <div class="trends">
+                            <p class="trending">Technology &middot; Trending</p>
+                            <h1 class="topic">Windows 11</h1>
+                            <p class="tweet-number">4,273 Tweets</p>
+                        </div>
+                        <div class="trends">
+                            <p class="trending">Music &middot; Trending</p>
+                            <h1 class="topic">#HarryStyles</h1>
+                            <p class="tweet-number">4,128 Tweets</p>
+                        </div>
+                        <div class="trends">
+                            <p class="trending">Trending in France</p>
+                            <h1 class="topic">Nantes</h1>
+                            <p class="tweet-number">6,153 Tweets</p>
+                        </div>
+                        <div class="trends">
+                            <p class="trending">Entertainment &middot; Trending</p>
+                            <h1 class="topic">#DisneyPlus</h1>
+                            <p class="tweet-number">7,933 Tweets</p>
+                        </div>
+                        <div class="trends">
+                            <p class="trending">Trending in France</p>
+                            <h1 class="topic">Bugs Bunny</h1>
+                            <p class="tweet-number">3,374 Tweets</p>
+                        </div>
+                        <div class="showmore">
+                            <a><p>Show more</p></a>
+                        </div>
+                    </div>
+                    <div class="who-to-follow">
+                        <div class="title">
+                            <h1>Who to follow</h1>
+                        </div>
+                        <div class="card">
+                            <img src="./images/profile-picture5.jpeg" alt="">
+                            <div class="name-and-follow">
+                                <div class="name-and-pseudo">
+                                    <a><h2 class="name">Cat Society</h2></a>
+                                    <p class="pseudo">@catoutfits</p>
+                                </div>
+                                <button class="follow">Follow</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./images/profile-picture6.jpeg" alt="">
+                            <div class="name-and-follow">
+                                <div class="name-and-pseudo">
+                                    <div class="name-and-stamp">
+                                        <a><h2 class="name">Justin Bieber</h2></a>
+                                        <img class="stamp" src="./icons/stamp.svg" alt="">
+                                    </div>
+                                    <p class="pseudo">@justinbieber</p>
+                                </div>
+                                <button class="follow">Follow</button>
+                            </div>
+                        </div>
+                        <div class="showmore">
+                            <a><p>Show more</p></a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
