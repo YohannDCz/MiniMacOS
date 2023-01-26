@@ -1,7 +1,7 @@
 .window {
     display: flex;
     flex-direction: column;
-    background: none; 
+    background-color: transparent;
     position: absolute;
     width: 700px;
     height: 475px;

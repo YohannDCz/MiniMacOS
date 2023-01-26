@@ -1,40 +1,40 @@
 const finder = document.getElementById('finder');
 finder.addEventListener("click", function () {
-  addWindow("../components/finder-window.html", "Finder");
+  addWindow("../components/apps/finder-window.html", "Finder");
 })
 
 const safari = document.getElementById('safariApp');
-safari.addEventListener("click", function () { 
-  addWindow("./apps/safari.html", "Safari");
+safari.addEventListener("click", function () {
+  addWindow("../components/apps/safari/safari.html", "Safari");
 });
 
 const vscode = document.getElementById('vscodeApp');
-vscode.addEventListener("click", function () { 
-  addWindow("https://vscode.dev/", "VSCode"); 
+vscode.addEventListener("click", function () {
+  addWindow("https://vscode.dev/", "VSCode");
 });
 
 const word = document.getElementById('wordApp');
-word.addEventListener("click", function () { 
+word.addEventListener("click", function () {
   addWindow("./word.html", "Word");
 });
 
 const notes = document.getElementById('notesApp');
-notes.addEventListener("click", function () { 
+notes.addEventListener("click", function () {
   addWindow("./apps/notes.html", "Notes");
 });
 
 const calendar = document.getElementById('calendarApp');
-calendar.addEventListener("click", function () { 
+calendar.addEventListener("click", function () {
   addWindow("./apps/calendar.html", "Calendrier");
 });
 
 const mail = document.getElementById('mailApp');
-mail.addEventListener("click", function () { 
+mail.addEventListener("click", function () {
   addWindow("./apps/mail.html", "Mail");
 });
 
 const settings = document.getElementById('settings');
-settings.addEventListener("click", function () { 
+settings.addEventListener("click", function () {
   addWindow("./apps/settings.html", "Réglages Système");
 });
 
@@ -46,7 +46,6 @@ function addWindow(location, name) {
     windows.id = name;
     windows.className = "window";
     windows.style.zIndex = "revert";
-    windows.onclick = "modifyZIndex()";
     let randomX = Math.ceil(Math.random() * 2);
     let randomY = Math.ceil(Math.random() * 2);
     windows.style.position = "absolute";
