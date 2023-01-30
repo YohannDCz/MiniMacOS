@@ -60,7 +60,7 @@ function addWindow(location, name) {
       windows.style.top = "200px";
     }
     windows.innerHTML = `
-                      <div class="header" id="header">
+                      <div class="header-window" id="header-window">
                         <div class="trafficLights" id="trafficLights">
                           <button class="red" id="red"></button>
                           <button class="yellow" id="yellow"></button>

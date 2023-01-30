@@ -2,16 +2,18 @@
     display: flex;
     flex-direction: column;
     background-color: transparent;
-    position: absolute;
+    position: relative;
     width: 700px;
     height: 475px;
+    top: 220px;
+    left: 220px;
     border-radius: 8px;
     border: none;
     overflow: hidden;
     transition: opacity 0.25s, transform 0.5s;
    }
 
-   #header {
+   .header-window {
     display: flex;
     position: relative;
     align-items: center;
@@ -21,7 +23,7 @@
     color: #fff;
    }
 
-   #header .trafficLights {
+   .header-window .trafficLights {
     display: flex;
     position: absolute;
     height: auto;
@@ -29,13 +31,13 @@
     z-index: 0;
    }
 
-   #header .trafficLights:hover {
+   .header-window .trafficLights:hover {
     cursor: default;
    }
 
-   #header .trafficLights .red,
-   #header .trafficLights .yellow,
-   #header .trafficLights .green {
+   .header-window .trafficLights .red,
+   .header-window .trafficLights .yellow,
+   .header-window .trafficLights .green {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,19 +49,19 @@
     padding: 0;
    }
 
-   #header .trafficLights .red {
+   .header-window .trafficLights .red {
     background-color: rgb(235, 90, 80);
    }
 
-   #header .trafficLights .yellow {
+   .header-window .trafficLights .yellow {
     background-color: rgb(240, 190, 68);
    }
 
-   #header .trafficLights .green {
+   .header-window .trafficLights .green {
     background-color: rgb(100, 206, 111);
    }
 
-   #header .movable {
+   .header-window .movable {
     display: flex;
     width: 100%;
     height: 100%;
@@ -67,7 +69,7 @@
     align-items: center;
    }
 
-   #header .movable .appname{
+   .header-window .movable .appname{
     font-size: 15px;
     font-weight: 600;
     font-family: "SF Pro", Helvetica;

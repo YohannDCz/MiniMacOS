@@ -6,15 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../styles/header.css" />
         <link rel="stylesheet" href="../styles/generalanddock.css" />
-        <link rel="stylesheet" href="../styles/windows.css">
         <link rel="stylesheet" href="../styles/app-header.css">
+        <link rel="stylesheet" href="../styles/finder-window.css">
+        <link rel="stylesheet" href="../styles/windows.css">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.svg">
         <title>Portfolio de Yohann D.</title>
     </head>
     <body>
         <div class="header"></div>
-        <header>
+        <header class="navbar">
             <div class="menu">
                 <div class="app-header finder-header">
                     <div class="tab long apple">
@@ -3804,6 +3805,219 @@
                 </div>
             </div>
         </header>
+        <main>
+            <section class="window" id="Finder">
+                <div class="header-window" id="header-window">
+                    <div class="trafficLights" id="trafficLights">
+                        <button class="red" id="red"></button>
+                        <button class="yellow" id="yellow"></button>
+                        <button class="green" id="green"></button>
+                    </div>
+                    <div class="movable" id="movable">
+                        <div class="appname">Finder</div>
+                    </div>
+                </div>
+                <div class="finder-window">
+                    <nav class="location">
+                        <ul class="favourites">
+                            <p class="title">Favoris</p>
+                            <li class="list">
+                                <img
+                                    class="applications"
+                                    src="../../images/finder/icon_applications.png"
+                                    alt=""
+                                    />
+                                <p>Applications</p>
+                            </li>
+                            <li class="list">
+                                <img
+                                    class="desktop"
+                                    src="../../images/finder/icon_desktop.png"
+                                    alt=""
+                                    />
+                                <p>Bureau</p>
+                            </li>
+                            <li class="list">
+                                <img
+                                    class="airdrop"
+                                    src="../../images/finder/icon_airdrop.png"
+                                    alt=""
+                                    />
+                                <p>AirDrop</p>
+                            </li>
+                            <li class="list">
+                                <img
+                                    class="recents"
+                                    src="../../images/finder/icon_recents.png"
+                                    alt=""
+                                    />
+                                <p>Récents</p>
+                            </li>
+                            <li class="list">
+                                <img
+                                    class="downloads"
+                                    src="../../images/finder/icon_downloads.png"
+                                    alt=""
+                                    />
+                                <p>Téléchargements</p>
+                            </li>
+                            <li class="list">
+                                <img
+                                    class="documents"
+                                    src="../../images/finder/icon_documents.png"
+                                    alt=""
+                                    />
+                                <p>Documents</p>
+                            </li>
+                        </ul>
+                        <ul class="clouds">
+                            <p class="title">Clouds</p>
+                            <li class="list creativecloud">
+                                <img src="../../images/finder/icon_folder.png"
+                                    alt=""
+                                    />
+                                <p>Creative Cloud</p>
+                            </li>
+                            <li class="list googledrive">
+                                <img src="../../images/finder/icon_folder.png"
+                                    alt=""
+                                    />
+                                <p>Google Drive</p>
+                            </li>
+                            <li class="list iclouddrive">
+                                <img src="../../images/finder/icon_folder.png"
+                                    alt=""
+                                    />
+                                <p>iCloud Drive</p>
+                            </li>
+                        </ul>
+                        <ul class="tags">
+                            <p class="title">Tags</p>
+                            <li class="list">
+                                <div class="red"></div>
+                                <p>Rouge</p>
+                            </li>
+                            <li class="list">
+                                <div class="orange"></div>
+                                <p>Orange</p>
+                            </li>
+                            <li class="list">
+                                <div class="yellow"></div>
+                                <p>Jaune</p>
+                            </li>
+                            <li class="list">
+                                <div class="green"></div>
+                                <p>Vert</p>
+                            </li>
+                            <li class="list">
+                                <div class="blue"></div>
+                                <p>Bleu</p>
+                            </li>
+                            <li class="list">
+                                <div class="purple"></div>
+                                <p>Violet</p>
+                            </li>
+                            <li class="list">
+                                <div class="grey"></div>
+                                <p>Gris</p>
+                            </li>
+                            <li class="list">
+                                <div class="white"></div>
+                                <p>Tout les tags...</p>
+                            </li>
+                        </ul>
+                    </nav>
+                    <main class="folders" id="folders">
+                        <header class="header-finder" id="header-finder">
+                            <div class="arrows">
+                                <img
+                                    src="../../images/finder/icon_left-arrow-grey.png"
+                                    alt="" class="previous" />
+                                <img
+                                    src="../../images/finder/icon_right-arrow-grey.png"
+                                    alt="" class="next" />
+                                <p>yohanndicrescenzo</p>
+                            </div>
+                            <img
+                                src="../../images/finder/icon_icon-classifier.png"
+                                alt=""
+                                class="affichage active"/>
+                            <div class="finder-icons">
+                                <img
+                                    src="../../images/finder/icon_icon-displayer.png"
+                                    alt="" class="tri active" />
+                                <img src="../../images/finder/icon_share.png"
+                                    alt=""
+                                    class="share" />
+                                <img src="../../images/finder/icon_tag.png"
+                                    alt=""
+                                    class="tag" />
+                                <img src="../../images/finder/icon_edition.png"
+                                    alt=""
+                                    class="menu active" />
+                            </div>
+                            <div class="search">
+                                <img
+                                    src="../../images/finder/icon_double-arrow.png"
+                                    alt=""
+                                    class="double-arrow">
+                                <img src="../../images/finder/icon_search.png"
+                                    alt=""
+                                    class="search active" />
+                            </div>
+                        </header>
+                        <section>
+                            <div class="finder-section" id="finder-section"></div>
+                            <div class="folder">
+                                <img src="../../images/finder/folder.png" alt=""
+                                    />
+                                <p>Applications</p>
+                            </div>
+                            <div class="folder">
+                                <img src="../../images/finder/folder.png" alt=""
+                                    />
+                                <p>Creative Cloud</p>
+                            </div>
+                            <div class="folder">
+                                <img src="../../images/finder/folder.png" alt=""
+                                    />
+                                <p>Images</p>
+                            </div>
+                            <div class="folder">
+                                <img src="../../images/finder/folder.png" alt=""
+                                    />
+                                <p>Music</p>
+                            </div>
+                            <div class="folder">
+                                <img src="../../images/finder/folder.png" alt=""
+                                    />
+                                <p>Public</p>
+                            </div>
+                            <div class="folder">
+                                <img src="../../images/finder/folder.png" alt=""
+                                    />
+                                <p>Sites</p>
+                            </div>
+                            <div class="folder">
+                                <img src="../../images/finder/folder.png" alt=""
+                                    />
+                                <p>Téléchargements</p>
+                            </div>
+                            <div class="folder">
+                                <img src="../../images/finder/folder.png" alt=""
+                                    />
+                                <p>Vidéos</p>
+                            </div>
+                            <div class="folder">
+                                <img src="../../images/finder/folder.png" alt=""
+                                    />
+                                <p>Google Drive</p>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </section>
+        </main>
         <nav class="dock">
             <ul class="dock-container">
                 <li class="li-1">
@@ -3882,7 +4096,7 @@
             transform:scale(1.2);
             backdrop-filter: blur(0px); opacity:0; position: absolute; display:
             flex; z-index: 0;"></iframe>
-        <script src="../scripts/finder-window.js"></script>
+        <script src="../scripts/app-header.js"></script>
         <script src="../scripts/date-time.js"></script>
         <script src="../scripts/dock.js"></script>
         <script src="../scripts/traffic-lights.js"></script>
@@ -3892,9 +4106,8 @@
         <script src="../scripts/header.js"></script>
         <script src="../scripts/windows.js"></script>
         <script src="../scripts/launchpad.js"></script>
-        <script src="../scripts/app-header.js"></script>
+        <script src="../scripts/finder-window.js"></script>
         <script>
-      
       // const body = document.querySelector('body');
       // const menu = document.querySelector(".menu");
 

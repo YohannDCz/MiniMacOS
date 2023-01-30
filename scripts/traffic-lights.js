@@ -1,4 +1,3 @@
-function trafficLights() {
  let windows = document.querySelectorAll(".window");
 
 windows.forEach((windowX) => {
@@ -51,5 +50,3 @@ windows.forEach((windowX) => {
   }
  };
 })
-}
- 

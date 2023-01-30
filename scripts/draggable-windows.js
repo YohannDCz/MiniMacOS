@@ -1,4 +1,3 @@
-function draggableWindows() {
  // Make the DIV element draggable:
  const elements = document.querySelectorAll(".window");
  
@@ -50,4 +49,3 @@ function draggableWindows() {
    document.onmousemove = null;
   }
  }
-}

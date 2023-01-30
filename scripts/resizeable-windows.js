@@ -1,5 +1,4 @@
-function resizeableWindows() {
- elements = document.querySelectorAll(".window");
+elements = document.querySelectorAll(".window");
 
 elements.forEach((element) => {
    makeResizable(element, 400, 225, 10);
@@ -255,4 +254,3 @@ elements.forEach((element) => {
    return dragMouseDown;
   }
  }
-}

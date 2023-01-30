@@ -1,4 +1,4 @@
-header {
+.navbar {
   display: flex;
   justify-content: space-between;
   height: 24px;
@@ -7,7 +7,7 @@ header {
   /* align-items: center; */
 }
 
-.header {
+.navbar {
   position: fixed;
   display: flex;
   top: 0;
@@ -18,7 +18,7 @@ header {
   backdrop-filter: blur(50px);
 }
 
-header .menu {
+.navbar .menu {
   position: relative;
   display: flex;
   width: 700px;
@@ -31,19 +31,19 @@ header .menu {
   margin: 0 -4px; */
 }
 
-header .rightinfos,
-header .rightinfos .widgets {
+.navbar .rightinfos,
+.navbar .rightinfos .widgets {
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-header .rightinfos {
+.navbar .rightinfos {
   z-index: 50;
 }
 
-header .rightinfos .widgets div,
-header .rightinfos .date {
+.navbar .rightinfos .widgets div,
+.navbar .rightinfos .date {
   display: flex;
   align-items: center;
   margin: 0 -3px;
@@ -51,52 +51,52 @@ header .rightinfos .date {
   border-radius: 4px;
 }
 
-header .rightinfos .date {
+.navbar .rightinfos .date {
   margin: 0 8px 0 -3px;
   padding: 0 8px;
 }
 
-header .menu p,
-header .date div {
+.navbar .menu p,
+.navbar .date div {
   color: white;
   font-family: "Helvetica Neue", "SF Pro";
   font-size: 13px;
   user-select: none;
 }
 
-header .widgets,
-header .date {
+.navbar .widgets,
+.navbar .date {
   display: flex;
   z-index: 50;
 }
 
-header .menu div:hover,
-header .widgets div:hover,
-header .date:hover {
+.navbar .menu div:hover,
+.navbar .widgets div:hover,
+.navbar .date:hover {
   cursor: default;
 }
 
-header .widgets div:active,
-header .date:active {
+.navbar .widgets div:active,
+.navbar .date:active {
   background-color: rgba(255, 255, 255, 0.527);
 }
 
-header img {
+.navbar img {
   width: 16px;
   height: 16px;
 }
 
-header .menu .appName {
+.navbar .menu .appName {
   font-weight: 800;
 }
 
-header .rightinfos .widgets .battery img {
+.navbar .rightinfos .widgets .battery img {
   width: 26px;
   height: 26px;
 }
 
-header .widgets,
-header .date div {
+.navbar .widgets,
+.navbar .date div {
   margin: 0 2px;
   padding: 0;
   user-select: none;
