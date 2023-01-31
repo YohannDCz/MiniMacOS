@@ -1,7 +1,10 @@
 * {
   font-size: 14px;
-  font-family: "Helvetica Neue";
-  text-decoration: none;
+  font-family: "SF Pro", Helvetica, sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,

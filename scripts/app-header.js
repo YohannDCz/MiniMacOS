@@ -5,8 +5,8 @@ function hideOnClickOutside(element) {
     if (!element.contains(event.target) && isVisible(element)) {
       element.querySelector(".box.active").className = 'box';
       element.querySelector(".container.active").className = 'container';
-      for (let k = 0; k < list.length; k++) {
-        list[k].onmouseover = null;
+      for (let k = 0; k < boxes.length; k++) {
+        boxes[k].onmouseover = null;
       }
       removeClickListener();
     }
@@ -18,31 +18,31 @@ function hideOnClickOutside(element) {
 }
 
 
-let list = document.querySelectorAll(".box");
+let boxes = document.querySelectorAll(".box");
 let tab = document.querySelectorAll(".tab")
 
-for (let i = 0; i < list.length; i++) {
-  list[i].onclick = function () {
-    switch (list[i].className) {
+for (let i = 0; i < boxes.length; i++) {
+  boxes[i].onclick = function () {
+    switch (boxes[i].className) {
       case "box":
         let h = 0;
-        while (h < list.length) {
-          list[h].className = "box";
-          list[h++].nextElementSibling.className = "container"
+        while (h < boxes.length) {
+          boxes[h].className = "box";
+          boxes[h++].nextElementSibling.className = "container"
         }
-        list[i].className = "box active";
-        list[i].nextElementSibling.className = "container active";
+        boxes[i].className = "box active";
+        boxes[i].nextElementSibling.className = "container active";
 
 
-        for (let k = 0; k < list.length; k++) {
-          list[k].onmouseover = function () {
+        for (let k = 0; k < boxes.length; k++) {
+          boxes[k].onmouseover = function () {
             let h = 0;
-            while (h < list.length) {
-              list[h].className = "box";
-              list[h++].nextElementSibling.className = "container";
+            while (h < boxes.length) {
+              boxes[h].className = "box";
+              boxes[h++].nextElementSibling.className = "container";
             }
-            list[k].className = "box active";
-            list[k].nextElementSibling.className = "container active";
+            boxes[k].className = "box active";
+            boxes[k].nextElementSibling.className = "container active";
             hideOnClickOutside(tab[k]);
           }
           hideOnClickOutside(tab[i]);
@@ -50,15 +50,15 @@ for (let i = 0; i < list.length; i++) {
         break;
       case "box active":
         let j = 0;
-        while (j < list.length) {
-          list[j].className = "box";
-          list[j++].nextElementSibling.className = "container";
+        while (j < boxes.length) {
+          boxes[j].className = "box";
+          boxes[j++].nextElementSibling.className = "container";
         }
-        list[i].className = "box";
-        list[i].nextElementSibling.className = "container";
+        boxes[i].className = "box";
+        boxes[i].nextElementSibling.className = "container";
 
-        for (let k = 0; k < list.length; k++) {
-          list[k].onmouseover = null;
+        for (let k = 0; k < boxes.length; k++) {
+          boxes[k].onmouseover = null;
         }
         break;
     }

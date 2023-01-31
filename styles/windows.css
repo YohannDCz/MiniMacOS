@@ -2,42 +2,44 @@
     display: flex;
     flex-direction: column;
     background-color: transparent;
-    position: relative;
+    position: absolute;
     width: 800px;
     height: 475px;
     top: 220px;
     left: 220px;
     border-radius: 8px;
     border: none;
+    z-index: 999;
     overflow: hidden;
     transition: opacity 0.25s, transform 0.5s;
-   }
+}
 
-   .header-window {
+.header-window {
     display: flex;
     position: relative;
     align-items: center;
     height: 25px;
+    width: 100%;
     cursor: default;
     background-color: #f1f1f1;
-    color: #fff;
-   }
+    z-index: 800;
+}
 
-   .header-window .trafficLights {
+.header-window .trafficLights {
     display: flex;
     position: absolute;
     height: auto;
     align-items: center;
     z-index: 0;
-   }
+}
 
-   .header-window .trafficLights:hover {
+.header-window .trafficLights:hover {
     cursor: default;
-   }
+}
 
-   .header-window .trafficLights .red,
-   .header-window .trafficLights .yellow,
-   .header-window .trafficLights .green {
+.header-window .trafficLights .red,
+.header-window .trafficLights .yellow,
+.header-window .trafficLights .green {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,32 +49,32 @@
     border-radius: 9999px;
     margin-left: 9px;
     padding: 0;
-   }
+}
 
-   .header-window .trafficLights .red {
+.header-window .trafficLights .red {
     background-color: rgb(235, 90, 80);
-   }
+}
 
-   .header-window .trafficLights .yellow {
+.header-window .trafficLights .yellow {
     background-color: rgb(240, 190, 68);
-   }
+}
 
-   .header-window .trafficLights .green {
+.header-window .trafficLights .green {
     background-color: rgb(100, 206, 111);
-   }
+}
 
-   .header-window .movable {
+.header-window .movable {
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
-   }
+}
 
-   .header-window .movable .appname{
+.header-window .movable .appname {
     font-size: 15px;
     font-weight: 600;
     font-family: "SF Pro", Helvetica;
     text-align: center;
     color: black;
-   }
+}

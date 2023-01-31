@@ -23,14 +23,3 @@ for (let i = 0; i < folders.length; i++) {
     }
   }
 }
-
-
-let section1 = document.querySelector("section");
-let header = document.getElementById("header");
-if (section1.scrollTop == 0) {
-  header.style.boxShadow = "none";
-  header.style.clipPath = "none";
-} else {
-  header.style.boxShadow = "0px 0px 3px rgba(140, 140, 140, 0.75)";
-  header.style.clipPath = "inset(0px 0px -15px 0px)";
-}
