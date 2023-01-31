@@ -27,3 +27,11 @@ background.onclick = function () {
   iframeLaunchpad.style.visibility = "hidden";
   iframeLaunchpad.style.transition = "all 0.2s";
 }
+
+let input = document.getElementById('input');
+let img = document.getElementById('input-image');
+
+input.onfocus = function () {
+  img.style.left = "8px";
+  input.style.left = "32px";
+}

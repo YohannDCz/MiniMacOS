@@ -23,13 +23,13 @@ body {
 
 .dock {
   width: auto;
-  height: 86px;
+  height: 88px;
   border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 8px;
+  bottom: 4px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
@@ -42,7 +42,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-radius: 20px;
+  border-radius: 28px;
   background: rgba(205, 205, 205, 0.533);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -50,14 +50,21 @@ body {
   z-index: 999;
 }
 
-.dock .dock-container .li-1::after {
+.dock .dock-container .li-1::after,
+.dock .dock-container .li-3.active::after,
+.dock .dock-container .li-4.active::after,
+.dock .dock-container .li-5.active::after,
+.dock .dock-container .li-6.active::after,
+.dock .dock-container .li-7.active::after,
+.dock .dock-container .li-8.active::after,
+.dock .dock-container .li-9.active::after {
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(0, 0, 0);
   content: "";
-  bottom: 2px;
+  bottom: 1px;
 }
 
 .dock .dock-container li {
@@ -67,6 +74,8 @@ body {
   justify-content: center;
   width: auto;
   height: auto;
+  margin: 0 2px;
+  margin-bottom: 6px;
   vertical-align: bottom;
   transition: 0.5s;
   transform-origin: 50% 100%;
@@ -83,6 +92,7 @@ body {
 
 .dock .dock-container li .name {
   position: absolute;
+  font-size: 15px;
   top: -70px;
   background: rgba(205, 205, 205, 0.7);
   color: rgba(0, 0, 0, 0.9);
@@ -109,8 +119,8 @@ body {
 }
 
 .dock .dock-container li .ico {
-  width: 80px;
-  height: 80px;
+  width: 76px;
+  height: 76px;
   object-fit: cover;
   transition: 0.5s;
 }
