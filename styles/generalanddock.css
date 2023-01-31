@@ -23,7 +23,7 @@ body {
 
 .dock {
   width: auto;
-  height: 88px;
+  height: 90px;
   border-radius: 16px;
   display: flex;
   justify-content: center;

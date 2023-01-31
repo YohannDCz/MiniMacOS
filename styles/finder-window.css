@@ -50,6 +50,7 @@
   margin-right: 12px;
   margin-left: -4px;
   align-items: center;
+  user-select: none;
 }
 
 .location .favourites li.active,
@@ -212,7 +213,7 @@
   row-gap: 24px;
   grid-auto-rows: 94.5px;
   position: absolute;
-  top: 56px;
+  top: 72px;
   left: 175px;
   bottom: 0;
   right: 0;
@@ -247,7 +248,7 @@
 .folders section .folder.active p {
   background-color: rgb(42, 98, 217);
   color: white;
-  padding: 2px 2px;
+  padding: 0 2px;
   border-radius: 3px;
 }
 
