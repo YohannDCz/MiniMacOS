@@ -3,6 +3,7 @@ main {
     flex-direction: row;
     width: 990px;
     justify-content: space-between;
+    background-color: white;
 }
     
 main .center {

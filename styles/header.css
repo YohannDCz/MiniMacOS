@@ -14,6 +14,7 @@
   right: 0;
   left: 0;
   height: 24px;
+  z-index: 900;
   background-color: rgba(0, 0, 0, 0.288);
   backdrop-filter: blur(50px);
 }
@@ -23,7 +24,7 @@
   display: flex;
   width: 700px;
   height: 24px;
-  z-index: 50;
+  z-index: 900;
   /* align-items: center; */
   /* padding: 0 16px;
   border: none;

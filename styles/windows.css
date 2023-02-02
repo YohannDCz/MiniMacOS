@@ -4,12 +4,12 @@
     background-color: transparent;
     position: absolute;
     width: 800px;
-    height: 475px;
+    height: 500px;
     top: 220px;
     left: 220px;
     border-radius: 8px;
     border: none;
-    z-index: 999;
+    z-index: 800;
     overflow: hidden;
     transition: opacity 0.25s, transform 0.5s;
 }

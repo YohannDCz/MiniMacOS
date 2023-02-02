@@ -37,13 +37,13 @@ windows.forEach((windowX) => {
     );
     if (heightPercentage < 100 && widthPercentage < 100) {
       windowX.style.width = "100vw";
-      windowX.style.height = "100vh";
-      windowX.style.top = "0";
+      windowX.style.height = "calc(100vh - 24px)";
+      windowX.style.top = "24px";
       windowX.style.left = "0";
       windowX.style.transition = "top 0.25s, left 0.25s";
-    } else if (heightPercentage === 100 && widthPercentage === 100) {
+    } else if (heightPercentage >= 90 && widthPercentage === 100) {
       windowX.style.width = "800px";
-      windowX.style.height = "450px";
+      windowX.style.height = "500px";
       windowX.style.top = "200px";
       windowX.style.left = "200px";
       windowX.style.transition = "";

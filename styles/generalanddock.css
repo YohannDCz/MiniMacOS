@@ -163,3 +163,15 @@ body {
 .li-9:hover .name {
   visibility: visible !important;
 }
+
+header {
+  z-index: 900;
+}
+
+.menu {
+  z-index: inherit;
+}
+
+main {
+  z-index: 800;
+}

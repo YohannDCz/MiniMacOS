@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../styles/finder-window.css">
         <link rel="stylesheet" href="../styles/windows.css">
         <link rel="stylesheet" href="../styles/safari.css">
+        <link rel="stylesheet" href="../styles/vscode.css">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.svg">
         <title>Portfolio de Yohann D.</title>
@@ -4031,15 +4032,17 @@
                 <div class="safari-window">
                     <header class="header-safari">
                         <div class="info left-info">
-                            <button class="chevron">
+                            <button class="chevron chevron-left">
                                 <img
                                     src="../../../images/safari/icon_left-chevron.svg"
-                                    alt="left chevron">
+                                    alt="left chevron"
+                                    class="left-chevron">
                             </button>
-                            <button class="chevron">
+                            <button class="chevron chevron-right">
                                 <img
                                     src="../../../images/safari/icon_right-chevron.svg"
-                                    alt="right chevron">
+                                    alt="right chevron"
+                                    class="right-chevron">
                             </button>
                             <button class="sidebar">
                                 <img
@@ -4054,7 +4057,7 @@
                                     alt="security">
                             </button>
                             <input type="text" placeholder="Recherche ou nom
-                                d'un site">
+                                d'un site" class="search-bar">
                         </div>
                         <div class="info right-info">
                             <button class="share">
@@ -4096,30 +4099,26 @@
                                         alt="portfolio #3" class="icon">
                                     <p class="title">Portfolio Site #3</p>
                                 </div>
-                                <div class="website google-mirror">
+                                <div class="website google-mirror-button" onclick='changeWindow("googlemirror", "./apps/safari/Google/index.html")'>
                                     <img
                                         src="../../../images/safari/thumbnail_google.png"
                                         alt="Google thumbnail" class="icon">
                                     <p class="title">Google (mirror)</p>
                                 </div>
-                                <a href="./apps/safari/YouTube/index.html">
-                                    <div class="website youtube-mirror">
+                                    <div class="website youtube-mirror-button" onclick='changeWindow("youtubemirror", "./apps/safari/YouTube/index.html")'>
                                         <img
                                             src="../../../images/safari/thumbnail_youtube.jpeg"
                                             alt="YouTube thumbnail"
                                             class="icon">
                                         <p class="title">YouTube (mirror)</p>
                                     </div>
-                                </a>
-                                <a href="./apps/safari/Twitter/index.html">
-                                    <div class="website twitter-mirror">
+                                    <div class="website twitter-mirror-button" onclick='changeWindow("twittermirror", "./apps/safari/Twitter/index.html")'>
                                         <img
                                             src="../../../images/safari/thumbnail_twitter.jpeg"
                                             alt="Twitter thumbnail"
                                             class="icon">
                                         <p class="title">Twitter (mirror)</p>
                                     </div>
-                                </a>
                             </div>
                         </section>
                         <section class="frequently-used">
@@ -4222,6 +4221,22 @@
                     </main>
                 </div>
             </section>
+            <section class="window" id="VSCode">
+                <div class="header-window" id="header-window">
+                    <div class="trafficLights" id="trafficLights">
+                        <button class="red" id="red"></button>
+                        <button class="yellow" id="yellow"></button>
+                        <button class="green" id="green"></button>
+                    </div>
+                    <div class="movable" id="movable">
+                        <div class="appname">Visual Studio Code</div>
+                    </div>
+                </div>
+                <div class="vscode-window">
+                    <iframe src="https://vscode.dev/" frameborder="0" class="vscode"></iframe>
+                </div>
+            </section>
+
         </main>
         <nav class="dock">
             <ul class="dock-container">
@@ -4313,19 +4328,56 @@
         <script src="../scripts/windows.js"></script>
         <script src="../scripts/launchpad.js"></script>
         <script>
+        const main = document.querySelector(".main-safari");
+        const chevron = document.querySelector(".left-chevron");
 
-        // const googlemirror = document.querySelector(".google-mirror");
+        function changeWindow(name, location) {
+            const iframe = document.createElement("iframe");
+            iframe.src = location
+            iframe.style.position = "absolute";
+            iframe.style.width = "100%";
+            iframe.style.top = "40px";
+            iframe.zIndex = "999";
+            iframe.className= name
+            iframe.style.border = "none";
+            iframe.style.height = "calc(100% - 40px)";
 
-        // googlemirror.addEventListener("click", function() {
-        //     iframe = document.createElement("iframe");
-        //     iframe.style.width = "100%";
-        //     iframe.style.height = "100%";
-        //     iframe.src = "./apps/safari/Google/index.html"
-        //     iframe.zIndex = "999";
-        //     document.querySelector(".main-safari").appendChild(iframe)
-        // })
+            document.querySelector(".safari-window").appendChild(iframe);
 
+            main.style.display = "none";
 
+            chevron.src = "../images/safari/icon_left-chevron-black.svg";
+            
+            const input = document.querySelector(".search-bar");
+            input.style.backgroundColor = "rgb(255, 255, 255)";
+            input.style.border = "1px solid rgb(210, 207, 203)";
+            input.placeholder = `${name}.com`; 
+        }
+
+        const backButton = document.querySelector(".chevron-left");
+
+        backButton.addEventListener("click", function () {
+            const main = document.querySelector(".main-safari")
+            main.style.display = "flex";
+            
+            if (document.querySelector(".youtubemirror")) {
+                const youtubemirror = document.querySelector(".youtubemirror");
+                youtubemirror.remove();
+            } else if (document.querySelector(".googlemirror")) {
+                const googlemirror = document.querySelector(".googlemirror");
+                googlemirror.remove();
+            } else if (document.querySelector(".twittermirror")) {
+                const twittermirror = document.querySelector(".twittermirror")
+                twittermirror.remove();
+            }
+
+            const input = document.querySelector(".search-bar");
+            input.style.backgroundColor = "#E5E7EB";
+            input.style.border = "none";
+            input.placeholder = "Recherche ou nom d'un site"; 
+            
+            chevron.src = "../images/safari/icon_left-chevron.svg"
+        })
       // const body = document.querySelector('body');
       // const menu = document.querySelector(".menu");
 
