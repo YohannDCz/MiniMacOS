@@ -1,13 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word</title>
-    <link rel="stylesheet" href="../../styles/word.css">
-  </head>
-  <body>
-    
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Word</title>
+		<link rel="stylesheet" href="../../styles/word.css">
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-size: 14px;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		.header-word img {
+			width: 32px;
+			height: 32px;
+		}
+
+		.header-word {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.header-word nav {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+		} 
+
+		.header-word .info {
+			display: flex;
+			align-items: center;
+		}
+		.header-word .app-word {
+			justify-content: center;
+			width: 100%;
+			height: 48px;
+			background-color: #185abd;
+			color: white;
+		}
+
+		.header-word .app-word .left-info .drop-menu {
+			width: 48px;
+			height: 48px;
+			padding: 16px;
+		}
+		.header-word .app-word .left-info .title {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			font-weight: 800;
+			padding: 0 12px 0 8px;
+			height: 100%;
+		}
+
+		.header-word .app-word .left-info .saved {
+			
+			min-width: calc(50vw - 385.023px)
+		}
+
+		.header-word .app-word .left-info .saved button {
+			display: flex;
+			align-items: center;
+			color: white;
+			padding: 0 6px;
+			background-color: transparent;
+			width: 182.95px;
+			height: 48px;
+			border: none;
+		}
+
+		.header-word .app-word .left-info > *:not(:last-child):hover,
+		.header-word .app-word .left-info .saved button:hover  {
+			display: flex;
+			align-items: center;
+			background-color: rgb(40, 80, 164);
+		}
+
+		.header-word .app-word .left-info .saved  button p:nth-child(1) {
+			padding: 0 4px;
+		}
+
+		.header-word .app-word .left-info .saved button p:nth-child(2) {
+			padding: 0 2px;
+		}
+
+		.header-word .app-word .left-info .saved button p:nth-child(3) {
+			padding: 0 4px;
+		}
+
+		.header-word .app-word .left-info .saved button img {
+			width: 20px;
+			height: 20px;
+		}
+
+		.header-word .app-word .middle-info {
+			display: flex;
+			flex-grow: 1;
+			align-items: center;
+		}
+
+		.header-word .app-word .middle-info .search-bar {
+			min-width: 468px;
+			height: 32px;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			background-color: rgb(203, 211, 229);
+			border-radius: 3px;
+		}
+
+		.header-word .app-word .middle-info .search-bar img {
+			display:block;
+			margin: 0 8px 0 16px;
+			width: 28px;
+			height: 28px;
+			
+		}
+
+		.header-word .app-word input {
+			justify-self: right;
+			display: block;
+			min-width: 422px;
+			height: 32px;
+			border: none;
+			outline: none;
+			border-radius: 3px;
+			background-color: transparent;
+		}
+
+		.header-word .app-word input::placeholder {
+			color: rgb(36, 70, 140);
+		}
+
+		.header-word .app-word .right-info .image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 48px;
+			height: 48px;
+		}
+
+		.header-word .app-word .right-info img {
+			width: 20px;
+			height: 20px;
+		}
+
+		.header-word .app-word .right-info .user  {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 48px;
+			height: 48px;
+		}
+
+		.header-word .app-word .right-info .username {
+			background-color: #185abd;
+			color: white;
+			border: 1px solid white;
+			border-radius: 9999px;
+			width: 32px;
+			height: 32px; 
+		}
+
+		.header-word .menu-word .left-info button {
+			width: auto;
+		}
+	</style>
+	<body>
+		<header class="header-word">
+			<nav class="app-word">
+				<div class="left-info info">
+					<img src="../../images/word/icon_dropmenu.png" alt="the menu"
+						class="drop-menu">
+					<p class="title">Word</p>
+					<div class="saved">
+						<button>
+							<p>Document1</p>
+							<p>-</p>
+							<p>Enregistré</p>
+							<img src="../../images/word/icon_down-arrow-white.svg" alt="the white
+								down arrow">
+						</button>
+					</div>
+				</div>
+				<div class="middle-info info">
+					<div class="search-bar">
+						<img src="../../images/word/icon_magnifier.svg" alt="the magnifier"
+							class="magnifier">
+						<input type="text" placeholder="Rechercher (option + Q)"
+							class="input-header">
+					</div>
+				</div>
+				<div class="right-info info">
+					<div class="image">
+						<img src="../../images/word/icon_settings.png" alt="the icon of the
+							settings"
+							class="settings">
+					</div>
+					<div class="user">
+						<button class="username">YD</button>
+					</div>
+				</div>
+			</nav>
+			<nav class="menu-word">
+				<div class="left-info info">
+					<button><p class="title">Fichier</p></button>
+					<button><p class="title">Accueil</p></button>
+					<button><p class="title">Insertion</p></button>
+					<button><p class="title">Mise en page</p></button>
+					<button><p class="title">Référence</p></button>
+					<button><p class="title">Révision</p></button>
+					<button><p class="title">Affichage</p></button>
+					<button><p class="title">Aide</p></button>
+				</div>
+				<div class="right-info info">
+					<div class="comments">
+						<img src="../../images/word/icon_comment.svg" alt="comment"
+							class="comment">
+						<p>Commentaires</p>
+					</div>
+					<div class="modification">
+						<img src="../../images/word/icon_modify.svg" alt="" class="modification">
+						<p>Modification</p>
+						<img src="../../images/word/icon_down-arrow-blue.svg" alt=""
+							class="down-arrow">
+					</div>
+					<div class="share">
+						<img src="../../images/word/icon_share.svg" alt="" class="sharing">
+						<p>Partager</p>
+						<img src="../../images/word/icon_down-arrow-white.svg" alt=""
+							class="down-arrow">
+					</div>
+				</div>
+			</nav>
+		</header>
+		<script>
+			const input = document.querySelector(".input-header");
+			const searchBar = document.querySelector(".search-bar");
+
+			input.onfocus = function () {
+				input.placeholder = "Rechercher";
+				input.style.backgroundColor = "white";
+				searchBar.style.backgroundColor = "white";
+			}
+
+			input.onblur = function () {
+				input.placeholder = "Rechercher (option + Q)"
+				input.style.backgroundColor = "rgb(203, 211, 229)";
+				searchBar.style.backgroundColor = "rgb(203, 211, 229)";	
+			}
+
+			searchBar.onmouseover = function () {
+				if (document.activeElement == input) {
+				} else {
+				input.style.backgroundColor = "rgb(213, 222, 241)";
+				searchBar.style.backgroundColor = "rgb(213, 222, 241)";
+				}
+			}
+
+			searchBar.onmouseout = function () {
+				if (document.activeElement == input) {
+					input.placeholder = "Rechercher";
+					input.style.backgroundColor = "white";
+					searchBar.style.backgroundColor = "white";
+				} else {
+					input.style.backgroundColor = "rgb(203, 211, 229)";
+					searchBar.style.backgroundColor = "rgb(203, 211, 229)";
+				}
+			}
+
+
+		</script>
+	</body>
 </html>
