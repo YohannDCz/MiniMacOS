@@ -168,8 +168,68 @@
 			height: 32px; 
 		}
 
-		.header-word .menu-word .left-info button {
+		.header-word .menu-word {
+			background-color: rgb(243, 242, 241);
+		}
+		.header-word .menu-word .left-info {
+			width: 100%;
+			height: 31px;
+		}
+		.header-word .menu-word .left-info > div {
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
 			width: auto;
+			height: 31px;
+			padding: 0 10px;
+			user-select: none;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.header-word .menu-word .left-info > div:first-child {
+			width: 82.2px
+		}
+
+		.header-word .menu-word .left-info > div:nth-child(2) {
+			width: 63.99px;
+		}
+
+		.header-word .menu-word .left-info > div:nth-child(3) {
+			width: 82.45px;
+		}
+
+		.header-word .menu-word .left-info > div:nth-child(4) {
+			width: 110.88px;
+		}
+
+		.header-word .menu-word .left-info > div:nth-child(5) {
+			width: 88.66px;
+		}
+
+		.header-word .menu-word .left-info > div:nth-child(6) {
+			width: 78.8px;
+		}
+
+		.header-word .menu-word .left-info > div:nth-child(7) {
+			width: 86.27px;
+		}
+
+		.header-word .menu-word .left-info > div:nth-child(8) {
+			width: 55.99px;
+		}
+
+		.header-word .menu-word .left-info > div > p {
+			text-align: center;
+			margin: 0 4px;
+		}
+
+		.header-word .menu-word .left-info .slider {
+			position: absolute;
+			background-color: rgb(44, 89, 183);
+			height: 3px;
+			width: 40px;
+			align-self: flex-end;
 		}
 	</style>
 	<body>
@@ -210,14 +270,15 @@
 			</nav>
 			<nav class="menu-word">
 				<div class="left-info info">
-					<button><p class="title">Fichier</p></button>
-					<button><p class="title">Accueil</p></button>
-					<button><p class="title">Insertion</p></button>
-					<button><p class="title">Mise en page</p></button>
-					<button><p class="title">Référence</p></button>
-					<button><p class="title">Révision</p></button>
-					<button><p class="title">Affichage</p></button>
-					<button><p class="title">Aide</p></button>
+					<div class="title"><p>Fichier</p></div>
+					<div class="title"><p>Accueil</p></div>
+					<div class="title"><p>Insertion</p></div>
+					<div class="title"><p>Mise en page</p></div>
+					<div class="title"><p>Référence</p></div>
+					<div class="title"><p>Révision</p></div>
+					<div class="title"><p>Affichage</p></div>
+					<div class="title"><p>Aide</p></div>
+					<div class="slider"></div>
 				</div>
 				<div class="right-info info">
 					<div class="comments">
@@ -275,7 +336,20 @@
 				}
 			}
 
-
+			const titles = document.querySelectorAll(".title");
+			
+			titles.forEach((title) => {
+				const p = title.querySelector("p");
+				title.onmouseover = function () {
+					title.style.backgroundColor = "rgb(237, 235, 233)";
+					p.style.fontWeight = "800";
+					p.style.margin = "0";
+				}
+				title.onmouseout = function () {
+					title.style.backgroundColor = "rgb(243, 242, 241)";
+					p.style.fontWeight = "400";
+				}
+			})
 		</script>
 	</body>
 </html>
