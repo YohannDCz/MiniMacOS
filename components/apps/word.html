@@ -1,307 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Word</title>
-		<link rel="stylesheet" href="../../styles/word.css">
-	</head>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-size: 14px;
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		}
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Word</title>
+        <link rel="stylesheet" href="../../styles/word.css">
+    </head>
+    <style>
 
-		.header-word img {
-			width: 32px;
-			height: 32px;
-		}
-
-		.header-word {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-		}
-
-		.header-word nav {
-			display: flex;
-			flex-direction: row;
-			width: 100%;
-		} 
-
-		.header-word .info {
-			display: flex;
-			align-items: center;
-		}
-		.header-word .app-word {
-			justify-content: center;
-			width: 100%;
-			height: 48px;
-			background-color: #185abd;
-			color: white;
-		}
-
-		.header-word .app-word .left-info .drop-menu {
-			width: 48px;
-			height: 48px;
-			padding: 16px;
-		}
-		.header-word .app-word .left-info .title {
-			display: flex;
-			align-items: center;
-			font-size: 16px;
-			font-weight: 800;
-			padding: 0 12px 0 8px;
-			height: 100%;
-		}
-
-		.header-word .app-word .left-info .saved {
-			
-			min-width: calc(50vw - 385.023px)
-		}
-
-		.header-word .app-word .left-info .saved button {
-			display: flex;
-			align-items: center;
-			color: white;
-			padding: 0 6px;
-			background-color: transparent;
-			width: 182.95px;
-			height: 48px;
-			border: none;
-		}
-
-		.header-word .app-word .left-info > *:not(:last-child):hover,
-		.header-word .app-word .left-info .saved button:hover  {
-			display: flex;
-			align-items: center;
-			background-color: rgb(40, 80, 164);
-		}
-
-		.header-word .app-word .left-info .saved  button p:nth-child(1) {
-			padding: 0 4px;
-		}
-
-		.header-word .app-word .left-info .saved button p:nth-child(2) {
-			padding: 0 2px;
-		}
-
-		.header-word .app-word .left-info .saved button p:nth-child(3) {
-			padding: 0 4px;
-		}
-
-		.header-word .app-word .left-info .saved button img {
-			width: 20px;
-			height: 20px;
-		}
-
-		.header-word .app-word .middle-info {
-			display: flex;
-			flex-grow: 1;
-			align-items: center;
-		}
-
-		.header-word .app-word .middle-info .search-bar {
-			min-width: 468px;
-			height: 32px;
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-			background-color: rgb(203, 211, 229);
-			border-radius: 3px;
-		}
-
-		.header-word .app-word .middle-info .search-bar img {
-			display:block;
-			margin: 0 8px 0 16px;
-			width: 28px;
-			height: 28px;
-			
-		}
-
-		.header-word .app-word input {
-			justify-self: right;
-			display: block;
-			min-width: 422px;
-			height: 32px;
-			border: none;
-			outline: none;
-			border-radius: 3px;
-			background-color: transparent;
-		}
-
-		.header-word .app-word input::placeholder {
-			color: rgb(36, 70, 140);
-		}
-
-		.header-word .app-word .right-info .image {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 48px;
-			height: 48px;
-		}
-
-		.header-word .app-word .right-info img {
-			width: 20px;
-			height: 20px;
-		}
-
-		.header-word .app-word .right-info .user  {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 48px;
-			height: 48px;
-		}
-
-		.header-word .app-word .right-info .username {
-			background-color: #185abd;
-			color: white;
-			border: 1px solid white;
-			border-radius: 9999px;
-			width: 32px;
-			height: 32px; 
-		}
-
-		.header-word .menu-word {
-			background-color: rgb(243, 242, 241);
-		}
-		.header-word .menu-word .left-info {
-			width: 100%;
-			height: 31px;
-		}
-		.header-word .menu-word .left-info > div {
-			box-sizing: border-box;
-			position: relative;
-			display: flex;
-			width: auto;
-			height: 31px;
-			padding: 0 10px;
-			user-select: none;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.header-word .menu-word .left-info > div:first-child {
-			width: 82.2px
-		}
-
-		.header-word .menu-word .left-info > div:nth-child(2) {
-			width: 63.99px;
-		}
-
-		.header-word .menu-word .left-info > div:nth-child(3) {
-			width: 82.45px;
-		}
-
-		.header-word .menu-word .left-info > div:nth-child(4) {
-			width: 110.88px;
-		}
-
-		.header-word .menu-word .left-info > div:nth-child(5) {
-			width: 88.66px;
-		}
-
-		.header-word .menu-word .left-info > div:nth-child(6) {
-			width: 78.8px;
-		}
-
-		.header-word .menu-word .left-info > div:nth-child(7) {
-			width: 86.27px;
-		}
-
-		.header-word .menu-word .left-info > div:nth-child(8) {
-			width: 55.99px;
-		}
-
-		.header-word .menu-word .left-info > div > p {
-			text-align: center;
-			margin: 0 4px;
-		}
-
-		.header-word .menu-word .left-info .slider {
-			position: absolute;
-			background-color: rgb(44, 89, 183);
-			height: 3px;
-			width: 40px;
-			align-self: flex-end;
-		}
 	</style>
-	<body>
-		<header class="header-word">
-			<nav class="app-word">
-				<div class="left-info info">
-					<img src="../images/word/icon_dropmenu.png" alt="the menu"
-						class="drop-menu">
-					<p class="title">Word</p>
-					<div class="saved">
-						<button>
-							<p>Document1</p>
-							<p>-</p>
-							<p>Enregistré</p>
-							<img src="../images/word/icon_down-arrow-white.svg" alt="the white
-								down arrow">
-						</button>
-					</div>
-				</div>
-				<div class="middle-info info">
-					<div class="search-bar">
-						<img src="../images/word/icon_magnifier.svg" alt="the magnifier"
-							class="magnifier">
-						<input type="text" placeholder="Rechercher (option + Q)"
-							class="input-header">
-					</div>
-				</div>
-				<div class="right-info info">
-					<div class="image">
-						<img src="../images/word/icon_settings.png" alt="the icon of the
-							settings"
-							class="settings">
-					</div>
-					<div class="user">
-						<button class="username">YD</button>
-					</div>
-				</div>
-			</nav>
-			<nav class="menu-word">
-				<div class="left-info info">
-					<div class="title"><p>Fichier</p></div>
-					<div class="title"><p>Accueil</p></div>
-					<div class="title"><p>Insertion</p></div>
-					<div class="title"><p>Mise en page</p></div>
-					<div class="title"><p>Référence</p></div>
-					<div class="title"><p>Révision</p></div>
-					<div class="title"><p>Affichage</p></div>
-					<div class="title"><p>Aide</p></div>
-					<div class="slider"></div>
-				</div>
-				<div class="right-info info">
-					<div class="comments">
-						<img src="../images/word/icon_comment.svg" alt="comment"
-							class="comment">
-						<p>Commentaires</p>
-					</div>
-					<div class="modification">
-						<img src="../images/word/icon_modify.svg" alt="" class="modification">
-						<p>Modification</p>
-						<img src="../images/word/icon_down-arrow-blue.svg" alt=""
-							class="down-arrow">
-					</div>
-					<div class="share">
-						<img src="../images/word/icon_share.svg" alt="" class="sharing">
-						<p>Partager</p>
-						<img src="../images/word/icon_down-arrow-white.svg" alt=""
-							class="down-arrow">
-					</div>
-				</div>
-			</nav>
-		</header>
-		<script>
+    <body>
+        <header class="header-word">
+            <nav class="app-word">
+                <div class="left-info info">
+                    <img src="../../images/word/icon_dropmenu.png" alt="the
+                        menu"
+                        class="drop-menu">
+                    <p class="titleapp">Word</p>
+                    <div class="saved">
+                        <button>
+                            <p>Document1</p>
+                            <p>-</p>
+                            <p>Enregistré</p>
+                            <img
+                                src="../../images/word/icon_down-arrow-white.svg"
+                                alt="the white
+                                down arrow">
+                        </button>
+                    </div>
+                </div>
+                <div class="middle-info info">
+                    <div class="search-bar">
+                        <img src="../../images/word/icon_magnifier.svg" alt="the
+                            magnifier"
+                            class="magnifier">
+                        <input type="text" placeholder="Rechercher (option + Q)"
+                            class="input-header">
+                    </div>
+                </div>
+                <div class="right-info info">
+                    <div class="image">
+                        <img src="../../images/word/icon_settings.png" alt="the
+                            icon of the
+                            settings"
+                            class="settings">
+                    </div>
+                    <div class="user">
+                        <button class="username">YD</button>
+                    </div>
+                </div>
+            </nav>
+            <nav class="menu-word">
+                <div class="left-info info">
+                    <div class="file-word"><p>Fichier</p></div>
+                    <div class="title active"><p>Accueil</p></div>
+                    <div class="title"><p>Insertion</p></div>
+                    <div class="title"><p>Mise en page</p></div>
+                    <div class="title"><p>Référence</p></div>
+                    <div class="title"><p>Révision</p></div>
+                    <div class="title"><p>Affichage</p></div>
+                    <div class="title"><p>Aide</p></div>
+                    <div class="slide"></div>
+                </div>
+                <div class="right-info info">
+                    <div class="comments">
+                        <img src="../../images/word/icon_comment.svg"
+                            alt="comment"
+                            class="comment">
+                        <p>Commentaires</p>
+                    </div>
+                    <div class="modification">
+                        <img src="../../images/word/icon_modify.svg" alt=""
+                            class="modification">
+                        <p>Modification</p>
+                        <img src="../../images/word/icon_down-arrow-blue.svg"
+                            alt=""
+                            class="down-arrow">
+                    </div>
+                    <div class="share">
+                        <img src="../../images/word/icon_share.svg" alt=""
+                            class="sharing">
+                        <p>Partager</p>
+                        <img src="../../images/word/icon_down-arrow-white.svg"
+                            alt=""
+                            class="down-arrow">
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <nav class="panel">
+            <nav class="sidebar">
+                <div class="close">
+                    <img src="../../images/word/icon_arrow.svg" alt="The back
+                        arrow.">
+                    <p>Fermer</p>
+                </div>
+                <div class="title2 active">
+                    <img src="../../images/word/icon_home.svg" alt="The home
+                        icon.">
+                    <p>Accueil</p>
+                </div>
+                <div class="title2">
+                    <img src="../../images/word/icon_file.svg" alt="The news
+                        icon.">
+                    <p>Nouveau</p>
+                </div>
+                <div class="title2">
+                    <img src="../../images/word/icon_folder.svg" alt="The folder
+                        icon.">
+                    <p>Ouvrir</p>
+                </div>
+                <div class="slide2"></div>
+                <hr>
+                <div class="menu-item"><p>Informations</p></div>
+                <div class="menu-item"><p>Enregistrer sous</p></div>
+                <div class="menu-item"><p>Exporter</p></div>
+                <div class="menu-item"><p>Imprimer</p></div>
+                <div class="menu-item"><p>Partager</p></div>
+                <div class="menu-item"><p>À propos</p></div>
+            </nav>
+            <nav class="otherpart">
+                <div class="word-home-header">
+                    <h2>Accueil</h2>
+                    <div class="one-drive">
+                        <p>Les nouveaux documents sont enregistrés dans :</p>
+                        <img src="../../images/word/icon_one-drive.svg" alt="the
+                            one drive icon." class="onedrive">
+                        <p style="font-weight: 800;">One Drive Entreprise</p>
+                    </div>
+                </div>
+                <p class="nouveau">Nouveau</p>
+                <div class="pages">
+                    <div class="page">
+                        <div class="box-page">
+                            <div class="image-page">
+                                <img src="../../images/word/icon_cross.svg"
+                                    alt="The cross icon.">
+                            </div>
+                            <p>Nouveau document ...</p>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="box-page">
+                            <img src="../../images/word/thumbnail_template.png"
+                                alt="thumbnail of the second template.">
+                            <p>Notes générales</p>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="box-page">
+                            <img src="../../images/word/thumbnail_template2.png"
+                                alt="thumbnail of the third template.">
+                            <p>Document de style A...</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="recents">Récents</p>
+                <div class="documents">
+                    <div class="document">
+                        <img src="../../images/word/icon_document.svg" alt="The
+                            Word icon." class="word-icon">
+                        <div class="document-p">
+                            <p class="document-title">Document2.docx</p>
+                            <p class="document-description">Yohann DI CRESCENZO
+                                OneDrive de Ecoles Galiléo Global Education
+                                France</p>
+                        </div>
+                    </div>
+                    <div class="document">
+                        <img src="../../images/word/icon_document.svg" alt="The
+                            Word icon." class="word-icon">
+                        <div class="document-p">
+                            <p class="document-title">Document3.docx</p>
+                            <p class="document-description">Yohann DI CRESCENZO
+                                OneDrive de Ecoles Galiléo Global Education
+                                France</p>
+                        </div>
+                    </div>
+                    <div class="document">
+                        <img src="../../images/word/icon_document.svg" alt="The
+                            Word icon." class="word-icon">
+                        <div class="document-p">
+                            <p class="document-title">Document4.docx</p>
+                            <p class="document-description">Yohann DI CRESCENZO
+                                OneDrive de Ecoles Galiléo Global Education
+                                France</p>
+                        </div>
+                    </div>
+                    <div class="document">
+                        <img src="../../images/word/icon_document.svg" alt="The
+                            Word icon." class="word-icon">
+                        <div class="document-p">
+                            <p class="document-title">Document5.docx</p>
+                            <p class="document-description">Yohann DI CRESCENZO
+                                OneDrive de Ecoles Galiléo Global Education
+                                France</p>
+                        </div>
+                    </div>
+                    <div class="document">
+                        <img src="../../images/word/icon_document.svg" alt="The
+                            Word icon." class="word-icon">
+                        <div class="document-p">
+                            <p class="document-title">Document6.docx</p>
+                            <p class="document-description">Yohann DI CRESCENZO
+                                OneDrive de Ecoles Galiléo Global Education
+                                France</p>
+                        </div>
+                    </div>
+                    <div class="document">
+                        <img src="../../images/word/icon_document.svg" alt="The
+                            Word icon." class="word-icon">
+                        <div class="document-p">
+                            <p class="document-title">Document7.docx</p>
+                            <p class="document-description">Yohann DI CRESCENZO
+                                OneDrive de Ecoles Galiléo Global Education
+                                France</p>
+                        </div>
+                    </div>
+                    <div class="document">
+                        <img src="../../images/word/icon_document.svg" alt="The
+                            Word icon." class="word-icon">
+                        <div class="document-p">
+                            <p class="document-title">Document8.docx</p>
+                            <p class="document-description">Yohann DI CRESCENZO
+                                OneDrive de Ecoles Galiléo Global Education
+                                France</p>
+                        </div>
+                    </div>
+                    <div class="document">
+                        <img src="../../images/word/icon_document.svg" alt="The
+                            Word icon." class="word-icon">
+                        <div class="document-p">
+                            <p class="document-title">Document9.docx</p>
+                            <p class="document-description">Yohann DI CRESCENZO
+                                OneDrive de Ecoles Galiléo Global Education
+                                France</p>
+                        </div>
+                    </div>
+                    <div class="document">
+                        <img src="../../images/word/icon_document.svg" alt="The
+                            Word icon." class="word-icon">
+                        <div class="document-p">
+                            <p class="document-title">Document10.docx</p>
+                            <p class="document-description">Yohann DI CRESCENZO
+                                OneDrive de Ecoles Galiléo Global Education
+                                France</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-file">
+                    <p class="more-file">Afficher plus de fichiers <img src="../../images/word/icon_right-arrow-blue.svg"
+                        alt="The right blue arrow."></p>
+                    
+                </div>
+            </nav>
+        </nav>
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+        <script>
 			const input = document.querySelector(".input-header");
 			const searchBar = document.querySelector(".search-bar");
 
@@ -335,21 +291,36 @@
 					searchBar.style.backgroundColor = "rgb(203, 211, 229)";
 				}
 			}
-
-			const titles = document.querySelectorAll(".title");
 			
-			titles.forEach((title) => {
-				const p = title.querySelector("p");
-				title.onmouseover = function () {
-					title.style.backgroundColor = "rgb(237, 235, 233)";
-					p.style.fontWeight = "800";
-					p.style.margin = "0";
-				}
-				title.onmouseout = function () {
-					title.style.backgroundColor = "rgb(243, 242, 241)";
-					p.style.fontWeight = "400";
-				}
+			$(document).ready(function() {
+				$(".title").on("click", function() {
+					$(this).siblings().removeClass('active');
+					$(this).addClass("active");
+				})
 			})
+
+            $(document).ready(function() {
+				$(".title2").on("click", function() {
+					$(this).siblings().removeClass('active');
+					$(this).addClass("active");
+				})
+			})
+
+            const close = document.querySelector(".close");
+            const panel = document.querySelector(".panel");
+            const file = document.querySelector(".file-word");
+
+            file.addEventListener("click", function() {
+                panel.style.visibility = "visible";
+                panel.style.transform = "translate(0)";
+                panel.style.opacity = "1";
+            })
+            
+            close.addEventListener("click", function() {
+                panel.style.visibility= "hidden";
+                panel.style.transform = "translate(-50px)";
+                panel.style.opacity = "0";
+            })
 		</script>
-	</body>
+    </body>
 </html>
