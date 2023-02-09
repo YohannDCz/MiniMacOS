@@ -6,13 +6,6 @@ function modifyZIndex() {
     windowX.style.zIndex = ++counter;
   })
 
-  iframes.forEach((iframe) => iframe.addEventListener("click", function () {
-    windows.forEach((windowX) => {
-      windowX.style.zIndex = ++counter;
-    })
-  })
-  )
-
   // windows.addEventListener('click', function (event) {
   //   if (containingElement.contains(event.target)) {
   //     windowX.style.zIndex = ++counter;

@@ -437,7 +437,7 @@ body, html {
   opacity: 0;
 }
 
-hr.word {
+hr {
   margin: 8px 12px;
   height: 1px;
   border: 0.5px solid rgba(255, 255, 255, 0.75);
@@ -482,17 +482,17 @@ hr.word {
   overflow-y: scroll;
 }
 
-.panel .otherpart .word-home-header {
+.panel .otherpart .word-header {
   display: flex;
   justify-content: space-between;
 }
 
-.panel .otherpart .word-home-header h2 {
+.panel .otherpart .word-header h2 {
   font-size: 28px;
   padding: 40px 0 15px 30px;
 }
 
-.panel .otherpart .word-home-header .one-drive {
+.panel .otherpart .word-header .one-drive {
   display: flex;
   align-items: center;
   font-size: 12px;
@@ -500,21 +500,21 @@ hr.word {
   padding: 0 0 15px 30px;
 }
 
-.panel .otherpart .word-home-header .one-drive p {
+.panel .otherpart .word-header .one-drive p {
   font-size: inherit;
 }
 
-.panel .otherpart .word-home-header .one-drive p:first-child {
+.panel .otherpart .word-header .one-drive p:first-child {
   margin: 1px -1px 1px 0;
   padding: 2px 0 0;
   color: #605E5C;
 }
 
-.panel .otherpart .word-home-header .one-drive p:last-child {
+.panel .otherpart .word-header .one-drive p:last-child {
   color: #605E5C;
 }
 
-.panel .otherpart .word-home-header .one-drive img {
+.panel .otherpart .word-header .one-drive .onedrive {
   width: 28px;
   height: 28px;
   margin-bottom: -4px;
