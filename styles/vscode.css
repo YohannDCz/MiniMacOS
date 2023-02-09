@@ -211,11 +211,6 @@ body {
   line-height: inherit
 }
 
-hr {
-  height: 0;
-  color: inherit;
-  border-top-width: 1px
-}
 
 abbr:where([title]) {
   text-decoration: underline dotted

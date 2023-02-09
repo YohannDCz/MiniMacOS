@@ -6,14 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../styles/generalanddock.css" />
         <link rel="stylesheet" href="../styles/header.css" />
-        <link rel="stylesheet" href="../styles/app-header.css">
-        <link rel="stylesheet" href="../styles/finder-window.css">
-        <link rel="stylesheet" href="../styles/windows.css">
-        <link rel="stylesheet" href="../styles/safari.css">
-        <link rel="stylesheet" href="../styles/vscode.css">
+        <link rel="stylesheet" href="../styles/finder-window.css" />
+        <link rel="stylesheet" href="../styles/windows.css" />
+        <link rel="stylesheet" href="../styles/safari.css" />
+        <link rel="stylesheet" href="../styles/vscode.css" />
+        <link rel="stylesheet" href="../styles/app-header.css" />
 
-        <link rel="icon" type="image/x-icon" href="../images/favicon.svg">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.svg" />
         <title>Portfolio de Yohann D.</title>
+
+        <style>
+        </style>
     </head>
     <body>
         <div class="header"></div>
@@ -3807,7 +3810,7 @@
             </div>
         </header>
         <main>
-            <section class="window" id="Finder">
+            <section class="window" id="Finder" style="display: none;">
                 <div class="header-window" id="header-window">
                     <div class="trafficLights" id="trafficLights">
                         <button class="red" id="red"></button>
@@ -4018,7 +4021,7 @@
                     </main>
                 </div>
             </section>
-            <section class="window" id="Safari">
+            <section class="window" id="Safari" style="display: none;">
                 <div class="header-window" id="header-window">
                     <div class="trafficLights" id="trafficLights">
                         <button class="red" id="red"></button>
@@ -4099,26 +4102,32 @@
                                         alt="portfolio #3" class="icon">
                                     <p class="title">Portfolio Site #3</p>
                                 </div>
-                                <div class="website google-mirror-button" onclick='changeWindow("googlemirror", "./apps/safari/Google/index.html")'>
+                                <div class="website google-mirror-button"
+                                    onclick='changeWindow(" googlemirror",
+                                    "./apps/safari/Google/index.html")'>
                                     <img
                                         src="../../images/safari/thumbnail_google.png"
                                         alt="Google thumbnail" class="icon">
                                     <p class="title">Google (mirror)</p>
                                 </div>
-                                    <div class="website youtube-mirror-button" onclick='changeWindow("youtubemirror", "./apps/safari/YouTube/index.html")'>
-                                        <img
-                                            src="../../images/safari/thumbnail_youtube.jpeg"
-                                            alt="YouTube thumbnail"
-                                            class="icon">
-                                        <p class="title">YouTube (mirror)</p>
-                                    </div>
-                                    <div class="website twitter-mirror-button" onclick='changeWindow("twittermirror", "./apps/safari/Twitter/index.html")'>
-                                        <img
-                                            src="../../images/safari/thumbnail_twitter.jpeg"
-                                            alt="Twitter thumbnail"
-                                            class="icon">
-                                        <p class="title">Twitter (mirror)</p>
-                                    </div>
+                                <div class="website youtube-mirror-button"
+                                    onclick='changeWindow(" youtubemirror",
+                                    "./apps/safari/YouTube/index.html")'>
+                                    <img
+                                        src="../../images/safari/thumbnail_youtube.jpeg"
+                                        alt="YouTube thumbnail"
+                                        class="icon">
+                                    <p class="title">YouTube (mirror)</p>
+                                </div>
+                                <div class="website twitter-mirror-button"
+                                    onclick='changeWindow(" twittermirror",
+                                    "./apps/safari/Twitter/index.html")'>
+                                    <img
+                                        src="../../images/safari/thumbnail_twitter.jpeg"
+                                        alt="Twitter thumbnail"
+                                        class="icon">
+                                    <p class="title">Twitter (mirror)</p>
+                                </div>
                             </div>
                         </section>
                         <section class="frequently-used">
@@ -4221,7 +4230,7 @@
                     </main>
                 </div>
             </section>
-            <section class="window" id="VSCode">
+            <section class="window" id="VSCode" style="display: none;">
                 <div class="header-window" id="header-window">
                     <div class="trafficLights" id="trafficLights">
                         <button class="red" id="red"></button>
@@ -4233,7 +4242,10 @@
                     </div>
                 </div>
                 <div class="vscode-window">
-                    <iframe src="https://github1s.com/Renovamen/playground-macos/blob/main/README.md" frameborder="0" class="vscode"></iframe>
+                    <iframe
+                        src="https://github1s.com/Renovamen/playground-macos/blob/main/README.md"
+                        frameborder="0" width="100%"
+                        height="500px"></iframe>
                 </div>
             </section>
 
@@ -4328,6 +4340,48 @@
         <script src="../scripts/windows.js"></script>
         <script src="../scripts/launchpad.js"></script>
         <script>
+
+        const finderLogo = document.getElementById("finder");
+        const finderApp = document.getElementById("Finder")
+        const finderHeader = document.querySelector(".finder-header");
+
+        const safariLogo = document.getElementById("safariApp");
+        const safariApp = document.getElementById("Safari");
+        const safariHeader = document.querySelector(".safari-header");
+
+        const vscodeLogo = document.getElementById("vscodeApp");
+        const vscodeApp = document.getElementById("VSCode");
+        const vscodeHeader = document.querySelector(".vscode-header");
+
+        const appHeader = document.querySelectorAll(".app-header");
+
+        finderLogo.addEventListener("click", function() {
+            finderApp.style.display = "flex";
+            let j = 0;
+            while (j < appHeader.length) {
+                appHeader[j++].style.display = "none";
+            }
+            finderHeader.style.display = "flex";
+        })
+
+         safariLogo.addEventListener("click", function() {
+            safariApp.style.display = "flex";
+            let j = 0;
+            while (j < appHeader.length) {
+                appHeader[j++].style.display = "none";
+            }
+            safariHeader.style.display = "flex";
+        })
+
+         vscodeLogo.addEventListener("click", function() {
+            vscodeApp.style.display = "flex";
+            let j = 0;
+            while (j < appHeader.length) {
+                appHeader[j++].style.display = "none";
+            }
+            vscodeHeader.style.display = "flex";
+        })
+
         const main = document.querySelector(".main-safari");
         const chevron = document.querySelector(".left-chevron");
 

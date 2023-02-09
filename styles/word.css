@@ -437,7 +437,7 @@ body, html {
   opacity: 0;
 }
 
-hr {
+hr.word {
   margin: 8px 12px;
   height: 1px;
   border: 0.5px solid rgba(255, 255, 255, 0.75);
