@@ -6,6 +6,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body, html {
+  width: 100vw;
+  min-hight: 100vh;
+}
 
 .header-word {
   display: flex;
@@ -51,6 +55,7 @@
   font-weight: 800;
   padding: 0 12px 0 8px;
   height: 100%;
+  user-select: none;
 }
 
 .header-word .app-word .left-info .saved {
@@ -70,7 +75,8 @@
 }
 
 .header-word .app-word .left-info>*:not(:last-child):hover,
-.header-word .app-word .left-info .saved button:hover {
+.header-word .app-word .left-info .saved button:hover,
+.header-word .app-word .right-info div:hover {
   display: flex;
   align-items: center;
   background-color: rgb(40, 80, 164);
@@ -167,19 +173,29 @@
 }
 
 .header-word .menu-word .left-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   width: 100%;
-  height: 31px;
+  height: 36px;
 }
 
-.header-word .menu-word .left-info>div:hover {
+.header-word .menu-word .left-info > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: 32px;
+  width: 100%;
+}
+.header-word .menu-word .left-info>div >div:hover {
   background-color: rgb(237, 235, 233);
 }
 
-.header-word .menu-word .left-info>div:hover>p {
+.header-word .menu-word .left-info>div > div:hover>p {
   font-weight: 800;
 }
 
-.header-word .menu-word .left-info>div {
+.header-word .menu-word .left-info>div>div {
   position: relative;
   display: flex;
   width: auto;
@@ -192,49 +208,49 @@
   transition: 0.25s;
 }
 
-.header-word .menu-word .left-info>div:first-child {
+.header-word .menu-word .left-info>div >div:first-child {
   width: 82.2px
 }
 
-.header-word .menu-word .left-info>div:nth-child(2) {
+.header-word .menu-word .left-info>div>div:nth-child(2) {
   width: 63.99px;
 }
 
-.header-word .menu-word .left-info>div:nth-child(3) {
+.header-word .menu-word .left-info>div>div:nth-child(3) {
   width: 82.45px;
 }
 
-.header-word .menu-word .left-info>div:nth-child(4) {
+.header-word .menu-word .left-info>div>div:nth-child(4) {
   width: 110.88px;
 }
 
-.header-word .menu-word .left-info>div:nth-child(5) {
+.header-word .menu-word .left-info>div>div:nth-child(5) {
   width: 88.66px;
 }
 
-.header-word .menu-word .left-info>div:nth-child(6) {
+.header-word .menu-word .left-info>div>div:nth-child(6) {
   width: 78.8px;
 }
 
-.header-word .menu-word .left-info>div:nth-child(7) {
+.header-word .menu-word .left-info>div>div:nth-child(7) {
   width: 86.27px;
 }
 
-.header-word .menu-word .left-info>div:nth-child(8) {
+.header-word .menu-word .left-info>div>div:nth-child(8) {
   width: 55.99px;
 }
 
-.header-word .menu-word .left-info>div.active>p {
+.header-word .menu-word .left-info>div>div.active>p {
   font-weight: 800;
 }
 
-.header-word .menu-word .left-info>div>p {
+.header-word .menu-word .left-info>div>div>p {
   text-align: center;
   margin: 0 4px;
   font-weight: 400;
 }
 
-.header-word .menu-word .left-info>div:nth-child(4) {
+.header-word .menu-word .left-info>div>div:nth-child(4) {
   padding: 6px 0;
 }
 
@@ -315,6 +331,50 @@
   width: 55.98px;
 }
 
+.header-word .menu-word .right-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-word .menu-word .right-info button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  height: 28px;
+  margin: 4px;
+  padding: 0 6px;
+}
+
+.header-word .menu-word .right-info button img {
+  width: 28px;
+}
+
+.header-word .menu-word .right-info button .down-arrow {
+  width: 22px;
+}
+
+.header-word .menu-word .right-info button:not(:last-of-type) {
+  background-color: white;
+  color: rgb(24, 90, 189);
+  border: 1px solid rgb(200, 198, 196);
+}
+
+.header-word .menu-word .right-info button:not(:last-of-type):hover {
+  background-color: rgb(237, 235, 233);
+}
+
+.header-word .menu-word .right-info button:last-of-type {
+  background-color: rgb(24, 90, 189);
+  color: white;
+  border: transparent;
+}
+
+.header-word .menu-word .right-info button:last-of-type:hover {
+  background-color: rgb(40, 80, 184);
+}
+
 .panel {
   position: absolute;
   left: 0;
@@ -323,7 +383,7 @@
   width: 928px;
   z-index: 990;
   transform: translate(-50px);
-  visibility: "hidden";
+  visibility: hidden;
   transition: 0.25s;
 }
 

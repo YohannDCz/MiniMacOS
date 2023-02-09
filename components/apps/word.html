@@ -8,13 +8,78 @@
         <link rel="stylesheet" href="../../styles/word.css">
     </head>
     <style>
+        .header-word .tabs-word {
+            position: absolute;
+            top: 84px;
+            height: 40px;
+            background-color: rgb(243, 242, 241);
+        }
+
+        .header-word .tabs-word > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .header-word .tabs-word .box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0 6px
+        }
+
+        .header-word .tabs-word .box:has(div) {
+            padding: 0 0 0 6px;
+        }
+
+        .header-word .tabs-word .box:has(div) + .separator {
+            margin: 0 0 0 8px;
+        }
+
+        .header-word .tabs-word .box img.too-small {
+            width: 36px;
+            height: 36px;
+        }
+        
+        .header-word .tabs-word .box img:not(.too-small) {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-word .tabs-word .box img.too-medium {
+            width: 32px;
+        }
+
+        .header-word .tabs-word .box > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: -3px;
+        }
+
+        .header-word .tabs-word .box p {
+            font-size: 14px;
+        }
+
+        .header-word .tabs-word .box > div > .down-arrow {
+            width: 12px;
+        }
+
+        .header-word .tabs-word .separator {
+            width: 1px;
+            height: 32px;
+            border: none;
+            background-color: rgb(200, 198, 196);
+            margin: 4px;
+        }
+
 
 	</style>
     <body>
         <header class="header-word">
             <nav class="app-word">
                 <div class="left-info info">
-                    <img src="../../images/word/icon_dropmenu.png" alt="the
+                    <img src="../../images/word/panel&header/icon_dropmenu.png" alt="the
                         menu"
                         class="drop-menu">
                     <p class="titleapp">Word</p>
@@ -24,7 +89,7 @@
                             <p>-</p>
                             <p>Enregistré</p>
                             <img
-                                src="../../images/word/icon_down-arrow-white.svg"
+                                src="../../images/word/common/icon_down-arrow-white.svg"
                                 alt="the white
                                 down arrow">
                         </button>
@@ -32,7 +97,7 @@
                 </div>
                 <div class="middle-info info">
                     <div class="search-bar">
-                        <img src="../../images/word/icon_magnifier.svg" alt="the
+                        <img src="../../images/word/common/icon_magnifier.svg" alt="the
                             magnifier"
                             class="magnifier">
                         <input type="text" placeholder="Rechercher (option + Q)"
@@ -41,7 +106,7 @@
                 </div>
                 <div class="right-info info">
                     <div class="image">
-                        <img src="../../images/word/icon_settings.png" alt="the
+                        <img src="../../images/word/panel&header/icon_settings.png" alt="the
                             icon of the
                             settings"
                             class="settings">
@@ -52,41 +117,218 @@
                 </div>
             </nav>
             <nav class="menu-word">
-                <div class="left-info info">
-                    <div class="file-word"><p>Fichier</p></div>
-                    <div class="title active"><p>Accueil</p></div>
-                    <div class="title"><p>Insertion</p></div>
-                    <div class="title"><p>Mise en page</p></div>
-                    <div class="title"><p>Référence</p></div>
-                    <div class="title"><p>Révision</p></div>
-                    <div class="title"><p>Affichage</p></div>
-                    <div class="title"><p>Aide</p></div>
-                    <div class="slide"></div>
+                <div class="left-info">
+                    <div>
+                        <div class="file-word"><p>Fichier</p></div>
+                        <div class="title active"><p>Accueil</p></div>
+                        <div class="title"><p>Insertion</p></div>
+                        <div class="title"><p>Mise en page</p></div>
+                        <div class="title"><p>Référence</p></div>
+                        <div class="title"><p>Révision</p></div>
+                        <div class="title"><p>Affichage</p></div>
+                        <div class="title"><p>Aide</p></div>
+                        <div class="slide"></div>
+                    </div>
                 </div>
                 <div class="right-info info">
-                    <div class="comments">
-                        <img src="../../images/word/icon_comment.svg"
+                    <button class="comments">
+                        <img src="../../images/word/panel&header/icon_comment.svg"
                             alt="comment"
                             class="comment">
                         <p>Commentaires</p>
-                    </div>
-                    <div class="modification">
-                        <img src="../../images/word/icon_modify.svg" alt=""
+                    </button>
+                    <button class="catch-up">
+                        <img src="../../images/word/panel&header/icon_catch-up.svg" alt="The
+                            catch-up icon." class="catch-up">
+                        <p>Rattrapage</p>
+                    </button>
+                    <button class="modification">
+                        <img src="../../images/word/panel&header/icon_modify.svg" alt="The
+                            modify icon."
                             class="modification">
                         <p>Modification</p>
-                        <img src="../../images/word/icon_down-arrow-blue.svg"
-                            alt=""
+                        <img
+                            src="../../images/word/common/icon_down-arrow-blue.svg"
+                            alt="The down arrow icon."
                             class="down-arrow">
-                    </div>
-                    <div class="share">
-                        <img src="../../images/word/icon_share.svg" alt=""
+                    </button>
+                    <button class="share">
+                        <img src="../../images/word/panel&header/icon_share.svg" alt=""
                             class="sharing">
                         <p>Partager</p>
-                        <img src="../../images/word/icon_down-arrow-white.svg"
+                        <img
+                            src="../../images/word/common/icon_down-arrow-white.svg"
                             alt=""
                             class="down-arrow">
-                    </div>
+                    </button>
                 </div>
+            </nav>
+            <nav class="tabs-word">
+                <div class=">
+                    <div class="box">
+                        <img src="../../images/word/icon_undo-arrow.svg"
+                            alt="The back arrow." class="undo-arrow">
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_clippath.svg"
+                            alt="The back arrow." class="undo-arrow too-small">
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_formatter.svg"
+                            alt="The formatter icon." class="formatter too-small">
+                    </div>
+                    <div class="separator"></div>
+                    <select class="font-family">
+                        <option value="typo1">Calibri (corps)</option>
+                    </select>
+                    <select class="font-size">
+                        <option value="size1">12</option>
+                    </select>
+                    <div class="box">
+                        <img src="../../images/word/icon_larger.svg"
+                            alt="The larger icon." class="larger">
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_smaller.svg"
+                            alt="The smaller icon." class="smaller">
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_bold.svg" alt="The
+                            bold icon." class="bold">
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_italic.svg"
+                            alt="The italic icon." class="italic">
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_underlined.svg"
+                            alt="The underlined icon." class="underlined">
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_highlighter.svg"
+                            alt="The highlighter icon." class="highlighter too-small">
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_colors.svg"
+                            alt="The colors icon." class="colors too-small">
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_color-erase.svg"
+                            alt="The color-erase icon." class="color-erase too-small">
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/common/icon_menu.svg" alt="The
+                            drop menu icon." class="menu">
+                    </div>
+                    <div class="separator"></div>
+                    <div class="box">
+                        <img src="../../images/word/icon_bullets.svg"
+                            alt="The bullet list icon." class="bullets too-medium">
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_numbers.svg"
+                            alt="The list numbering icon." class="numbers too-medium">
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/common/icon_increase.svg"
+                            alt="The increase indent icon." class="increase  too-medium">
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/common/icon_decrease.svg"
+                            alt="The decrease icon." class="decrease too-medium">
+                    </div>
+                    <div class="box">
+                        <img src="../../images/word/icon_justify.svg"
+                            alt="The list justify icon." class="justify">
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="box">
+                        <img src="../../images/word/icon_apply-style.svg"
+                            alt="The applying styles icon." class="apply too-small">
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="box">
+                        <img src="../../images/word/common/icon_search.svg"
+                            alt="The search icon." class="search too-small">
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="box">
+                        <img src="../../images/word/icon_reuse.svg"
+                            alt="The reuse icon." class="reuse too-small">
+                    </div>
+                    <div class="separator"></div>
+                    <div class="box">
+                        <img src="../../images/word/icon_mic.svg"
+                            alt="The mic icon." class="mic too-small">
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="box">
+                        <img src="../../images/word/common/icon_editor.svg"
+                            alt="The editor icon." class="editor too-small">
+                    </div>
+                    <div class="separator"></div>
+                    <div class="box">
+                        <img src="../../images/word/icon_conceptor.svg"
+                            alt="The conceptor icon." class="conceptor too-small">
+                        <p>Concepteur</p>
+                        <div class="more">
+                            <img src="../../images/word/common/icon_down-arrow.svg"
+                                alt="The down arrow." class="down-arrow">
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="box">
+                        <img src="../../images/word/common/icon_menu.svg"
+                            alt="The drop menu icon." class="menur">
+                    </div>
+                    <div class="separator"></div>
+                </div>
+                <div class="insertion"></div>
+                <div class="formatting"></div>
+                <div class="reference"></div>
+                <div class="review"></div>
+                <div class="display"></div>
+                <div class="help"></div>
             </nav>
         </header>
         <nav class="panel">
@@ -97,7 +339,7 @@
                     <p>Fermer</p>
                 </div>
                 <div class="title2 active">
-                    <img src="../../images/word/icon_home.svg" alt="The home
+                    <img src="../../images/word/icon_home.svg" alt="The
                         icon.">
                     <p>Accueil</p>
                 </div>
@@ -121,7 +363,7 @@
                 <div class="menu-item"><p>À propos</p></div>
             </nav>
             <nav class="otherpart">
-                <div class="word-home-header">
+                <div class="word-header">
                     <h2>Accueil</h2>
                     <div class="one-drive">
                         <p>Les nouveaux documents sont enregistrés dans :</p>
@@ -250,9 +492,10 @@
                     </div>
                 </div>
                 <div class="more-file">
-                    <p class="more-file">Afficher plus de fichiers <img src="../../images/word/icon_right-arrow-blue.svg"
-                        alt="The right blue arrow."></p>
-                    
+                    <p class="more-file">Afficher plus de fichiers <img
+                            src="../../images/word/icon_right-arrow-blue.svg"
+                            alt="The right blue arrow."></p>
+
                 </div>
             </nav>
         </nav>
