@@ -27,6 +27,7 @@
 }
 
 .tab .box:has(img) {
+    width: 48px;
     margin-left: 4px;
 }
 

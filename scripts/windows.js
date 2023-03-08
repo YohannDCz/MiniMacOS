@@ -1,41 +1,49 @@
 const finder = document.getElementById('finder');
+const finderWindow = document.getElementById('Finder');
 finder.addEventListener("click", function () {
-  addWindow("../components/apps/finder-window.html", "Finder");
+  finderWindow.style.display = "flex";
 })
 
 const safari = document.getElementById('safariApp');
+const safariWindow = document.getElementById('Safari');
 safari.addEventListener("click", function () {
-  addWindow("../components/apps/safari/safari.html", "Safari");
+  safariWindow.style.display = "flex";
 });
 
 const vscode = document.getElementById('vscodeApp');
+const vscodeWindow = document.getElementById('VSCode');
 vscode.addEventListener("click", function () {
-  addWindow("https://vscode.dev/", "VSCode");
+  vscodeWindow.style.display = "flex";
 });
 
 const word = document.getElementById('wordApp');
+const wordWindow = document.getElementById('Word1');
 word.addEventListener("click", function () {
-  addWindow("./word.html", "Word");
+  wordWindow.style.display = "flex";
 });
 
 const notes = document.getElementById('notesApp');
+const notesWindow = document.getElementById('Notes1');
 notes.addEventListener("click", function () {
-  addWindow("./apps/notes.html", "Notes");
+  notesWindow.style.display = "flex";
 });
 
 const calendar = document.getElementById('calendarApp');
+const calendarWindow = document.getElementById('Calendar1');
 calendar.addEventListener("click", function () {
-  addWindow("./apps/calendar.html", "Calendrier");
+  calendarWindow.style.display = "flex";
 });
 
 const mail = document.getElementById('mailApp');
+const mailWindow = document.getElementById('Mail1');
 mail.addEventListener("click", function () {
-  addWindow("./apps/mail.html", "Mail");
+  mailWindow.style.display = "flex";
 });
 
 const settings = document.getElementById('settings');
+const settingsWindow = document.getElementById('Settings1');
 settings.addEventListener("click", function () {
-  addWindow("./apps/settings.html", "Réglages Système");
+  settingsWindow.style.display = "flex"
 });
 
 let counter = 0;

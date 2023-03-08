@@ -9,7 +9,7 @@
     left: 220px;
     border-radius: 8px;
     border: none;
-    z-index: 800;
+    z-index: revert;
     overflow: hidden;
     transition: opacity 0.25s, transform 0.5s;
 }
