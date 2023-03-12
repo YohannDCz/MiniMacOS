@@ -4087,13 +4087,17 @@
                                         class="icon">
                                     <p class="title">Portfolio</p>
                                 </div>
-                                <div class="website portfolio-website1">
+                                <div class="website portfolio-website1"
+                                onclick="changeWindow('designo',
+                                    'https://yohanndcz.github.io/Designo/')">
                                     <img
                                         src="./../images/safari/thumbnail_frontend-mentor.jpeg"
                                         alt="portfolio #1" class="icon">
                                     <p class="title">Portfolio Site #1</p>
                                 </div>
-                                <div class="website portfolio-website2">
+                                <div class="website portfolio-website2"
+                                onclick="changeWindow('kanban',
+                                    'https://kanban-woad.vercel.app/')">
                                     <img
                                         src="./../images/safari/thumbnail_frontend-mentor.jpeg"
                                         alt="portfolio #2" class="icon">
@@ -4106,7 +4110,7 @@
                                     <p class="title">Portfolio Site #3</p>
                                 </div>
                                 <div class="website google-mirror-button"
-                                    onclick='changeWindow(" googlemirror",
+                                    onclick='changeWindow("googlemirror",
                                     "./apps/safari/Google/index.html")'>
                                     <img
                                         src="./../images/safari/thumbnail_google.png"
@@ -4114,7 +4118,7 @@
                                     <p class="title">Google (mirror)</p>
                                 </div>
                                 <div class="website youtube-mirror-button"
-                                    onclick='changeWindow(" youtubemirror",
+                                    onclick='changeWindow("youtubemirror",
                                     "./apps/safari/YouTube/index.html")'>
                                     <img
                                         src="./../images/safari/thumbnail_youtube.jpeg"
@@ -4123,7 +4127,7 @@
                                     <p class="title">YouTube (mirror)</p>
                                 </div>
                                 <div class="website twitter-mirror-button"
-                                    onclick='changeWindow(" twittermirror",
+                                    onclick='changeWindow("twittermirror",
                                     "./apps/safari/Twitter/index.html")'>
                                     <img
                                         src="./../images/safari/thumbnail_twitter.jpeg"
@@ -4506,6 +4510,12 @@
             } else if (document.querySelector(".twittermirror")) {
                 const twittermirror = document.querySelector(".twittermirror")
                 twittermirror.remove();
+            } else if (document.querySelector(".designo")) {
+                const portfolio1 = document.querySelector(".designo");
+                portfolio1.remove();
+            } else if (document.querySelector(".kanban")) {
+                const portfolio2 = document.querySelector(".kanban");
+                portfolio2.remove();
             }
 
             const input = document.querySelector(".search-bar");

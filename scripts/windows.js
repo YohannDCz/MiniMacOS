@@ -46,7 +46,7 @@ settings.addEventListener("click", function () {
   settingsWindow.style.display = "flex"
 });
 
-let counter = 0;
+// let counter = 0;
 
 function addWindow(location, name) {
   if (document.getElementById(name) == null) {
