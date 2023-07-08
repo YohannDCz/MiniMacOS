@@ -1,5 +1,3 @@
- https://yohanndcz.github.io/Projet_VENTURA/
- 
 # Projet Ventura
 Intégration de MacOS sur le web.
 
