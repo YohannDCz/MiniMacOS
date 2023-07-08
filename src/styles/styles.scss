@@ -1,0 +1,35 @@
+@use "app-header";
+@use "building";
+@use "dock";
+@use "finder-window";
+@use "header";
+@use "launchpad";
+@use "safari";
+@use "screen";
+@use "start";
+@use "windows";
+@use "word";
+
+* {
+	font-size: 14px;
+	font-family: "SF Pro", Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+html,
+body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	/* align-items: center; */
+}

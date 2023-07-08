@@ -1,0 +1,92 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 24px;
+  width: 100%;
+  z-index: 900;
+  background-color: rgba(255, 255, 255, 0.288);
+  backdrop-filter: blur(50px);
+
+  .menu {
+    position: relative;
+    display: flex;
+    width: 700px;
+    height: 24px;
+    z-index: 900;
+  }
+
+  .rightinfos,
+  .rightinfos .widgets {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .rightinfos {
+    z-index: 50;
+  }
+
+  .rightinfos .widgets div,
+  .rightinfos .date {
+    display: flex;
+    align-items: center;
+    margin: 0 -3px;
+    padding: 0 12px;
+    border-radius: 4px;
+  }
+
+  .rightinfos .date {
+    margin: 0 8px 0 -3px;
+    padding: 0 8px;
+  }
+
+  .menu p,
+  .date div {
+    color: white;
+    font-family: "Helvetica Neue", "SF Pro";
+    font-size: 13px;
+    user-select: none;
+  }
+
+  .widgets,
+  .date {
+    display: flex;
+    z-index: 50;
+  }
+
+  .menu div:hover,
+  .widgets div:hover,
+  .date:hover {
+    cursor: default;
+  }
+
+  .widgets div:active,
+  .date:active {
+    background-color: rgba(255, 255, 255, 0.527);
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .menu .appName {
+    font-weight: 800;
+  }
+
+  .rightinfos .widgets .battery img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .widgets,
+  .date div {
+    margin: 0 2px;
+    padding: 0;
+    user-select: none;
+  }
+}
