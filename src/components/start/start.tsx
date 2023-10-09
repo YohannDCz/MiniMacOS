@@ -24,7 +24,7 @@ const Start = () => {
 				if (width >= 100) {
 					clearInterval(id);
 					i = 0;
-					navigate("./src/component/start/components/finder.html");
+					navigate("./src/components/finder.html");
 				} else {
 					width++;
 					if (elem) {
