@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../../styles/app-header.css">
+    </head>
+    <body>
+        <div class="app-header vscode-header">
+            <div class="tab long apple">
+                <div class="box">
+                    <img src="../../images/icons/icon_mac.svg" alt="The Apple
+                        logo."
+                        />
+                </div>
+                <div class="container">
+                    <div class="enabled">À propos de ce Mac</div>
+                    <hr>
+                    <div class="enabled">Réglages du système...</div>
+                    <div class="enabled">App Store...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Éléments récents</div>
+                        <img class="right-arrow"
+                            src="../../images/icons/icon_right-arrow.png"
+                            alt="">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Forcer à quitter...</div>
+                        <div class="symbols">&#8997; &#8984; &#9099;</div>
+                    </div>
+                    <hr>
+                    <div class="enabled">Suspendre l'activité</div>
+                    <div class="enabled">Redémarrer...</div>
+                    <div class="enabled">Éteindre...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Vérouiller l'écran</div>
+                        <div class="symbols">&#8963; &#8984; Q</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Fermer la session Yohann D...</div>
+                        <div class="symbols">&#8679; &#8984; Q</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box title">
+                    <p class="title app">Code</p>
+                </div>
+                <div class="container">
+                    <div class="enabled">À propos de Visual Studio Code</div>
+                    <div class="enabled">Rechercher les mises à jour...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Réglages...</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Servies</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Masquer Visual Studio Code</div>
+                        <div class="symbols">&#8984; H</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Masquer les autres</div>
+                        <div class="symbols">&#8997; &#8984; H</div>
+                    </div>
+                    <div class="grey">Afficher tout</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Quitter Visual Studio Code</div>
+                        <div class="symbols">&#8984; Q</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box" id="Fichier">
+                    <p class="title">Fichier</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Nouveau fichier texte</div>
+                        <div class="symbols">&#8984; N</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Nouveau fichier...</div>
+                        <div class="symbols">&#8963; &#8997; &#8984; N</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Nouvelle fenêtre</div>
+                        <div class="symbols">&#8679; &#8984; N</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Ouvrir...</div>
+                        <div class="symbols">&#8984; O</div>
+                    </div>
+                    <div class="enabled">Ouvrir le dossier...</div>
+                    <div class="enabled">Ourir l'espace de travail à partir du fichier...</div>
+                    <div class="command enabled">
+                        <div>Ouvrir les éléments récents</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div>Ajouter un dossier à l'espace de travail...</div>
+                    <div>Enregistrer l'espace de travail sous...</div>
+                    <div>Dupliquer l'espace de travail</div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Enregistrer</div>
+                        <div class="symbols">&#8984; S</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Enregistrer sous...</div>
+                        <div class="symbols">&#8679; &#8984; S</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Enregistrer tout</div>
+                        <div class="symbols">&#8997; &#8984; S</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Partager</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Enregistrement automatique</div>
+                    </div>
+                    <hr>
+                    <div class="grey">Rétablir le fichier</div>
+                    <div class="command">
+                        <div class="grey">Fermer l'éditeur</div>
+                        <div class="symbols">&#8984; W</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Fermer le dossier</div>
+                        <div class="symbols">&#8984;K F</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Fermer la fenêtre</div>
+                        <div class="symbols">&#8984; W</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab extralong">
+                <div class="box" id="Edition">
+                    <p class="title">Édition</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Annuler</div>
+                        <div class="symbols">&#8984; Z</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Rétablir</div>
+                        <div class="symbols">&#8679; &#8984; Z</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Couper</div>
+                        <div class="symbols">&#8984; X</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Copier</div>
+                        <div class="symbols">&#8984; C</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Coller</div>
+                        <div class="symbols">&#8984; V</div>
+                    </div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Rechercher</div>
+                        <div class="symbols">&#8984; F</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Remplacer</div>
+                        <div class="symbols">&#8997; &#8984; F</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Rechercher dans les fichiers</div>
+                        <div class="symbols">&#8679; &#8984; F</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Remplacer dans les fichiers</div>
+                        <div class="symbols">&#8679; &#8984; H</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Afficher/masquer le commentaire de ligne</div>
+                        <div class="symbols">&#8984; /</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Afficher/masquer le commentaire de bloc</div>
+                        <div class="symbols">&#8997; &#8679; A</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Emmet : Développer l'abréviation</div>
+                        <div class="symbols">&#8677;</div>
+                    </div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Démarrer Dictée</div>
+                        <div class="symbols">fn D</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Emoji et symboles</div>
+                        <div class="symbols">fn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab extralong">
+                <div class="box" id="Selection">
+                    <p class="title">Sélection</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Sélectionner tout</div>
+                        <div class="symbols">&#8984; A</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Développer la sélection</div>
+                        <div class="symbols">&#8963; &#8679; &#8984; &#8594;</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Réduire la sélection</div>
+                        <div class="symbols">&#8963; &#8679; &#8984; &#8592;</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Copier la ligne en haut</div>
+                        <div class="symbols">&#8997; &#8679; &#8593;</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Copier la ligne en bas</div>
+                        <div class="symbols">&#8997; &#8679; &#8595;</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Déplacer la ligne vers le haut</div>
+                        <div class="symbols">&#8997; &#8593;</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Déplacer la ligne vers le bas</div>
+                        <div class="symbols">&#8997; &#8595;</div>
+                    </div>
+                    <div class="enabled">Dupliquer la sélection</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Ajouter un curseur au-dessus</div>
+                        <div class="symbols">&#8997; &#8984; &#8593;</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Ajouter un curseur au-dessous</div>
+                        <div class="symbols">&#8997; &#8984; &#8595;</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Ajouter des curseurs à la fin des lignes</div>
+                        <div class="symbols">&#8997; &#8679; I</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Ajouter l'occurence suivante</div>
+                        <div class="symbols">&#8984; D</div>
+                    </div>
+                    <div class="enabled">Ajouter l'occurrence précédente</div>
+                    <div class="command enabled">
+                        <div>Sélectionner toutes les occurences</div>
+                        <div class="symbols">&#8679; &#8984; L</div>
+                    </div>
+                    <hr>
+                    <div class="enabled">Utiliser Cmd+Clic pour l'option multicurseur</div>
+                    <div class="enabled">Mode de sélection de colonne</div>
+                </div>
+
+            </div>
+            <div class="tab">
+                <div class="box" id="Affichage">
+                    <p class="title">Affichage</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Palette de commandes...</div>
+                        <div class="symbols">&#8679; &#8984; P</div>
+                    </div>
+                    <div class="enabled">Ouvrir la vue...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Apparence</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>Disposition de l'éditeur</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Explorateur</div>
+                        <div class="symbols">&#8679; &#8984; E</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Rechercher</div>
+                        <div class="symbols">&#8679; &#8984; F</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Contrôle de code source</div>
+                        <div class="symbols">&#8963; &#8679; G</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Exécuter</div>
+                        <div class="symbols">&#8679; &#8984; D</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Extensions</div>
+                        <div class="symbols">&#8679; &#8984; X</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Problèmes</div>
+                        <div class="symbols">&#8679; &#8984; M</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Sortie</div>
+                        <div class="symbols">&#8679; &#8984; U</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Console de débogage</div>
+                        <div class="symbols">&#8679; &#8984; Y</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Terminal</div>
+                        <div class="symbols">&#8963; `</div>
+                    </div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Retour automatique à la ligne</div>
+                        <div class="symbols">&#8997; Z</div>
+                    </div>
+                    <div class="enabled">Défilement épinglé</div>
+                </div>
+            </div>
+            <div class="tab extralong">
+                <div class="box" id="Atteindre">
+                    <p class="title">Atteindre</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Précédent</div>
+                        <div class="symbols">&#8963; -</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Suivant</div>
+                        <div class="symbols">&#8963; &#8679; -</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Emplacement de la dernière modification</div>
+                        <div class="symbols">&#8984;K &#8984;Q</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Changer d'éditeur</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>Changer de groupe</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Atteindre le fichier...</div>
+                        <div class="symbols">&#8984; P</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Atteindre le symbole dans l'espace de travail...</div>
+                        <div class="symbols">&#8984; T</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Atteindre le symbole dans l'éditeur...</div>
+                        <div class="symbols">&#8679; &#8984; O</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Atteindre la définition</div>
+                        <div class="symbols">F12</div>
+                    </div>
+                    <div class="grey">Atteindre la déclaration</div>
+                    <div class="grey">Accéder à la définition de type</div>
+                    <div class="command">
+                        <div class="grey">Atteindre les implémentations</div>
+                        <div class="symbols">&#8984; F12</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Atteindre les références</div>
+                        <div class="symbols">&#8679; F12</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Atteindre la ligne/colonne...</div>
+                        <div class="symbols">&#8963; G</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Accéder au crochet</div>
+                        <div class="symbols">&#8679; &#8984; \</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Problème suivant</div>
+                        <div class="symbols">F8</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Problème précédent</div>
+                        <div class="symbols">&#8679; F8</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Changement suivant</div>
+                        <div class="symbols">&#8997; F3</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Changement précédent</div>
+                        <div class="symbols">&#8997; &#8679; F3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box" id="Executer">
+                    <p class="title">Exécuter</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Démarrer le débogage</div>
+                        <div class="symbols">F5</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Exécuter sans débogage</div>
+                        <div class="symbols">&#8963; F5</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Arrêter le débogage</div>
+                        <div class="symbols">&#8679; F5</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Redémarrer le débogage</div>
+                        <div class="symbols">&#8679; &#8984; F5</div>
+                    </div>
+                    <hr>
+                    <div class="grey">Ouvrir les configurations</div>
+                    <div class="enabled">Ajouter une configuration</div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Effectuer un paps à pas principal</div>
+                        <div class="symbols">F10</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Effectuer un paps à pas détaillé</div>
+                        <div class="symbols">F11</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Effectuer un paps à pas sortant</div>
+                        <div class="symbols">&#8679; F11</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Continuer</div>
+                        <div class="symbols">F5</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Activer/désactiver le point d'arrêt</div> 
+                        <div class="symbols">F9</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Nouveau point d'arrêt</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="enabled">Activer tous les point d'arrêt</div>
+                    <div class="enabled">Désactiver tous les points d'arrêt</div>
+                    <div class="enabled">Supprimer tous les points d'arrêt</div>
+                    <hr>
+                    <div class="enabled">Installer des débogueurs supplémentaires...</div>
+                </div>
+
+            </div>
+            <div class="tab extralong">
+                <div class="box" id="Terminal">
+                    <p class="title">Terminal</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Nouveau terminal</div>
+                        <div class="symbols">&#8963; &#8679; `</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Terminal divisé</div>
+                        <div class="symbols">&#8984; \</div>
+                    </div>
+                    <hr>
+                    <div class="enabled">Exécuter la tâche...</div>
+                    <div class="command enabled">
+                        <div>Exécuter la tâche build...</div>
+                        <div class="symbols">&#8679; &#8984; B</div>
+                    </div>
+                    <div class="enabled">Exécuter le fichier actif</div>
+                    <div class="enabled">Exécuter le texte sélectionné</div>
+                    <hr>
+                    <div class="grey">Afficher les tâches en cours d'exécution...</div>
+                    <div class="grey">Redémarrer la tâche en cours d'exécution...</div>
+                    <div class="grey">Terminer la tâche...</div>
+                    <hr>
+                    <div class="enabled">Configurer les tâches...</div>
+                    <div class="enabled">Configurer la tâche de build par défaut...</div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box" id="Fenetre">
+                    <p class="title">Fenêtre</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Rêduire</div>
+                        <div class="symbols">&#8984; M</div>
+                    </div>
+                    <div class="enabled">Zoom</div>
+                    <div class="enabled">Placer la fenêtre à gauche de l'écran</div>
+                    <div class="enabled">Placer la fenêtre à droite de l'écran</div>
+                    <div class="grey">Remplacer la fenêtre en mosaïque</div>
+                    <hr>
+                    <div class="grey">Supprimer la fenêtre du groupe</div>
+                    <hr>
+                    <div class="enabled">Changer de fenêtre....</div>
+                    <hr>
+                    <div class="grey">Tout mettre au premier plan</div>
+                </div>
+            </div>
+            <div class="tab extralong">
+                <div class="box" id="Aide">
+                    <p class="title">Aide</p>
+                </div>
+                <div class="container">
+                    <div class="enabled">Démarrage</div>
+                    <div class="command enabled">
+                        <div>Afficher toutes les commandes</div>
+                        <div class="symbols">&#8679; &#8984; P</div>
+                    </div>
+                    <div class="enabled">Documentation</div>
+                    <div class="enabled">Terrain de jeu de l'éditeur</div>
+                    <div class="enabled">Afficher les notes de publication</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Référence des raccourcis clavier</div>
+                        <div class="symbols">&#8984;K &#8984;R</div>
+                    </div>
+                    <div class="enabled">Tutoriels vidéo</div>
+                    <div class="enabled">Conseils et astuces</div>
+                    <hr>
+                    <div class="enabled">Rejoignez-nous sur Twitter</div>
+                    <div class="enabled">Rechercher parmi les requêtes de fonctionnalités</div>
+                    <div class="enabled">Signaler le problème</div>
+                    <hr>
+                    <div class="enabled">Afficher la licence</div>
+                    <div class="enabled">Déclaration de confidentialité</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Activer/désactiver les outils de développement</div> 
+                        <div class="symbols">&#8997; &#8984; I</div>
+                    </div>
+                    <div class="enabled">Ouvrir l'Explorateur de processus</div>
+                </div>
+            </div>
+        </div>
+        <script src="../../scripts/app-header.js"></script>
+    </body>
+</html>

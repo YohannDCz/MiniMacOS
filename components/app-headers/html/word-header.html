@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../styles/app-header.css">
+    </head>
+    <body>
+        <div class="app-header word-header">
+            <div class="tab long apple">
+                <div class="box">
+                    <img src="../../images/icons/icon_mac.svg" alt="The Apple
+                        logo."
+                        />
+                </div>
+                <div class="container">
+                    <div class="enabled">À propos de ce Mac</div>
+                    <hr>
+                    <div class="enabled">Réglages du système...</div>
+                    <div class="enabled">App Store...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Éléments récents</div>
+                        <img class="right-arrow"
+                            src="../../images/icons/icon_right-arrow.png"
+                            alt="">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Forcer à quitter...</div>
+                        <div class="symbols">&#8997; &#8984; &#9099;</div>
+                    </div>
+                    <hr>
+                    <div class="enabled">Suspendre l'activité</div>
+                    <div class="enabled">Redémarrer...</div>
+                    <div class="enabled">Éteindre...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Vérouiller l'écran</div>
+                        <div class="symbols">&#8963; &#8984; Q</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Fermer la session Yohann D...</div>
+                        <div class="symbols">&#8679; &#8984; Q</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="box" id="Word">
+                    <p class="title app">Word</p>
+                </div>
+                <div class="container">
+                    <div class="enabled">À propos de Microsoft Word</div>
+                    <hr>
+                    <div class="command">
+                        <div>Préférences...</div>
+                        <div class="symbols">&#8984; ,</div>
+                    </div>
+                    <hr>
+                    <div class="enabled">Se déconnecter...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Services</div>
+                        <img src="../../images/icons/icon_right-arrow.png"
+                            alt=""
+                            class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Masquer Word</div>
+                        <div class="symbols">&#8984; H</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Masquer les autres</div>
+                        <div class="symbols">&#8997; &#8984; H</div>
+                    </div>
+                    <div class="grey">Tout afficher</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Quitter Word</div>
+                        <div class="symbols">&#8984; Q</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box" id="Fichier">
+                    <p class="title">Fichier</p>
+                </div>
+                <div class="container">
+                    <div class="command">
+                        <div>Nouveau document</div>
+                        <div class="symbols">&#8984; N</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Nouveau à partir d'un modèle...</div>
+                        <div class="symbols">&#8679; &#8984; P</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Ouvrir...</div>
+                        <div class="symbols">&#8984; O</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Ouvrir récent</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Fermer</div>
+                        <div class="symbols">&#8984; W</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Enregistrer</div>
+                        <div class="symbols">&#8984; S</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Enregistrer sous...</div>
+                        <div class="symbols">&#8679; &#8984; S</div>
+                    </div>
+                    <div>Enregistrer comme modèle...</div>
+                    <hr>
+                    <div class="grey">Parcourir l'historique des versions</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Partager</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div>Toujours ouvrir en lecture seule</div>
+                    <div class="command enabled">
+                        <div>Restreindre les autorisations</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="enabled">Réduire la taille du fichier...</div>
+                    <hr>
+                    <div class="enabled">Mise en page...</div>
+                    <div class="command eabled">
+                        <div>Imprimer...</div>
+                        <div class="symbols">&#8984; P</div>
+                    </div>
+                    <hr>
+                    <div class="enabled">Propriétés...</div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box" id="Edition">
+                    <p class="title">Édition</p>
+                </div>
+                <div class="container">
+                    <div class="command">
+                        <div class="grey">Impossible d'annuler</div>
+                        <div class="symbols">&#8984; Z</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Impossible de répéter</div>
+                        <div class="symbols">&#8984; Y</div>
+                    </div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Couper</div>
+                        <div class="symbols">&#8984; X</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Copier</div>
+                        <div class="symbols">&#8984; C</div>
+                    </div>
+                    <hr>
+                    <div class="command">
+                        <div class="grey">Coller</div>
+                        <div class="symbols">&#8984; Z</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Collage spécial...</div>
+                        <div class="symbols">&#8963; &#8984; V</div>
+                    </div>
+                    <div class="command">
+                        <div class="grey">Coller et respecter la mise en forme</div>
+                        <div class="symbols">&#8997; &#8679; &#8984; V</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Effacer</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>Sélectionner tout</div>
+                        <div class="symbols">&#8984; A</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Rechercher</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="grey">Liaisons...</div>
+                    <hr>
+                    <div class="enabled">Démarrer la dictée Word</div>
+                    <hr>
+                    <div class="grey">Sélectionner des données...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Activer/Désactiver le dessin</div>
+                        <div class="symbols">&#8963; &#8984; Z</div>
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Démarrer Dictée</div>
+                        <div class="symbols">fn D</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Emoji et symboles</div>
+                        <div class="symbols">fn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab ticked">
+                <div class="box" id="Affichage">
+                    <p class="title">Affichage</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_tick.png" alt="" class="tick">
+                            <div>Mode Page</div>
+                        </div>
+                    </div>
+                    <div class="enabled">Mode Web</div>
+                    <div class="enabled">Plan</div>
+                    <div class="enabled">Brouillon</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Focus</div>
+                        <div class="symbols">&#8963; &#8679; &#8984; F</div>
+                    </div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_tick.png" class="tick">
+                            <div>Ruban</div>
+                        </div>
+                        <div class="symbols">&#8997; &#8984; R</div>
+                    </div>
+                    <div class="command enabled">
+                        <div>Encadré</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="grey">Barre des messages</div>
+                    <hr>
+                    <div class="enabled">Règle</div>
+                    <div class="enabled">En-tête et pied de page</div>
+                    <div class="grey">Notes de bas de page</div>
+                    <div class="enabled">Document maître</div>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_tick.png" alt="" class="tick">
+                            <div>Marques</div>
+                        </div>
+                    </div>
+                    <div class="enabled">Révéler la mise en forme</div>
+                    <div class="command enabled">
+                        <div>Zoom</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="enabled">Quadrillage</div>
+                    <div class="command enabled">
+                        <div>Activer le mode plein écran</div> 
+                        <div class="symbols">fn F</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="box" id="Inserer">
+                    <p class="title">Insérer</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Images</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>Forme</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>SmartArt</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>Graphique</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="enabled">Tableau...</div>
+                    <div class="command enabled">
+                        <div>Audio</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>Vidéo</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="enabled">Icônes...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Modèles 3D</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Compléments</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Lien hypertexte...</div>
+                        <div class="symbols">&#8984;K</div>
+                    </div>
+                    <div class="enabled">Signet...</div>
+                    <div class="enabled">Renvoi...</div>
+                    <hr>
+                    <div class="enabled">Commentaire</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Saut</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="enabled">Note...</div>
+                    <div class="enabled">Légende...</div>
+                    <div class="enabled">Tables et index...</div>
+                    <div class="enabled">Filigrane...</div>
+                    <div class="enabled">Numéro de page...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Zone de texte</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>Insertion automatique</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="enabled">Date et heure...</div>
+                    <div class="enabled">Objet...</div>
+                    <div class="enabled">Fichier...</div>
+                    <div class="enabled">Champs...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Équation</div>
+                        <div class="symbols">&#8963; =</div>
+                    </div>
+                    <div class="enabled">Symbole avancé...</div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box" id="Mise-en-forme">
+                    <p class="title">Mise en forme</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Police...</div>
+                        <div class="symbols">&#8984; D</div>
+                    </div>
+                    <div class="enabled">Effets de texte...</div>
+                    <div class="command enabled">
+                        <div>Paragraphe...</div>
+                        <div class="symbols">&#8997; &#8984; M</div>
+                    </div>
+                    <div class="enabled">Document...</div>
+                    <hr>
+                    <div class="enabled">Puces et numéros...</div>
+                    <div class="enabled">Bordure et trame...</div>
+                    <hr>
+                    <div class="enabled">Colonnes...</div>
+                    <div class="enabled">Tabulations...</div>
+                    <div class="grey">Lettrine...</div>
+                    <div class="enabled">Changer la casse...</div>
+                    <hr>
+                    <div class="enabled">Style...</div>
+                    <hr>
+                    <div class="enabled">Substitution de polices...</div>
+                    <hr>
+                    <div class="enabled">Options des équations...</div>
+                </div>
+            </div>
+            <div class="tab extralong">
+                <div class="box" id="Outils">
+                    <p class="title">Outils</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Grammaire et orthographe</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>Dictionnaire des synonymes...</div>
+                        <div class="symbols">&#8963; &#8997; &#8984; R</div>
+                    </div>
+                    <div class="enabled">Coupure de mots...</div>
+                    <div class="command enabled">
+                        <div>Recherche intelligente...</div>
+                        <div class="symbols">&#8963; &#8984; L</div>
+                    </div>
+                    <div class="enabled">Recherche...</div>
+                    <div class="command enabled">
+                        <div>Traduction</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="enabled">Langue...</div>
+                    <hr>
+                    <div class="enabled">Statistiques...</div>
+                    <div class="enabled">Options de correction automatique...</div>
+                    <hr>
+                    <div class="enabled">Vérification de l'accessibilité</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Suivi des modifications</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="enabled">Combiner des documents...</div>
+                    <hr>
+                    <div class="grey">Bloquer des auteurs</div>
+                    <div class="grey">Débloquer toutes mes zones bloquées</div>
+                    <div class="enabled">Protéger le document...</div>
+                    <hr>
+                    <div class="enabled">Enveloppes...</div>
+                    <div class="enabled">Étiquettes...</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Macro</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="grey">Compléments lents et désactivés...</div>
+                    <div class="enabled">Modèles et compléments...</div>
+                    <div class="enabled">Personnaliser le clavier...</div>
+                </div>
+            </div>
+            <div class="tab long">
+                <div class="box" id="Tableau">
+                    <p class="title">Tableau</p>
+                </div>
+                <div class="container">
+                    <div class="enabled">Dessiner un tableau</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Insérer</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>Supprimer</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="command enabled">
+                        <div>Sélectionner</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="grey">Fusionner les cellules</div> 
+                    <div class="grey">Fractionner les cellules...</div> 
+                    <div class="grey">Fractionner le tableau</div>
+                    <hr>
+                     <div class="command enabled">
+                        <div>Adjustement automatique et distribution</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="grey">Répéter les lignes d'en-tête</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div>Convertir</div>
+                        <img src="../../images/icons/icon_right-arrow.png" alt="" class="right-arrow">
+                    </div>
+                    <div class="enabled">Trier...</div>
+                    <div class="enabled">Formule...</div>
+                    <div class="enabled">Afficher le quadrillage</div>
+                    <hr>
+                    <div class="grey">Propriétés du tableau...</div>
+                </div>
+            </div>
+            <div class="tab long ticked">
+                <div class="box" id="Fenetre">
+                    <p class="title">Fenêtre</p>
+                </div>
+                <div class="container">
+                    <div class="command enabled">
+                        <div>Réduire</div>
+                        <div class="symbols">&#8984;M</div>
+                    </div>
+                    <div class="enabled">Zoom</div>
+                    <hr>
+                    <div class="enabled">Nouvelle fenêtre</div>
+                    <div class="enabled">Réorganiser tout</div>
+                    <div class="enabled">Fractionner</div>
+                    <hr>
+                    <div class="grey">Tout ramener au premier plan</div>
+                    <div class="enabled">Placer la fenêtre à gauche de l'écran</div>
+                    <div class="enabled">Placer la fenêtre à droite de l'écran</div>
+                    <div class="grey">Remplacer la fenêtre en mosaïque</div>
+                    <hr>
+                    <div class="grey">Supprimer la fenêtre du groupe</div>
+                    <hr>
+                    <div class="command enabled">
+                        <div class="left-block">
+                            <img src="../../images/icons/icon_tick.png" alt="" class="tick">
+                            <div>Document Sans Titre</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="box" id="aide">
+                    <p class="title">Aide</p>
+                </div>
+                <div class="container">
+                    <input type="text" placeholder="Recherche">
+                    <div class="enabled">Aide de Word</div>
+                    <hr>
+                    <div class="enabled">Commentaires</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../scripts/app-header.js"></script>
+    </body>
+</html>

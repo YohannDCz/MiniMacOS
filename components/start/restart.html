@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="icon" type="image/x-icon" href="../../images/favicon.svg">
+  <title>Portfolio de Yohann D.</title>
+
+  <style>
+   html {
+    width: 100%;
+    min-height: 100vh;
+   }
+   body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+   }
+
+   #progress {
+    display: flex;
+    width: 223.79px;
+    background-color: rgb(108, 114, 128);
+    border-radius: 9999px;
+    overflow: hidden;
+   }
+
+   #bar {
+    width: 1%;
+    height: 5px;
+    background-color: #fff;
+   }
+
+   #boot {
+    color: white;
+    font-family: "SF Pro";
+    cursor: pointer;
+   }
+
+   img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 100px;
+   }
+  </style>
+ </head>
+ <body onload="move()">
+  <img src="../../images/apple_logotype.png" alt="" />
+  <div id="progress">
+   <div id="bar"></div>
+  </div>
+  <br />
+
+  <script>
+   let i = 0;
+   function move() {
+    if (i == 0) {
+     i = 1;
+     let elem = document.getElementById("bar");
+     let width = 1;
+     let id = setInterval(frame, 40);
+     function frame() {
+      if (width >= 100) {
+       clearInterval(id);
+       i = 0;
+       window.location = "../../index.html";
+      } else {
+       width++;
+       elem.style.width = width + "%";
+      }
+     }
+    }
+   }
+  </script>
+ </body>
+</html>

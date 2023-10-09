@@ -1,0 +1,177 @@
+* {
+  font-size: 14px;
+  font-family: "SF Pro", Helvetica, sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-image: url(../images/wallpaper.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.dock {
+  width: auto;
+  height: 90px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.dock .dock-container {
+  padding: 3px;
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 28px;
+  background: rgba(205, 205, 205, 0.533);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 999;
+}
+
+.dock .dock-container .li-1::after,
+.dock .dock-container .li-3.active::after,
+.dock .dock-container .li-4.active::after,
+.dock .dock-container .li-5.active::after,
+.dock .dock-container .li-6.active::after,
+.dock .dock-container .li-7.active::after,
+.dock .dock-container .li-8.active::after,
+.dock .dock-container .li-9.active::after {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+  content: "";
+  bottom: 1px;
+}
+
+.dock .dock-container li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  margin: 0 2px;
+  margin-bottom: 6px;
+  vertical-align: bottom;
+  transition: 0.5s;
+  transform-origin: 50% 100%;
+}
+
+.dock .dock-container li:hover {
+  margin: 0px 12px 0px 12px;
+}
+
+.dock .dock-container li .ico:active {
+  filter: brightness(0.4) !important;
+  transition: none;
+}
+
+.dock .dock-container li .name {
+  position: absolute;
+  font-size: 15px;
+  top: -70px;
+  background: rgba(205, 205, 205, 0.7);
+  color: rgba(0, 0, 0, 0.9);
+  height: 10px;
+  padding: 14px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.dock .dock-container li .name::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(205, 205, 205, 0.7);
+}
+
+.dock .dock-container li .ico {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.li-1:hover .name {
+  visibility: visible !important;
+}
+
+.li-2:hover .name {
+  visibility: visible !important;
+}
+
+.li-3:hover .name {
+  visibility: visible !important;
+}
+
+.li-4:hover .name {
+  visibility: visible !important;
+}
+
+.li-5:hover .name {
+  visibility: visible !important;
+}
+
+.li-6:hover .name {
+  visibility: visible !important;
+}
+
+.li-7:hover .name {
+  visibility: visible !important;
+}
+
+.li-8:hover .name {
+  visibility: visible !important;
+}
+
+.li-9:hover .name {
+  visibility: visible !important;
+}
+
+header {
+  z-index: 900;
+}
+
+.menu {
+  z-index: inherit;
+}
+
+main {
+  z-index: 800;
+}
